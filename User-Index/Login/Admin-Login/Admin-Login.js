@@ -3,7 +3,7 @@ document.getElementById("AdminForm").addEventListener("submit", async (e) => {
   const username = document.getElementById("Admin-Name").value;
   const password = document.getElementById("Password").value;
 
-  const res = await fetch("http://localhost:3000/Login-Admin", {
+  const res = await fetch("https://fashion-imn4.onrender.com/Login-Admin", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({username, password}),

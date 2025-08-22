@@ -1,7 +1,7 @@
-const API="http://localhost:3000/Product";
+const API="https://fashion-imn4.onrender.com/Product";
 async function checkadmin() {
     const token= localStorage.getItem("token");
-    const res= await fetch("http://localhost:3000/admin",{
+    const res= await fetch("https://fashion-imn4.onrender.com/admin",{
         headers: {authorization:`Bearer ${token}`},
     });
     if(!res.ok){
@@ -43,7 +43,7 @@ async function fetchProduct() {
 }
 
 async function loadCategories() {
-    const res= await fetch("http://localhost:3000/Category");
+    const res= await fetch("https://fashion-imn4.onrender.com/Category");
     const category= await res.json();
     const select= document.getElementById("filterCategory");
     category.forEach(cat =>{
@@ -69,7 +69,7 @@ async function Confirm() {
         const formData= new FormData();
         formData.append('image', imageFile);
         try{
-            const uploadRes= await fetch("http://localhost:3000/imgProduct",{
+            const uploadRes= await fetch("https://fashion-imn4.onrender.com/imgProduct",{
                 method:"POST",
                 body:formData
             });
@@ -129,7 +129,7 @@ function editProduct(id, gender, category, name, price, image, description){
             const formData = new FormData();
             formData.append('image', updatedImageFile);
             try {
-                const uploadRes = await fetch("http://localhost:3000/imgProduct", {
+                const uploadRes = await fetch("https://fashion-imn4.onrender.com/imgProduct", {
                     method: "POST",
                     body: formData,
                 });
@@ -140,7 +140,7 @@ function editProduct(id, gender, category, name, price, image, description){
                 finalImageUrl = uploadData.imageUrl;
                 const oldFilename = image.split('/').pop();
                 if (oldFilename && oldFilename !== uploadData.imageUrl.split('/').pop()) {
-                    await fetch(`http://localhost:3000/deleteProductImage/${oldFilename}`, {
+                    await fetch(`https://fashion-imn4.onrender.com/deleteProductImage/${oldFilename}`, {
                         method: "DELETE"
                     });
                 }
@@ -184,7 +184,7 @@ async function fetchProductfillter() {
     if(valuecaterogy=="" && valuegender==""){
         fetchProduct();
     } else if(valuecaterogy=="" && valuegender==="Men"){
-            const res= await fetch("http://localhost:3000/Product/Menproduct");
+            const res= await fetch("https://fashion-imn4.onrender.com/Product/Menproduct");
             const data= await res.json();
             data.forEach(p=>{
                 const row= document.createElement("tr");
@@ -206,7 +206,7 @@ async function fetchProductfillter() {
             table.appendChild(row);
             })
     } else if(valuecaterogy=="" && valuegender==="Women"){
-        const res= await fetch("http://localhost:3000/Product/Womenproduct");
+        const res= await fetch("https://fashion-imn4.onrender.com/Product/Womenproduct");
             const data= await res.json();
             data.forEach(p=>{
                 const row= document.createElement("tr");
@@ -228,7 +228,7 @@ async function fetchProductfillter() {
             table.appendChild(row);
             })
     } else if(valuecaterogy!=="" && valuegender==""){
-        const res= await fetch(`http://localhost:3000/Product/category/${valuecaterogy}`);
+        const res= await fetch(`https://fashion-imn4.onrender.com/Product/category/${valuecaterogy}`);
             const data= await res.json();
             data.forEach(p=>{
                 const row= document.createElement("tr");
@@ -250,7 +250,7 @@ async function fetchProductfillter() {
             table.appendChild(row);
             })
     }else if(valuecaterogy!=="" && valuegender=="Men"){
-        const res= await fetch(`http://localhost:3000/Product/category/${valuecaterogy}/gender/Men`);
+        const res= await fetch(`https://fashion-imn4.onrender.com/Product/category/${valuecaterogy}/gender/Men`);
             const data= await res.json();
             data.forEach(p=>{
                 const row= document.createElement("tr");
@@ -272,7 +272,7 @@ async function fetchProductfillter() {
             table.appendChild(row);
             })
     }else if(valuecaterogy!=="" && valuegender=="Women"){
-        const res= await fetch(`http://localhost:3000/Product/category/${valuecaterogy}/gender/Women`);
+        const res= await fetch(`https://fashion-imn4.onrender.com/Product/category/${valuecaterogy}/gender/Women`);
             const data= await res.json();
             data.forEach(p=>{
                 const row= document.createElement("tr");
