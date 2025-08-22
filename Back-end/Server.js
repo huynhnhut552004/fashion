@@ -34,6 +34,9 @@ app.use("/User", userRoute);
 app.use("/Voucher", voucherRoute);
 app.use("/Forget", forgetRoute);
 app.use("/Question", questionRoute);
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../User-Index/Main/Main.html'));
+});
 app.get("/admin",authMiddleware,requireAdmin,(req,res)=>{
     res.json({secret:"Dữ liệu chỉ dành cho admin!"});
 });
