@@ -1,5 +1,5 @@
  const pageId= "689326e405f2a44685180a0f";
-const API = "https://fashion-imn4.onrender.com/Page";
+const API = "https://fashion-bsqk.onrender.com/Page";
 
 async function fetchPage(id) {
     try{

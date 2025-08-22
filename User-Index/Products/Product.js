@@ -10,7 +10,7 @@ if (elementId==="footer"){
 }
 }
 
-const API = "https://fashion-imn4.onrender.com/Page";
+const API = "https://fashion-bsqk.onrender.com/Page";
 const headerId = "68932692d62cb86cdd957f92";
 
 async function fetchHeaderData() {
@@ -140,7 +140,7 @@ async function quantity() {
   if(!token){
     return;
   }else{
-    const cart= await fetch("https://fashion-imn4.onrender.com/Cart", {
+    const cart= await fetch("https://fashion-bsqk.onrender.com/Cart", {
       headers:{"Content-Type": "application/json",
           authorization: `Bearer ${token}`}
       });
@@ -157,8 +157,8 @@ async function quantity() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    include("../Header/Header.html", "header");
-    include("../Footer/Footer.html", "footer");
+    include("/User-Index/Header/Header.html", "header");
+    include("/User-Index/Footer/Footer.html", "footer");
     fectPage(pageId);
     quantity();
 });

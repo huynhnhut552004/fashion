@@ -23,7 +23,7 @@ if (elementId==="footer"){
 }
 }
 
-const API = "https://fashion-imn4.onrender.com/Page";
+const API = "https://fashion-bsqk.onrender.com/Page";
 const headerId = "68932692d62cb86cdd957f92";
 
 async function fetchHeaderData() {
@@ -145,7 +145,7 @@ document.addEventListener('dblclick', async (e) => {
 
 async function Checkadmin() {
     const token= localStorage.getItem("token");
-    const res= await fetch("https://fashion-imn4.onrender.com/admin",{
+    const res= await fetch("https://fashion-bsqk.onrender.com/admin",{
         headers: {authorization:`Bearer ${token}`},
     });
     if(!res.ok){
@@ -246,11 +246,11 @@ document.addEventListener('dblclick', async (e) => {
             formData.append('video', file);
 
             try {
-                await fetch(`https://fashion-imn4.onrender.com/deletePageVideo/${oldFilename}`, {
+                await fetch(`https://fashion-bsqk.onrender.com/deletePageVideo/${oldFilename}`, {
                     method: 'DELETE'
                 });
 
-                const res = await fetch('https://fashion-imn4.onrender.com/videoPage', {
+                const res = await fetch('https://fashion-bsqk.onrender.com/videoPage', {
                     method: 'POST',
                     body: formData
                 });
@@ -284,8 +284,8 @@ document.addEventListener('dblclick', async (e) => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  Checkadmin();
-  include("../Header/Header.html", "header");
-  include("../Footer/Footer.html", "footer");
-  fetchPage(pageId);
+    Checkadmin();
+    include("/Admin-Index/Content/Header/Header.html", "header");
+    include("/Admin-Index/Content/Footer/Footer.html", "footer");
+    fetchPage(pageId);
 });

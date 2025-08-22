@@ -3,7 +3,7 @@ document.getElementById("Login").addEventListener("click", (e)=>{
     const email= document.getElementById("Email").value;
     const password= document.getElementById("Password").value;
     if(email==="setadministrator" && password===""){
-            window.location.href="../Admin-Login/Admin-Login.html";
+            window.location.href="/User-Index/Login/Admin-Login/Admin-Login.html";
         }else{
             document.getElementById("User").requestSubmit();
     }
@@ -13,7 +13,7 @@ document.getElementById("User").addEventListener("submit", async(e)=>{
     e.preventDefault();
     const username= document.getElementById("Email").value;
     const password= document.getElementById("Password").value;
-    const res= await fetch("https://fashion-imn4.onrender.com/Login/login",{
+    const res= await fetch("https://fashion-bsqk.onrender.com/Login/login",{
         method:"POST",
         headers:{"Content-Type": "application/json"},
         body: JSON.stringify({username, password}),

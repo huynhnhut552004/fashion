@@ -10,7 +10,7 @@ if (elementId==="footer"){
 }
 }
 
-const API = "https://fashion-imn4.onrender.com/Page";
+const API = "https://fashion-bsqk.onrender.com/Page";
 const headerId = "68932692d62cb86cdd957f92";
 
 async function fetchHeaderData() {
@@ -44,7 +44,7 @@ async function fetchProduct() {
     if(!token){
         return;
     }else{
-        const res= await fetch("https://fashion-imn4.onrender.com/Cart", {
+        const res= await fetch("https://fashion-bsqk.onrender.com/Cart", {
         headers:{authorization: `Bearer ${token}`}
         });
         const data= await res.json();
@@ -72,7 +72,7 @@ async function fetchProduct() {
             const newQuantity = parseInt(input.value) + 1;
             const id= p.productId._id;
             try{
-                await fetch(`https://fashion-imn4.onrender.com/Cart/update`,{
+                await fetch(`https://fashion-bsqk.onrender.com/Cart/update`,{
                     method:"PATCH",
                     headers:{"Content-Type": "application/json",
                         authorization:`Bearer ${token}`},
@@ -94,7 +94,7 @@ async function fetchProduct() {
         const productId = p.productId._id;
 
         try {
-            await fetch(`https://fashion-imn4.onrender.com/Cart/update`, {
+            await fetch(`https://fashion-bsqk.onrender.com/Cart/update`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
@@ -124,7 +124,7 @@ async function fetchProduct() {
             deleted.addEventListener("click", async ()=>{
                 const id= p.productId._id;
                 try{
-                    await fetch(`https://fashion-imn4.onrender.com/Cart/remove`,{
+                    await fetch(`https://fashion-bsqk.onrender.com/Cart/remove`,{
                         method:"DELETE",
                         headers:{"Content-Type": "application/json",
                             authorization:`Bearer ${token}`},
@@ -168,7 +168,7 @@ function applyVoucher() {
         }
         const originalTotal = parseFloat(totalDisplay.innerText);
         try {
-            const res = await fetch(`https://fashion-imn4.onrender.com/Voucher/${code}`);
+            const res = await fetch(`https://fashion-bsqk.onrender.com/Voucher/${code}`);
             if (res.status === 404) {
                 error.style.display = "flex";
                 lastAppliedCode = null; 
@@ -197,7 +197,7 @@ function applyVoucher() {
 document.getElementById("Checkout").addEventListener("click", async ()=>{
     const token= localStorage.getItem("token");
     if(voucherchoose==null){
-        await fetch("https://fashion-imn4.onrender.com/Cart/updatesubtotal",{
+        await fetch("https://fashion-bsqk.onrender.com/Cart/updatesubtotal",{
                 method:"PATCH",
                 headers:{"Content-Type" : "application/json",
                     authorization:`Bearer ${token}`
@@ -207,7 +207,7 @@ document.getElementById("Checkout").addEventListener("click", async ()=>{
             window.location.href="/User-Index/Cart/Check-out/Check-Out.html";
     }else{
         try {
-            await fetch("https://fashion-imn4.onrender.com/Cart/updatesubtotal",{
+            await fetch("https://fashion-bsqk.onrender.com/Cart/updatesubtotal",{
                 method:"PATCH",
                 headers:{"Content-Type" : "application/json",
                     authorization:`Bearer ${token}`
@@ -232,7 +232,7 @@ async function quantity() {
   }else{
         no.style.display="none";
         have.style.display="block";
-        const cart= await fetch("https://fashion-imn4.onrender.com/Cart", {
+        const cart= await fetch("https://fashion-bsqk.onrender.com/Cart", {
         headers:{"Content-Type": "application/json",
                 authorization: `Bearer ${token}`}
         });

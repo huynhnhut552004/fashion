@@ -23,7 +23,7 @@ if (elementId==="footer"){
 }
 }
 
-const API = "https://fashion-imn4.onrender.com/Page";
+const API = "https://fashion-bsqk.onrender.com/Page";
 const headerId = "68932692d62cb86cdd957f92";
 
 async function fetchHeaderData() {
@@ -74,7 +74,7 @@ async function fetchPage(id) {
 }
 
 async function fetchCategory() {
-  const res= await fetch("https://fashion-imn4.onrender.com/Category");
+  const res= await fetch("https://fashion-bsqk.onrender.com/Category");
   const data= await res.json();
   const select= document.getElementById("Category");
   data.forEach(cat=>{
@@ -85,7 +85,7 @@ async function fetchCategory() {
   })
 }
 
-const APIproduct= "https://fashion-imn4.onrender.com/Product/Menproduct";
+const APIproduct= "https://fashion-bsqk.onrender.com/Product/Menproduct";
 
 async function fetchProduct() {
     const res= await fetch(APIproduct);
@@ -107,7 +107,7 @@ async function fetchProduct() {
     });
 }
 
-const APICategory= "https://fashion-imn4.onrender.com/Product/category";
+const APICategory= "https://fashion-bsqk.onrender.com/Product/category";
 
 document.getElementById("Category").addEventListener("change", async ()=>{
   const category= document.getElementById("Category").value;
@@ -142,7 +142,7 @@ async function search() {
         return;
     }
     timer= setTimeout(()=>{
-        fetch(`https://fashion-imn4.onrender.com/Product/searchMen?search=${encodeURIComponent(query)}`)
+        fetch(`https://fashion-bsqk.onrender.com/Product/searchMen?search=${encodeURIComponent(query)}`)
         .then(res => {
     if (!res.ok) throw new Error("Lỗi tìm kiếm");
     return res.json();
@@ -181,7 +181,7 @@ async function quantity() {
   if(!token){
     return;
   }else{
-    const cart= await fetch("https://fashion-imn4.onrender.com/Cart", {
+    const cart= await fetch("https://fashion-bsqk.onrender.com/Cart", {
       headers:{"Content-Type": "application/json",
           authorization: `Bearer ${token}`}
       });
@@ -198,8 +198,8 @@ async function quantity() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  include("../Header/Header.html", "header");
-  include("../Footer/Footer.html", "footer");
+  include("/User-Index/Header/Header.html", "header");
+  include("/User-Index/Footer/Footer.html", "footer");
   fetchPage(pageId);
   fetchCategory();
   fetchProduct();

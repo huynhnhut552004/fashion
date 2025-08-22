@@ -1,7 +1,7 @@
-const API= "https://fashion-imn4.onrender.com/Question";
+const API= "https://fashion-bsqk.onrender.com/Question";
 async function Checkadmin() {
     const token= localStorage.getItem("token");
-    const res= await fetch("https://fashion-imn4.onrender.com/admin",{
+    const res= await fetch("https://fashion-bsqk.onrender.com/admin",{
         headers: {authorization:`Bearer ${token}`},
     });
     if(!res.ok){
