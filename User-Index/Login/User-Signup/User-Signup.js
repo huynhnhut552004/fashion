@@ -13,7 +13,7 @@ document.getElementById("SignupFrom").addEventListener("submit", async (e) => {
     return;
   }
   try {
-    const res = await fetch("http://localhost:3000/Login/signup", {
+    const res = await fetch("https://fashion-bsqk.onrender.com/Login/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password, firstName, lastName }),

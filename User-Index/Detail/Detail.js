@@ -23,7 +23,7 @@ if (elementId==="footer"){
 }
 }
 
-const API = "https://fashion-imn4.onrender.com/Page";
+const API = "https://fashion-bsqk.onrender.com/Page";
 const headerId = "68932692d62cb86cdd957f92";
 
 async function fetchHeaderData() {
@@ -56,7 +56,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
 
 async function fetchProduct(){
-  fetch(`https://fashion-imn4.onrender.com/Product/${id}`)
+  fetch(`https://fashion-bsqk.onrender.com/Product/${id}`)
     .then(res => res.json())
     .then(data => {
        document.getElementById("Img").innerHTML=`<img src="${data.image}" alt="Img">`
@@ -80,7 +80,7 @@ document.getElementById("Buy").addEventListener("click", async () => {
     warning.style.display = "flex";
     return;
   }else{
-    const res= await fetch("https://fashion-imn4.onrender.com/usertoken", {
+    const res= await fetch("https://fashion-bsqk.onrender.com/usertoken", {
       headers: {authorization:`Bearer ${token}`},
     });
     
@@ -89,7 +89,7 @@ document.getElementById("Buy").addEventListener("click", async () => {
       return;
     } else {
       warning.style.display = "none";
-      await fetch(`https://fashion-imn4.onrender.com/Cart/add/${id}`, {
+      await fetch(`https://fashion-bsqk.onrender.com/Cart/add/${id}`, {
         method: "POST",
         headers: {authorization: `Bearer ${token}`}
       })
@@ -118,8 +118,8 @@ async function quantity() {
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{
-  include("../Header/Header.html", "header");
-  include("../Footer/Footer.html", "footer");
+  include("/User-Index/Header/Header.html", "header");
+  include("/User-Index/Footer/Footer.html", "footer");
   fetchProduct();
   quantity();
 })

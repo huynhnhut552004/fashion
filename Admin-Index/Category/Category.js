@@ -1,7 +1,7 @@
-API= "https://fashion-imn4.onrender.com/Category";
+API= "https://fashion-bsqk.onrender.com/Category";
 async function Checkadmin() {
     const token= localStorage.getItem("token");
-    const res= await fetch("https://fashion-imn4.onrender.com/admin",{
+    const res= await fetch("https://fashion-bsqk.onrender.com/admin",{
         headers: {authorization:`Bearer ${token}`},
     });
     if(!res.ok){ 

@@ -1,6 +1,6 @@
  async function Checkadmin() {
     const token= localStorage.getItem("token");
-    const res= await fetch("https://fashion-imn4.onrender.com/admin",{
+    const res= await fetch("https://fashion-bsqk.onrender.com/admin",{
         headers: {authorization:`Bearer ${token}`},
     });
     if(!res.ok){
@@ -13,7 +13,7 @@
 } 
 
 const pageId= "689326e405f2a44685180a0f";
-const API = "https://fashion-imn4.onrender.com/Page";
+const API = "https://fashion-bsqk.onrender.com/Page";
 
 async function fetchPage(id) {
     try{
