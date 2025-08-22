@@ -2,6 +2,8 @@ const multer = require('multer');
 const path = require('path');
 const express= require("express");
 const cors = require('cors');
+const fs = require("fs");
+const mime = require("mime");
 const ConnectDB= require("./Config/db");
 const authadminRoute= require("./Route/authadminRoute");
 const authuserRoute= require("./Route/authuserRoute");
@@ -21,7 +23,7 @@ const app= express();
 app.use(cors());
 app.use(express.json());
 ConnectDB();
-
+app.use(express.static(path.join(__dirname, '../User-Index')));
 app.use("/Page", pageRoute);
 app.use("/Login-Admin", authadminRoute); 
 app.use("/Login", authuserRoute);
@@ -70,7 +72,6 @@ app.delete('/deleteProductImage/:filename', (req, res) => {
         res.send("Image deleted.");
     });
 });
-const fs = require("fs");
 app.use('/Img', express.static(path.join(__dirname, 'Img')));
 
 const storagePage = multer.diskStorage({
@@ -146,4 +147,4 @@ app.delete('/deletePageVideo/:filename', (req, res) => {
 });
 app.use('/User-Index/Video', express.static(path.join(__dirname, '../User-Index/Video')));
 const PORT= process.env.PORT||3000;
-app.listen(PORT, '0.0.0.0', ()=>console.log(`Server đang chạy tại http://localhost:${PORT}`));
+app.listen(PORT, ()=>console.log(`Server đang chạy tại http://localhost:${PORT}`));
