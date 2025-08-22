@@ -23,7 +23,7 @@ if (elementId==="footer"){
 }
 }
 
-const API = "http://localhost:3000/Page";
+const API = "https://fashion-imn4.onrender.com/Page";
 const headerId = "68932692d62cb86cdd957f92";
 
 async function fetchHeaderData() {
@@ -145,7 +145,7 @@ document.addEventListener('dblclick', async (e) => {
 
 async function Checkadmin() {
     const token= localStorage.getItem("token");
-    const res= await fetch("http://localhost:3000/admin",{
+    const res= await fetch("https://fashion-imn4.onrender.com/admin",{
         headers: {authorization:`Bearer ${token}`},
     });
     if(!res.ok){
@@ -246,11 +246,11 @@ document.addEventListener('dblclick', async (e) => {
             formData.append('video', file);
 
             try {
-                await fetch(`http://localhost:3000/deletePageVideo/${oldFilename}`, {
+                await fetch(`https://fashion-imn4.onrender.com/deletePageVideo/${oldFilename}`, {
                     method: 'DELETE'
                 });
 
-                const res = await fetch('http://localhost:3000/videoPage', {
+                const res = await fetch('https://fashion-imn4.onrender.com/videoPage', {
                     method: 'POST',
                     body: formData
                 });

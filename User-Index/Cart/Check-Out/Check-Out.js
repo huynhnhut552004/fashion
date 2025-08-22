@@ -101,7 +101,7 @@ function editPayment(){
     })
 }
 
-const API= "http://localhost:3000/Page";
+const API= "https://fashion-imn4.onrender.com/Page";
 const pageId="689326c62b865f43c08fdb73";
 
 async function  fetchPage(id){
@@ -119,7 +119,7 @@ async function  fetchPage(id){
 
 async function fetchProduct() {
     const token= localStorage.getItem("token");
-    const res= await fetch("http://localhost:3000/Cart",{
+    const res= await fetch("https://fashion-imn4.onrender.com/Cart",{
         headers:{"Content-Type":"application/json",
             authorization:`Bearer ${token}`
         }
@@ -163,7 +163,7 @@ document.getElementById("Complete").addEventListener("click", async () => {
     const userId = payload.userId;
     console.log("User ID:", userId);
 
-    const res = await fetch("http://localhost:3000/Cart", {
+    const res = await fetch("https://fashion-imn4.onrender.com/Cart", {
         headers: {
             "Content-Type": "application/json",
             authorization: `Bearer ${token}`
@@ -177,7 +177,7 @@ document.getElementById("Complete").addEventListener("click", async () => {
         quantity: item.quantity
     }));
     const subtotal= data.total;
-    await fetch("http://localhost:3000/Order", {
+    await fetch("https://fashion-imn4.onrender.com/Order", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -190,7 +190,7 @@ document.getElementById("Complete").addEventListener("click", async () => {
             subtotal: subtotal
         })
     });
-    await fetch("http://localhost:3000/Cart/clear", {
+    await fetch("https://fashion-imn4.onrender.com/Cart/clear", {
         method:"DELETE",
         headers:{"Content-Type":"application/json",
             authorization:`Bearer ${token}`

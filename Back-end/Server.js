@@ -55,7 +55,7 @@ app.post('/imgProduct', imgProduct.single('image'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No file uploaded.');
     }
-   res.json({ imageUrl: `http://localhost:3000/Img/${req.file.filename}` });
+   res.json({ imageUrl: `https://fashion-imn4.onrender.com/Img/${req.file.filename}` });
 });
 app.delete('/deleteProductImage/:filename', (req, res) => {
     const filePath = path.join(__dirname, 'Img', req.params.filename);
@@ -83,7 +83,7 @@ app.post('/imgPage', imgPage.single('image'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No file uploaded.');
     }
-   res.json({ imageUrl: `http://localhost:3000/User-Index/Img/${req.file.filename}` });
+   res.json({ imageUrl: `https://fashion-imn4.onrender.com/User-Index/Img/${req.file.filename}` });
 });
 app.delete('/deletePageImage/:filename', (req, res) => {
     const filePath = path.join(__dirname, '../User-Index/Img', req.params.filename);
@@ -129,7 +129,7 @@ app.post('/videoPage', uploadVideo.single('video'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No video uploaded.');
     }
-    res.json({ videoUrl: `http://localhost:3000/User-Index/Video/${req.file.filename}` });
+    res.json({ videoUrl: `https://fashion-imn4.onrender.com/User-Index/Video/${req.file.filename}` });
 });
 app.delete('/deletePageVideo/:filename', (req, res) => {
     const filePath = path.join(__dirname, '../User-Index/Video', req.params.filename);

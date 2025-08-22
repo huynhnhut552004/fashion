@@ -13,7 +13,7 @@ document.getElementById("User").addEventListener("submit", async(e)=>{
     e.preventDefault();
     const username= document.getElementById("Email").value;
     const password= document.getElementById("Password").value;
-    const res= await fetch("http://localhost:3000/Login/login",{
+    const res= await fetch("https://fashion-imn4.onrender.com/Login/login",{
         method:"POST",
         headers:{"Content-Type": "application/json"},
         body: JSON.stringify({username, password}),

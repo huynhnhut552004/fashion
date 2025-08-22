@@ -11,7 +11,7 @@ async function setupEventListeners() {
         const changePasswordSection = document.querySelector(".Change-Password");
 
         try {
-            const res = await fetch("http://localhost:3000/Forget", {
+            const res = await fetch("https://fashion-imn4.onrender.com/Forget", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username }),
@@ -75,7 +75,7 @@ async function setupEventListeners() {
             return;
         }
         try {
-            const res = await fetch(`http://localhost:3000/Forget/${userId}`, {
+            const res = await fetch(`https://fashion-imn4.onrender.com/Forget/${userId}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ password }),
