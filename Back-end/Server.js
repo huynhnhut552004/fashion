@@ -1,31 +1,41 @@
 const multer = require('multer');
 const path = require('path');
-const express= require("express");
+const express = require("express");
 const cors = require('cors');
 const fs = require("fs");
 const mime = require("mime");
-const ConnectDB= require("./Config/db");
-const authadminRoute= require("./Route/authadminRoute");
-const authuserRoute= require("./Route/authuserRoute");
-const categoryRoute= require("./Route/categoryRoute");
-const contentRoute= require("./Route/contentRoute");
-const cartRoute= require("./Route/cartRoute");
-const orderRoute= require("./Route/orderRoute");
-const productRoute= require("./Route/productRoute");
-const pageRoute= require("./Route/pageRoute");
-const userRoute= require("./Route/userRoute");
-const voucherRoute= require("./Route/voucherRoute"); 
-const forgetRoute= require("./Route/forgetRoute");
-const questionRoute= require("./Route/questionRoute");
-const {authMiddleware, requireAdmin}= require("./Middleware/authMiddleware");
+const ConnectDB = require("./Config/db");
+const authadminRoute = require("./Route/authadminRoute");
+const authuserRoute = require("./Route/authuserRoute");
+const categoryRoute = require("./Route/categoryRoute");
+const contentRoute = require("./Route/contentRoute");
+const cartRoute = require("./Route/cartRoute");
+const orderRoute = require("./Route/orderRoute");
+const productRoute = require("./Route/productRoute");
+const pageRoute = require("./Route/pageRoute");
+const userRoute = require("./Route/userRoute");
+const voucherRoute = require("./Route/voucherRoute");
+const forgetRoute = require("./Route/forgetRoute");
+const questionRoute = require("./Route/questionRoute");
+const { authMiddleware, requireAdmin } = require("./Middleware/authMiddleware");
 require("dotenv").config();
-const app= express();
+
+const app = express();
 app.use(cors());
 app.use(express.json());
 ConnectDB();
-app.use(express.static(path.join(__dirname, '../User-Index')));
+
+// Phục vụ toàn bộ các file tĩnh từ thư mục gốc của dự án
+app.use(express.static(path.join(__dirname, '..')));
+
+// Định nghĩa route chính cho trang chủ
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../User-Index/Main/Main.html'));
+});
+
+// Các route khác của API
 app.use("/Page", pageRoute);
-app.use("/Login-Admin", authadminRoute); 
+app.use("/Login-Admin", authadminRoute);
 app.use("/Login", authuserRoute);
 app.use("/Category", categoryRoute);
 app.use("/Content", contentRoute);
@@ -36,20 +46,18 @@ app.use("/User", userRoute);
 app.use("/Voucher", voucherRoute);
 app.use("/Forget", forgetRoute);
 app.use("/Question", questionRoute);
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../User-Index/Main/Main.html'));
-});
-app.get("/admin",authMiddleware,requireAdmin,(req,res)=>{
-    res.json({secret:"Dữ liệu chỉ dành cho admin!"});
+
+app.get("/admin", authMiddleware, requireAdmin, (req, res) => {
+    res.json({ secret: "Dữ liệu chỉ dành cho admin!" });
 });
 app.get("/usertoken", authMiddleware, (req, res) => {
-  res.json({ user: req.user });
+    res.json({ user: req.user });
 });
 
-
+// Các route xử lý file
 const storageProduct = multer.diskStorage({
     destination: function (req, file, cb) {
-         cb(null, path.join(__dirname, 'Img'));
+        cb(null, path.join(__dirname, 'Img'));
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
@@ -60,8 +68,9 @@ app.post('/imgProduct', imgProduct.single('image'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No file uploaded.');
     }
-   res.json({ imageUrl: `https://fashion-imn4.onrender.com/Img/${req.file.filename}` });
+    res.json({ imageUrl: `https://fashion-imn4.onrender.com/Img/${req.file.filename}` });
 });
+
 app.delete('/deleteProductImage/:filename', (req, res) => {
     const filePath = path.join(__dirname, 'Img', req.params.filename);
     fs.unlink(filePath, (err) => {
@@ -72,7 +81,6 @@ app.delete('/deleteProductImage/:filename', (req, res) => {
         res.send("Image deleted.");
     });
 });
-app.use('/Img', express.static(path.join(__dirname, 'Img')));
 
 const storagePage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -87,8 +95,9 @@ app.post('/imgPage', imgPage.single('image'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No file uploaded.');
     }
-   res.json({ imageUrl: `https://fashion-imn4.onrender.com/User-Index/Img/${req.file.filename}` });
+    res.json({ imageUrl: `https://fashion-imn4.onrender.com/User-Index/Img/${req.file.filename}` });
 });
+
 app.delete('/deletePageImage/:filename', (req, res) => {
     const filePath = path.join(__dirname, '../User-Index/Img', req.params.filename);
     fs.unlink(filePath, (err) => {
@@ -99,8 +108,7 @@ app.delete('/deletePageImage/:filename', (req, res) => {
         res.send("Image deleted.");
     });
 });
-app.use('/User-Index/Img', express.static(path.join(__dirname, '../User-Index/Img')));
- 
+
 const storageVideo = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, path.join(__dirname, '../User-Index/Video'));
@@ -145,6 +153,6 @@ app.delete('/deletePageVideo/:filename', (req, res) => {
         res.send("Video deleted.");
     });
 });
-app.use('/User-Index/Video', express.static(path.join(__dirname, '../User-Index/Video')));
-const PORT= process.env.PORT||3000;
-app.listen(PORT, ()=>console.log(`Server đang chạy tại http://localhost:${PORT}`));
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server đang chạy tại http://localhost:${PORT}`));
