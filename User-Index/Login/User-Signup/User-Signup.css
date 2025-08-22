@@ -1,0 +1,296 @@
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url('/User-Index/Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    background-color: black;
+    font-size: 20px;
+}
+
+div.Flex-Container-1{
+    display: flex;
+    padding-top: 4%;
+    padding-left: 4%;
+    gap: 2%;
+}
+
+div.Flex-Container-1 div.Back a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 15px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Flex-Container-1 div.Back a:hover{
+    background-color: white;
+    color: black;
+}
+
+div.Flex-Container-1 div.Title{
+    margin-top: -5%;
+    font-size: 2.5em;
+    font-family: 'ArchivoBlack';
+    color: white;
+}
+
+div.Error{
+    display: none;
+    background-color: #ff8791;
+    width: 40%;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 30%;
+    align-items: center;
+    margin-top: -4%;
+}
+
+div.Error div.Icon{
+    width: 20%;
+    padding-left: 1%;
+}
+
+div.Error div.Icon img{
+    width: 20%;
+    height: auto;
+}
+
+div.Error div.Description-Error{
+    flex: 1;
+    font-family: Courier;
+    color: #d93025;
+    padding-right: 1%;
+}
+
+div.Error-1{
+    display: none;
+    background-color: #ff8791;
+    width: 40%;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 30%;
+    align-items: center;
+    margin-top: -4%;
+}
+
+div.Error-1 div.Icon{
+    width: 20%;
+    padding-left: 1%;
+}
+
+div.Error-1 div.Icon img{
+    width: 20%;
+    height: auto;
+}
+
+div.Error-1 div.Description-Error{
+    flex: 1;
+    font-family: Courier;
+    color: #d93025;
+    padding-right: 1%;
+}
+
+div.Submit{
+    margin-left: 30%;
+    background-color: #F5F5F3;
+    width: 40%;
+    height: 470px;
+    border-radius: 10px;
+}
+
+div.Submit div.Grid-Name{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+    padding-top: 3%;
+    padding-left: 15%;
+}
+
+div.Submit div.Grid-Name div.Title-1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-family: Courier;
+}
+
+div.Submit div.Grid-Name div.Title-2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-family: Courier;
+}
+
+div.Submit div.Grid-Name div.First-Name{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-top: -5%;
+}
+
+div.Submit div.Grid-Name div.First-Name input{
+    width: 60%;
+    height: 40px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Grid-Name div.Last-Name{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-top: -5%;
+}
+
+div.Submit div.Grid-Name div.Last-Name input{
+    width: 60%;
+    height: 40px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Title-3{
+    font-family: Courier;
+    padding-left: 20%;
+    margin-top: -5%;
+}
+
+div.Submit div.Email{
+    padding-top: 3%;
+    text-align: center;
+    margin-top: -5%;
+}
+
+div.Submit div.Email input{
+    width: 60%;
+    height: 40px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Title-4{
+    font-family: Courier;
+    padding-left: 20%;
+}
+
+div.Submit div.Password{
+    padding-top: 3%;
+    text-align: center;
+    margin-top: -5%;
+}
+
+div.Submit div.Password input{
+    width: 60%;
+    height: 40px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Confirm-Password{
+    padding-top: 3%;
+    text-align: center;
+    margin-top: -2%;
+}
+
+div.Submit div.Confirm-Password input{
+    width: 60%;
+    height: 40px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Signup{
+    padding-left: 19.5%;
+    margin-top: 3%;
+}
+
+div.Submit div.Signup button{
+    font-family: Courier;
+    background: none;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Signup button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 480px) {
+
+body{
+    font-size: 12px;
+}
+
+div.Flex-Container-1{
+    padding-top: 6%;
+    display: block;
+}
+
+div.Flex-Container-1 div.Title{
+    font-size: 2em;
+    margin-top: 1%;
+    text-align: center;
+}
+
+div.Error{
+    width: 80%;
+    margin-left: 10%;
+}
+
+div.Error div.Icon{
+    width: 15%;
+    padding-left: 2%;
+}
+
+div.Error div.Icon img{
+    width: 50%;
+}
+
+div.Submit{
+    margin-left: 10%;
+    width: 80%;
+    height: 370px;
+}
+
+div.Submit div.Grid-Name{
+    padding-left: 10%;
+}
+
+div.Submit div.Title-3{
+    margin-top: 2%;
+}
+
+div.Submit div.Signup{
+    padding-left: 18.5%;
+    margin-top: 3%;
+}
+
+div.Submit div.Signup button{
+   color: black;
+}
+}
+
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="User-Login.css">
+        <title>Fashion orientation</title>
+    </head>
+    <body>
+        <div class="Flex-Container-1">
+            <div class="Back" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                <a href="/User-Index/Main/Main.html">← Back</a>
+            </div>
+            <div class="Title" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                <h2>WELLCOME</h2>
+            </div>
+        </div>
+        <div class="Ban"  data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+            <div class="Icon">
+                <img src="/User-Index/icon/Error.png" alt="Error">
+            </div>
+            <div class="Description-Ban">
+                <p>Your account has been banned!</p>
+            </div>
+        </div>
+        <div class="Error" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+            <div class="Icon">
+                <img src="/User-Index/icon/Error.png" alt="Error">
+            </div>
+            <div class="Description-Error">
+                <p>Incorrect account or password!</p>
+            </div>
+        </div>
+        <div class="Submit" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+            <form id="User">
+                <div class="Title-1" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <label>Email</label>
+                </div>
+                <div class="Email" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <input id="Email" type="email" placeholder="Your Email">
+                </div>
+                <div class="Title-2" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <label class="Title-2">Password</label>
+                </div>
+                <div class="Password" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <input id="Password" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="Flex-Container-2">
+                    <div class="Google" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                        <a href=""><img src="/User-Index/icon/Google.png" alt="Facebook"></a>
+                    </div>
+                    <div class="Facebook" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                        <a href=""><img src="/User-Index/icon/Facebook.png" alt="Facebook"></a>
+                    </div>
+                    <div class="Button" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                        <button id="Login" type="submit">Login</button>
+                    </div>
+                </div>
+            </form>
+            <div class="Forget" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                <a href="../Foget/Forget-Password.html">Foget password?</a>
+            </div>
+            <div class="Create" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                <a href="../User-Signup/User-Signup.html">Create account.</a>
+            </div>
+        </div>
+        <script src="User-Login.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init(); 
+        </script>
+    </body>
+</html>

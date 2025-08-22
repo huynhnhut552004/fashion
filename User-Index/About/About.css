@@ -1,0 +1,378 @@
+
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url('../Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    overflow-x: hidden;
+    margin: 0;
+    background-color: #1C1C1D;
+    font-size: 16px;
+}
+
+section.Area-1{
+    padding-top: 6%;
+    position: relative;
+}
+
+section.Area-1 div.Brand-Name{
+    position: absolute;
+    font-family: 'ArchivoBlack';
+    font-size: 18.5em;
+    color:#F5F5F3;
+    top: 30%;
+    bottom: 20%;
+    left: 1%;
+    right: 1%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+section.Area-1 div.Img{
+    text-align: center;
+}
+
+section.Area-1 div.Img img{
+    width: 100%;
+}
+
+section.Area-2{
+    border-bottom: 1px solid white;
+    padding-top: 4%;
+}
+
+section.Area-2 div.Title{
+    color: white;
+    font-family: 'ArchivoBlack';
+    font-size: 2.2em;
+    padding-left: 4%;
+    margin-top: -3%;
+}
+
+section.Area-2 div.Content{
+    color: white;
+    font-family: Courier;
+    padding-left: 4%;
+    padding-right: 25%;
+}
+
+section.Area-2 div.Content-1{
+    color: white;
+    font-family: Courier;
+    padding-left: 8%;
+    padding-right: 32%;
+    padding-top: 2%;
+}
+
+section.Area-2 div.Content-2{
+     color: white;
+    font-family: Courier;
+    padding-left: 8%;
+    padding-right: 32%;
+    padding-top: 2%;
+}
+
+section.Area-2 div.Content-3{
+     color: white;
+    font-family: Courier;
+    padding-left: 8%;
+    padding-right: 32%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+section.Area-3{
+    border-bottom: 1px solid white;
+    padding-top: 4%;
+}
+
+section.Area-3 div.Title{
+    font-size: 2.2em;
+    font-family: 'ArchivoBlack';
+    color: white;
+    padding-right: 4%;
+    text-align: right;
+    margin-top: -3%;
+}
+
+section.Area-3 div.Content-1{
+    color: white;
+    font-family: Courier;
+    padding-left: 26%;
+    padding-right: 4%;
+}
+
+section.Area-3 div.Content-2{
+    color: white;
+    font-family: Courier;
+    padding-left: 26%;
+    padding-right: 4%;
+    padding-top: 2%;
+}
+
+section.Area-3 div.Content-3{
+    color: white;
+    font-family: Courier;
+    padding-left: 26%;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+section.Area-4{
+    border-bottom: 1px solid white;
+    padding-top: 4%;
+}
+
+section.Area-4 div.Title{
+    font-size: 2.2em;
+    font-family: 'ArchivoBlack';
+    color: white;
+    padding-left: 4%;
+    margin-top: -3%;
+}
+
+section.Area-4 div.Content-1{
+    color: white;
+    font-family: Courier;
+    padding-left: 4%;
+    padding-right: 26%;
+}
+
+section.Area-4 div.Content-2{
+    color: white;
+    font-family: Courier;
+    padding-left: 4%;
+    padding-right: 26%;
+    padding-bottom: 4%;
+    padding-top: 2%;
+}
+
+section.Area-5{
+    border-bottom: 1px solid white;
+    padding-top: 4%;
+}
+
+section.Area-5 div.Title{
+    color: white;
+    font-family: 'ArchivoBlack';
+    font-size: 2.2em;
+    padding-right: 4%;
+    text-align: right;
+    margin-top: -3%;
+}
+
+section.Area-5 div.Description-1{
+    color: white;
+    padding-right: 5%;
+    text-align: right;
+    font-family: Courier;
+    padding-top: 2%;
+    margin-top: -3%;
+}
+
+section.Area-5 div.Email{
+    text-align: right;
+    padding-right: 4%;
+}
+
+
+section.Area-5 div.Email input{
+    width: 31.2%;
+    height: 40px;
+    font-family: Courier;
+}
+
+section.Area-5 div.Description-2{
+    color: white;
+    padding-right: 5%;
+    text-align: right;
+    font-family: Courier;
+    padding-top: 2%;
+}
+
+section.Area-5 div.Message{
+    text-align: right;
+    padding-right: 4%;
+}
+
+
+section.Area-5 div.Message textarea{
+    font-family: Courier;
+}
+
+section.Area-5 div.Submit{
+    text-align: right;
+    padding-right: 4%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+section.Area-5 div.Submit button{
+    background: none;
+    font-family: Courier;
+    color: white;
+    font-size: 1.3em;
+    border: 1px solid white;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+section.Area-5 div.Submit button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    
+body{
+    font-size: 10px;
+}
+
+h3{
+    font-size: 0.8em;
+}
+
+section.Area-1{
+    padding-top: 11%;
+}
+
+section.Area-1 div.Brand-Name{
+    font-size: 7em;
+    top: 40%;
+    bottom: 28%;
+    left: 10%;
+    right: 10%;
+}
+
+section.Area-2{
+    padding-top: 1%;
+}
+
+section.Area-2 div.Title{
+    padding-left: 1%;
+}
+
+section.Area-2 div.Content{
+    padding-left: 1%;
+    padding-right: 15%;
+}
+
+section.Area-2 div.Content-1{
+    padding-left: 5%;
+    padding-right: 15%;
+    padding-top: 1%;
+}
+
+section.Area-2 div.Content-2{
+    padding-left: 5%;
+    padding-right: 15%;
+    padding-top: 1%;
+}
+
+section.Area-2 div.Content-3{
+    padding-left: 5%;
+    padding-right: 15%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+section.Area-3{
+    padding-top: 1%;
+}
+
+section.Area-3 div.Title{
+    padding-right: 1%;
+}
+
+section.Area-3 div.Content-1{
+    padding-left: 15%;
+    padding-right: 1%;
+}
+
+section.Area-3 div.Content-2{
+    padding-left: 15%;
+    padding-right: 1%;
+    padding-top: 1%;
+}
+
+section.Area-3 div.Content-3{
+    padding-left: 15%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+section.Area-4{
+    padding-top: 1%;
+}
+
+section.Area-4 div.Title{
+    padding-left: 1%;
+}
+
+section.Area-4 div.Content-1{
+    padding-left: 1%;
+    padding-right: 15%;
+}
+
+section.Area-4 div.Content-2{
+    padding-left: 1%;
+    padding-right: 15%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+section.Area-5{
+    padding-top: 1%;
+}
+
+section.Area-5 div.Title{
+    padding-right: 1%;
+}
+
+section.Area-5 div.Description-1{
+    padding-right: 1%;
+    padding-top: 1%;
+}
+
+section.Area-5 div.Email{
+    padding-right: 1%;
+}
+
+
+section.Area-5 div.Email input{
+    width: 85.5%;
+    height: 40px;
+    font-family: Courier;
+}
+
+section.Area-5 div.Description-2{
+    padding-right: 1%;
+    padding-top: 1%;
+}
+
+section.Area-5 div.Message{
+    padding-right: 1%;
+}
+
+section.Area-5 div.Message textarea{
+    width: 85.5%;
+    height: 80px;
+    font-family: Courier;
+}
+
+section.Area-5 div.Submit{
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+section.Area-5 div.Submit button{
+    font-size: 1.5em;
+}
+}

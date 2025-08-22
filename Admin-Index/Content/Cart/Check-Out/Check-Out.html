@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Check-Out.css">
+        <title>Admin-Page</title>
+    </head>
+    <body>
+        <section class="Header" data-Header-Checkout="Header-Checkout">
+        </section>
+        <div class="Next">
+            <a href="/Admin-Index/Content/Cart/Success/Success.html">Next</a>
+        </div>
+        <main>
+            <section class="Area-1">
+                <div class="Area-1">
+                    <div class="Flex-Container">
+                        <div class="Title">
+                            <h2>Your Imformation</h2>
+                        </div>
+                        <div class="Edit">
+                            <a id="Edit-1">EDIT</a>
+                        </div>
+                    </div>
+                    <div class="Imformation">
+                        <div class="Title-1">
+                            <h3>PHONE NUMBER</h3>
+                        </div>
+                        <div class="Phone-Number">
+                            <input id="Phone-Number" type="number" placeholder="Phone Number">
+                        </div>
+                        <div class="Title-2">
+                            <h3>YOUR ADRESS</h3>
+                        </div>
+                        <div class="Address">
+                            <input id="Address" type="text" placeholder="Your Address">
+                        </div>
+                        <div class="Title-3">
+                            <h3>DETAILED ADDRESS</h3>
+                        </div>
+                        <div class="Detailed">
+                            <input id="Detailed" type="text" placeholder="Detailed Address">
+                        </div>
+                        <div class="Error-1">
+                            <div class="Error-Descripton">
+                                <p>Please enter complete information</p>
+                            </div>
+                            <div class="Error-Icon">
+                                <img src="/User-Index/icon/Warning.png" alt="Img">
+                            </div>
+                        </div>
+                        <div class="Continue">
+                            <button id="Continue-1">CONTINUE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Area-2">
+                    <div class="Flex-Container-1">
+                        <div class="Title">
+                            <h2>Payment</h2>
+                        </div>
+                        <div class="Edit">
+                            <a id="Edit-2">EDIT</a>
+                        </div>
+                    </div>
+                    <div class="Payment">
+                        <div class="Security">
+                            <h3>Transactions are secure and encrypted.</h3>
+                        </div>
+                        <div class="Title-1">
+                            <h3>PAYMENT METHOD</h3>
+                        </div>
+                        <div class="Method">
+                            <p>Visa</p>
+                        </div>
+                        <div class="Title-2">
+                            <h3>CARD NUMBER</h3>
+                        </div>
+                        <div class="Card-Number">
+                            <input id="Card-Number" type="number" placeholder="Card Number">
+                        </div>
+                        <div class="Flex-Container-2">
+                            <div class="Title-3">
+                                <h3>EXPIRATION DATE</h3>
+                            </div>
+                            <div class="Title-4">
+                                <h3>SECURITY CODE</h3>
+                            </div>
+                        </div>
+                        <div class="Flex-Container-3">
+                            <div class="Month">
+                                <input id="Month" type="number" min="1" max="12" placeholder="--">
+                            </div>
+                            <div class="Year">
+                                <input id="Year" type="number" placeholder="----">
+                            </div>
+                            <div class="Code">
+                                <input id="Security-Code" class="Numer">
+                            </div>
+                        </div>
+                        <div class="Flex-Container-4">
+                            <div class="Title-5">
+                                <h3>FIRST NAME</h3>
+                            </div>
+                            <div class="Title-6">
+                                <h3>LAST NAME</h3>
+                            </div>
+                            <div class="Title-7">
+                                <h3>CITY</h3>
+                            </div>
+                        </div>
+                        <div class="Flex-Container-5">
+                            <div class="First">
+                                <input id="First" type="text" placeholder="First Name">
+                            </div>
+                            <div class="Last">
+                                <input id="Last" type="text" placeholder="Last Name">
+                            </div>
+                            <div class="City">
+                                <input id="City" type="text" placeholder="City">
+                            </div>
+                        </div>
+                        <div class="Flex-Container-6">
+                            <div class="Title-7">
+                                <h3>BILLING ADDRESS</h3>
+                            </div>
+                            <div class="Title-8">
+                                <h3>POSTAL CODE</h3>
+                            </div>
+                        </div>
+                        <div class="Flex-Container-7">
+                            <div class="Billing-Address">
+                                <input id="Billing-Address" type="text" placeholder="Address">
+                            </div>
+                            <div class="Posta-Code">
+                                <input id="Posta-Code" type="number" placeholder="Postal Code">
+                            </div>
+                        </div>
+                        <div class="Flex-Container-8">
+                            <div class="Title-9">
+                                <h3>NATION</h3>
+                            </div>
+                            <div class="Title-10">
+                                <h3>PHONE NUMBER</h3>
+                            </div>
+                        </div>
+                        <div class="Flex-Container-9">
+                            <div class="Nation">
+                                <input id="Nation" type="text" placeholder="Nation">
+                            </div>
+                            <div class="Phone-Number">
+                                <input id="Phone-Number-Payment" type="number" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="Error-2">
+                            <div class="Error-Descripton">
+                                <p>Please enter complete information</p>
+                            </div>
+                            <div class="Error-Icon">
+                                <img src="/User-Index/icon/Warning.png" alt="Img">
+                            </div>
+                        </div>
+                        <div class="Continue">
+                            <button id="Continue-2">CONTINUE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Complete">
+                        <button id="Complete">PAYMENT CONFIRMATION</button>
+                    </div>
+            </section>
+            <section class="Area-2">
+                <div class="Background">
+                    <div class="Product" id="Product"></div>
+                </div>
+            </section>
+        </main>
+        <script src="Check-Out.js"></script>
+    </body>
+</html>

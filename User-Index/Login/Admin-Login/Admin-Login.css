@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url('/User-Index/Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    background-color: black;
+    font-size: 20px;
+}
+
+div.Flex-Container-1{
+    display: flex;
+    padding-top: 4%;
+    padding-left: 4%;
+    gap: 2%;
+}
+
+div.Back a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 15px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Back a:hover{
+    background-color: white;
+    color: black;
+}
+
+div.Title{
+    margin-top: -5%;
+    flex: 1;
+    font-size: 4em;
+    font-family: 'ArchivoBlack';
+    color: white;
+}
+
+div.Error{
+    display: flex;
+    background-color: #ff8791;
+    width: 40%;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 30%;
+    align-items: center;
+    margin-top: -8%;
+    visibility: hidden;
+}
+
+div.Error div.Icon{
+    width: 35%;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+div.Error div.Icon img{
+    width: 20%;
+    height: auto;
+}
+
+div.Error div.Description-Error{
+    flex: 1;
+    font-family: Courier;
+    color: #d93025;
+    padding-right: 1%;
+}
+
+div.Submit{
+    margin-left: 30%;
+    background-color: #F5F5F3;
+    width: 40%;
+    height: 330px;
+    border-radius: 10px;
+    
+}
+
+div.Submit div.Title-1{
+    font-family: Courier;
+    padding-top: 6%;
+    padding-left: 20%;
+}
+
+div.Submit div.Admin-Name{
+    padding-top: 3%;
+    text-align: center;
+    margin-top: -2%;
+}
+
+div.Submit div.Admin-Name input{
+    width: 60%;
+    height: 40px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Title-2{
+    font-family: Courier;
+    padding-top: 3%;
+    padding-left: 20%;
+}
+
+div.Submit div.Password{
+    padding-top: 3%;
+    text-align: center;
+    margin-top: -2%;
+}
+
+div.Submit div.Password input{
+    width: 60%;
+    height: 40px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Button{
+    padding-left: 19.5%;
+    margin-top: 3%;
+}
+
+div.Submit div.Button button{
+    font-family: Courier;
+    background: none;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 15px 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Button button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 480px) {
+body{
+    font-size: 12px;
+}
+
+div.Flex-Container-1{
+    display: block;
+}
+
+div.Title{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 1%;
+}
+
+div.Error{
+    width: 80%;
+    margin-left: 12%;
+}
+
+div.Error div.Icon{
+    width: 24%;
+    padding-left: 2%;
+}
+
+div.Error div.Icon img{
+    width: 40%;
+}
+
+div.Submit{
+    width: 80%;
+    height: 240px;
+    margin-left: 12%;
+}
+
+div.Submit div.Button{
+    padding-left: 18.5%;
+}
+
+div.Submit div.Button button{
+   color: black;
+}
+}

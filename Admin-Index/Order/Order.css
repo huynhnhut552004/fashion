@@ -1,0 +1,104 @@
+body{
+    background-color: #F5F5F3;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: arial;
+    font-size: 16px;
+}
+
+div.Back{
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+div.Back a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #28282A;
+    padding: 15px 20px;
+}
+
+div.Flex-Container{
+    display: flex;
+    margin: 2% 4% 3% 4%;
+}
+
+div.Flex-Container div.Complete{
+    width: 70%;
+}
+
+div.Flex-Container div.Complete button{
+    cursor: pointer;
+    background-color: #28282A;
+    color: white;
+    font-weight: bold;
+    padding: 20px 25px;
+    font-size: 1.5em;
+    border: none;
+}
+
+div.Flex-Container div.Cancel{
+    flex: 1;
+}
+
+div.Flex-Container div.Cancel button{
+    cursor: pointer;
+    background-color: #28282A;
+    color: white;
+    font-weight: bold;
+    padding: 20px 40px;
+    font-size: 1.5em;
+    border: none;
+}
+
+table{
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    body{
+    font-size: 10px;
+}
+
+div.Back{
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+div.Back a{
+    padding: 10px 15px;
+}
+
+div.Flex-Container{
+    display: flex;
+    margin: 3% 1% 2% 1%;
+}
+
+div.Flex-Container div.Complete{
+    width: 40%;
+}
+
+div.Flex-Container div.Complete button{
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+div.Flex-Container div.Cancel button{
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
+span{
+    font-size: 1em;
+    margin: -6%;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 1%;
+  width: 100%;
+}
+
+
+}

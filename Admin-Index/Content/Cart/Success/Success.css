@@ -1,0 +1,100 @@
+@font-face{
+    font-family: 'ArchivoBlack';
+    src: url('/User-Index/Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    font-size: 16px;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+section.Header{
+    font-family: 'ArchivoBlack';
+    font-size: 1.5em;
+    border-bottom: 1px solid #ddd;
+    padding-left: 10%;
+    height: 70px;
+}
+
+main div.Icon{
+    text-align: center;
+    margin-top: 4%;
+}
+
+main div.Title{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'ArchivoBlack';
+}
+
+main div.Description{
+    text-align: center;
+    font-size: 1.2em;
+    font-family: arial;
+    margin-top: -1%;
+}
+
+main div.Contact{
+    text-align: center;
+    font-size: 1.2em;
+    font-family: arial;
+    margin-top: -1%;
+}
+
+main div.Contact a{
+    font-weight: bold;
+}
+
+main div.Navigation{
+    text-align: center;
+    margin-top: 4%;
+
+}
+
+main div.Navigation a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: Arial;
+    border: 1px solid black;
+    background-color: #28282A;
+    padding: 15px 25px;
+}
+
+main div.Navigation a:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 480px) {
+body{
+    font-size: 10px;
+}
+
+section.Header{
+    height: 40px;
+}
+
+main div.Icon img{
+    width: 20%;
+}
+
+main div.Title{
+    margin-top: -1%;
+}
+
+main div.Description{
+    margin-top: -2%;
+}
+
+main div.Contact{
+    margin-top: -2%;
+}
+main div.Navigation{
+    text-align: center;
+    margin-top: 7%;
+
+}
+}

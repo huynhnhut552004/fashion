@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" minimum-scale="1.0">
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="Men-Product.css">
+        <title>Fashion orientation</title>
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <section class="Area-1">
+                <div class="Brand-Name" data-Brand-Name="Brand-Name-Body" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                </div>
+                <div class="Video" data-Video-Area1="Video-Area1">
+                </div>
+                <div class="Flex-Container">
+                    <div class="Category" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                        <select id="Category">
+                            <option value="All">All</option>
+                        </select>
+                    </div>
+                    <div class="Search" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                        <input type="text" id="searchInput" placeholder="Search something...">
+                        <ul id="suggestions"></ul>
+                    </div>
+                </div>
+            </section>
+            <section class="Area-2">
+                <div class="Grid-Content" id="Area-Product">
+
+                </div>
+            </section>
+        </main>
+        <div id="footer"></div>
+        <script src="Men-Product.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init(); 
+        </script>
+    </body>
+</html>

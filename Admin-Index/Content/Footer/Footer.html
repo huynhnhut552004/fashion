@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" minimum-scale="1.0">
+        <meta charset="UTF-8">
+        <style>
+            @font-face {
+                font-family: 'ArchivoBlack';
+                src: url('/User-Index/Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+            }
+            
+            footer{
+                background-color: #1C1C1D;
+                color: white;
+                height: 620px;
+                margin: 0;
+                overflow-x: hidden;
+                overflow: hidden;
+                font-size: 16px;
+            }
+
+            footer div.Grid-Container{
+                display: grid;
+                grid-template-columns: 3.8fr 1.5fr 1fr;
+                grid-template-rows: 0.5fr 0.3fr 0.3fr 1fr;
+                padding-top: 4%;
+                padding-left: 4%;
+            }
+
+            footer div.Grid-Container div.Subscribe{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                font-family: 'ArchivoBlack';
+            }
+
+            footer div.Grid-Container div.Description{
+                grid-column: 1/2;
+                grid-row: 2/4;
+                font-family: Courier;
+            }
+
+            footer div.Grid-Container div.Site-Map{
+                grid-column: 2/3;
+                grid-row: 1/2;
+                font-family: 'ArchivoBlack';
+            }
+
+            footer div.Grid-Container div.About{
+                grid-column: 2/3;
+                grid-row: 2/3;
+                font-family: Courier;
+                font-size: 0.95em;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            footer div.Grid-Container div.About a{
+                color: white;
+            }
+            
+            footer div.Grid-Container div.Products{
+                grid-column: 2/3;
+                grid-row: 3/4;
+                font-family: Courier;
+                font-size: 0.95em;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            footer div.Grid-Container div.Products a{
+                color: white;
+            }
+
+            footer div.Grid-Container div.Conllection{
+                grid-column: 2/3;
+                grid-row: 4/5;
+                font-family: Courier;
+                font-size: 0.95em;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            footer div.Grid-Container div.Conllection a{
+                color: white;
+            }
+
+            footer div.Grid-Container div.Follow{
+                grid-column: 3/4;
+                grid-row: 1/2;
+                font-family: 'ArchivoBlack';
+            }
+
+            footer div.Grid-Container div.Social-Network-1{
+                grid-column: 3/4;
+                grid-row: 2/3;
+                font-family: Courier;
+                font-size: 0.95em;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            footer div.Grid-Container div.Social-Network-1 a{
+                color: white;
+            }
+
+            footer div.Grid-Container div.Social-Network-2{
+                grid-column: 3/4;
+                grid-row: 3/4;
+                font-family: Courier;
+                font-size: 0.95em;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            footer div.Grid-Container div.Social-Network-2 a{
+                color: white;
+            }
+
+            footer div.Grid-Container div.Social-Network-3{
+                grid-column: 3/4;
+                grid-row: 4/5;
+                font-family: Courier;
+                font-size: 0.95em;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            footer div.Grid-Container div.Social-Network-3 a{
+                color: white;
+            }
+
+            footer div.Login-Navigation{
+                padding-left: 10%;
+                padding-top: 2%;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            footer div.Login-Navigation a{
+                text-decoration: none;
+                color: white;
+                border: 1px solid white;
+                padding: 15px 20px;
+                font-family: Courier;
+            }
+
+            footer div.Login-Navigation a:hover{
+                background-color: white;
+                color: black;
+                transition: 0.3s ease;
+            }
+
+
+            footer div.Brand-Name{
+                font-family: 'ArchivoBlack';
+                font-size: 19em;
+                text-align: center;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            @media (max-width: 480px) {
+                footer{
+                    font-size: 10px;
+                    height: 290px;
+            }
+
+            footer div.Grid-Container{
+                padding-right: 4%;
+            }
+
+            footer div.Grid-Container div.Subscribe{
+                font-size: 1.5em;
+            }
+
+            footer div.Grid-Container div.Site-Map{
+                font-size: 1.5em;
+            }
+
+            footer div.Grid-Container div.Follow{
+                font-size: 1.5em;
+            }
+
+            footer div.Login-Navigation{
+                padding-left: 5%;
+                margin-top: -5%;
+            }
+            footer div.Brand-Name{
+                font-size: 7em;
+                padding-top: 10%;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <footer>
+            <div class="Grid-Container">
+                <div class="Subscribe">
+                    <p>SUBSCRIBE</p>
+                </div>
+                <div class="Description">
+                    <p>Sign up to receive news and updates.</p>
+                </div>
+                <div class="Site-Map">
+                    <p>SITEMAP</p>
+                </div>
+                <div class="About">
+                    <a href="/Admin-Index/Content/About/About.html">ABOUT</a>
+                </div>
+                <div class="Products">
+                    <a href="/Admin-Index/Content/Products/Product.html">PRODUCT</a>
+                </div>
+                <div class="Conllection">
+                    <a href="/Admin-Index/Content/Collection/Collection.html">CONLLECTION</a>
+                </div>
+                <div class="Follow">
+                    <p>FOLLOW</p>
+                </div>
+                <div class="Social-Network-1">
+                    <a href="" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+                </div>
+                <div class="Social-Network-2">
+                    <a href="" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+                </div>
+                <div class="Social-Network-3">
+                    <a href="" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+                </div>
+            </div>
+            <div class="Login-Navigation">
+                <a href="">Login →</a>
+            </div>
+            <div class="Brand-Name" data-Brand-Name-Footer="Brand-Name-Footer">
+            </div>
+        </footer>
+    </body>
+</html>

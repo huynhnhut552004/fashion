@@ -1,0 +1,359 @@
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url('../Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    background-color: #F5F5F3;
+    overflow-x: hidden;
+    margin: 0;
+    font-size: 16px;
+}
+
+
+section.Area-1{
+    border-bottom:1px solid black;
+    height: 1500px;
+}
+
+section.Area-1 div.Brand-Name{
+    text-align: center;
+    font-family: 'ArchivoBlack';
+    font-size: 18.5em;
+    color: #28282A;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+section.Area-1 div.Grid-Container{
+    display: grid;
+    grid-template-columns: 2.8fr 2.2fr;
+    grid-template-rows: 4fr 1.1fr 0.3fr;
+    padding-left: 1.5%;
+    padding-right: 3%;
+    gap: 4%;
+}
+
+section.Area-1 div.Grid-Container div.Img{
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+
+section.Area-1 div.Grid-Container div.Img img{
+    width: 100%;
+}
+
+section.Area-1 div.Grid-Container div.Title{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-family: 'ArchivoBlack';
+    font-size: 1.8em;
+    margin-top: -6%;
+}
+
+section.Area-1 div.Grid-Container div.Content{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-family: Courier;
+    
+}
+
+section.Area-1 div.Grid-Container div.About-Navigation{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+section.Area-1 div.Grid-Container div.About-Navigation a{
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    font-family: Courier;
+    padding: 15px;
+}
+
+section.Area-1 div.Grid-Container div.About-Navigation a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+section.Area-2{
+    border-bottom: 1px solid black;
+    height: 870px;
+}
+
+section.Area-2 div.Grid-Container{
+    display: grid;
+    grid-template-columns: 3fr 2.5fr;
+    grid-template-rows: 2fr 0.9fr 0.2fr;
+    padding-top: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    gap: 4%;
+}
+
+section.Area-2 div.Grid-Container div.Title{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-family: 'ArchivoBlack';
+    font-size: 1.8em;
+    margin-top: -30px;
+}
+
+section.Area-2 div.Grid-Container div.Content{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-family: Courier;
+    padding-right: 25%;
+}
+
+section.Area-2 div.Grid-Container div.Product-navigation{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+section.Area-2 div.Grid-Container div.Product-navigation a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+section.Area-2 div.Grid-Container div.Product-navigation a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+section.Area-2 div.Grid-Container div.Img{
+    grid-column: 2/3;
+    grid-row: 1/4;
+}
+
+section.Area-2 div.Grid-Container div.Img img{
+    width: 100%;
+}
+section.Area-3{
+    border-bottom: 1px solid black;
+    height: 3495px;
+}
+
+section.Area-3 div.Grid-Container{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1.4fr 0.5fr 1fr ;
+    padding-top: 5%;
+    padding-left: 4%;
+    padding-right: 4%;
+    gap: 4%;
+}
+
+section.Area-3 div.Grid-Container div.Title{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-family: 'ArchivoBlack';
+    font-size: 1.8em;
+    margin-top: -7%;
+}
+
+section.Area-3 div.Grid-Container div.Content{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    font-family: Courier;
+}
+
+section.Area-3 div.Grid-Container div.Img-1{
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+section.Area-3 div.Grid-Container div.Img-1 img{
+    width: 100%;
+}
+
+section.Area-3 div.Grid-Container div.Img-2{
+    grid-column: 2/3;
+    grid-row: 1/4;
+}
+
+section.Area-3 div.Grid-Container div.Img-2 img{
+    width: 100%;
+}
+
+section.Area-3 div.Img-3{
+    margin-top: 3%;
+    text-align: center;
+}
+
+section.Area-3 div.Img-3 img{
+    width: 40%;
+}
+
+section.Area-3 div.Flex-Container-1{
+    display: flex;
+    padding-top: 3%;
+    align-items: end;
+    padding-left: 4%;
+    padding-right: 4%;
+    gap: 30%;
+}
+
+section.Area-3 div.Flex-Container-1 div.Content{
+    font-family: Courier;
+    padding-bottom: 5%;
+    width: 60%;
+}
+
+section.Area-3 div.Flex-Container-1 div.Img-4{
+    width: 40%;
+}
+
+section.Area-3 div.Flex-Container-1 div.Img-4 img{
+    width: 100%;
+}
+
+section.Area-3 div.Flex-Container-2{
+    display: flex;
+    padding-top: 3%;
+    padding-left: 4%;
+    padding-right: 4%;
+    gap: 4%;
+    align-items: end;
+}
+
+section.Area-3 div.Flex-Container-2 div.Img-5{
+    width: 73%;
+}
+
+section.Area-3 div.Flex-Container-2 div.Img-5 img{
+    width: 100%;
+}
+
+section.Area-3 div.Flex-Container-2 div.Conllection-Navigation{
+    padding-bottom: 3%;
+    flex: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+section.Area-3 div.Flex-Container-2 div.Conllection-Navigation a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 15px;
+    font-family: Courier;
+}
+
+section.Area-3 div.Flex-Container-2 div.Conllection-Navigation a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+section.Area-4 div.Video{
+    padding-top: 4%;
+}
+
+section.Area-4 div.Video video{
+    width: 100%;
+    display: block;
+}
+
+@media (max-width:480px) {
+    body{
+    font-size: 10px;
+    }
+
+    h3{
+        font-size: 0.8em;
+    }
+
+    section.Area-1{
+        height: auto;
+    }
+
+    section.Area-1 div.Brand-Name{
+        font-size: 7em;
+        padding-top: 10%;
+    }
+
+    section.Area-1 div.Grid-Container{
+        grid-template-columns: 2fr 2.5fr;
+        grid-template-rows: 0.3fr 1fr 0.3fr;
+        gap: 1%;
+        padding: 1%;
+    }
+
+    section.Area-2{
+        height: auto;
+    }    
+
+    section.Area-2 div.Grid-Container{
+    grid-template-columns: 3fr 2.5fr;
+    grid-template-rows: 0.1fr 1.3fr 0.3fr;
+    gap: 1%;
+    padding: 1%;
+}
+
+    section.Area-2 div.Grid-Container div.Title{
+    margin-top: -6%;
+}
+
+    section.Area-2 div.Grid-Container div.Content{
+    padding-right: 1%;
+}
+    section.Area-3{
+    height: auto;
+}
+
+    section.Area-3 div.Grid-Container{
+    grid-template-columns: 2.5fr 3fr;
+    grid-template-rows: 0.2fr 0.9fr 1fr ;
+    gap: 1%;
+    padding: 1%;
+}
+
+    section.Area-3 div.Grid-Container div.Img-2 img{
+    width: 100%;
+    height: 84.5%;
+}
+
+    section.Area-3 div.Img-3{
+    margin-top: -15%;
+}
+
+    section.Area-3 div.Flex-Container-1{
+    padding: 1%;
+    gap: 1%;
+}
+
+    section.Area-3 div.Flex-Container-2{
+    padding: 1%;
+    gap: 1%;
+}
+
+    section.Area-3 div.Flex-Container-2 div.Img-5{
+    width: 60%;
+}
+
+    section.Area-3 div.Flex-Container-2 div.Conllection-Navigation{
+    padding-bottom: 5%;
+    
+}
+    section.Area-4 div.Video{
+    padding-top: 1%;
+}
+}

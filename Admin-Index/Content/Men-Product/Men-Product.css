@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url('../Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    color: black;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.Hidden{
+    display: none !important;
+}
+
+section.Area-1{
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+section.Area-1 div.Brand-Name{
+    position: absolute;
+    font-family: 'ArchivoBlack';
+    color: white;
+    font-size: 80px;
+    top: 1%;
+    left: 36%;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+section.Area-1 div.Video video{
+    width: 100%;
+}
+
+section.Area-1 div.Flex-Container{
+    display: flex;
+    margin-top: 60px;
+}
+
+section.Area-1 div.Flex-Container div.Category{
+    padding-left: 60px;
+    text-align: left;
+    width: 50%;
+}
+
+section.Area-1 div.Flex-Container div.Category select{
+    font-family: Courier;
+}
+
+option{
+    background: none;
+}
+
+section.Area-1 div.Flex-Container div.Search{
+    text-align: right;
+    width: 50%;
+    padding-right: 60px;
+}
+
+section.Area-1 div.Flex-Container div.Search input{
+    width: 250px;
+    height: 40px;
+    font-family: Courier;
+    padding-left: 10px;
+}
+
+.Card{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    padding: 40px 20px;
+}
+
+#suggestions {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.suggest-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.suggest-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.suggest-item .info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.suggest-item .info p {
+  margin: 4px 0 0;
+  color: green;
+}
+
+.suggest-item:hover {
+  background-color: #f0f0f0;
+}
+
+section.Area-2{
+    height: 200px;
+}
+
+@media (max-width:480px) {
+    
+body{
+    color: black;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.Hidden{
+    visibility: hidden !important;
+}
+
+section.Area-1{
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+section.Area-1 div.Brand-Name{
+    position: absolute;
+    font-family: 'ArchivoBlack';
+    color: white;
+    font-size: 50px;
+    top: 1%;
+    left: 21%;
+}
+
+section.Area-1 div.Video video{
+    width: 100%;
+}
+
+section.Area-1 div.Flex-Container{
+    display: flex;
+    margin-top: 10px;
+}
+
+section.Area-1 div.Flex-Container div.Category{
+    padding-left: 10px;
+    text-align: left;
+    width: 50%;
+}
+
+section.Area-1 div.Flex-Container div.Category select{
+    font-family: Courier;
+}
+
+option{
+    background: none;
+}
+
+section.Area-1 div.Flex-Container div.Search{
+    text-align: right;
+    width: 50%;
+    padding-right: 10px;
+}
+
+section.Area-1 div.Flex-Container div.Search input{
+    width: 200px;
+    height: 30px;
+    font-family: Courier;
+    padding-left: 10px;
+}
+
+.Card{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    padding: 40px 20px;
+}
+
+#suggestions {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.suggest-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+}
+
+.suggest-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.suggest-item .info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.suggest-item .info p {
+  margin: 4px 0 0;
+  color: green;
+}
+
+.suggest-item:hover {
+  background-color: #f0f0f0;
+}
+
+section.Area-2{
+    height: 200px;
+}
+
+}

@@ -1,0 +1,143 @@
+@font-face{
+    font-family: 'ArchivoBlack';
+    src: url('/User-Index/Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    background-color: #F5F5F3;
+    font-size: 16px;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+section.Title{
+    padding-top: 8%;
+}
+
+section.Title div.Title{
+    font-family: 'ArchivoBlack';
+    padding-left: 4%;
+}
+
+section.No-Product{
+    display: block;
+}
+
+section.No-Product div.Description{
+    padding-left: 4%;
+    font-family: Courier;
+}
+
+section.No-Product div.Product-Navigation{
+    padding-left: 4%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+section.No-Product div.Product-Navigation a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 15px;
+    font-family: Courier;
+}
+
+section.No-Product div.Product-Navigation a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+section.Have-Product{
+    display: none;
+}
+
+section.Have-Product div.List-Product{
+    display: flex;
+    flex-direction: column;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+section.Have-Product div.Flex-Container{
+    display: flex;
+    justify-content: right;
+    padding-right: 4%;
+}
+
+section.Have-Product div.Flex-Container div.Subtotal{
+    width: 20%;
+    font-family: Courier New;
+}
+
+section.Have-Product div.Flex-Container div.Total{
+    font-family: Courier;
+    font-size: 20px;
+}
+
+section.Have-Product div.Check-Out{
+    padding-right: 4%;
+    text-align: right;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+section.Have-Product div.Check-Out a{
+    text-decoration: none;
+    color: black;
+    font-family: Courier;
+    border: 1px solid black;
+    padding: 15px 115px;
+}
+
+section.Have-Product div.Check-Out a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    body{
+    font-size: 10px;
+}
+
+h2{
+    font-size: 2em;
+}
+
+section.Title{
+    padding-top: 10%;
+}
+
+section.Title div.Title{
+    padding-left: 1%;
+}
+
+section.No-Product div.Description{
+    padding-left: 1%;
+}
+
+section.No-Product div.Product-Navigation{
+    padding-left: 1%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+section.Have-Product div.Flex-Container{
+    padding-right: 1%;
+}
+
+section.Have-Product div.Flex-Container div.Total{
+    font-size: 15px;
+}
+
+section.Have-Product div.Check-Out{
+    padding-right: 1%;
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+section.Have-Product div.Check-Out a{
+    padding: 15px 24px;
+}
+}

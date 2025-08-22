@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="User-Signup.css">
+        <title>Fashion orientation</title>
+    </head>
+    <body>
+        <div class="Flex-Container-1">
+            <div class="Back" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                <a href="../User-Login/User-Login.html">← Back</a>
+            </div>
+            <div class="Title" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                <h2>TELL US MORE ABOUT YOU</h2>
+            </div>
+        </div>
+        <div class="Error" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+            <div class="Icon">
+                <img src="/User-Index/icon/Error.png" alt="Error">
+            </div>
+            <div class="Description-Error">
+                <p>This email has registered an account!</p>
+            </div>
+        </div>
+        <div class="Error-1" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+            <div class="Icon">
+                <img src="/User-Index/icon/Error.png" alt="Error">
+            </div>
+            <div class="Description-Error">
+                <p>Please enter complete information!</p>
+            </div>
+        </div>
+        <div class="Submit" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+            <form id="SignupFrom">
+                <div class="Grid-Name">
+                    <div class="Title-1" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                        <p>First Name</p>
+                    </div>
+                    <div class="Title-2" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                        <p>Last Name</p>
+                    </div>
+                    <div class="First-Name" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                        <input id="First" type="Text" placeholder="First Name">
+                    </div>
+                    <div class="Last-Name" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                        <input id="Last" type="Text" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="Title-3" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <p>Email</p>
+                </div>
+                <div class="Email" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <input id="Email" type="email" placeholder="Email">
+                </div>
+                <div class="Title-4" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <p>Password</p>
+                </div>
+                <div class="Password" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <input id="Password" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="Confirm-Password" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <input id="Confirm-Password" type="password" name="password" placeholder="Confirm Password">
+                </div>
+                <div class="Signup" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <button id="Signup" type="submit">Signup</button>
+                </div>
+            </form>
+        </div>
+        <script src="User-Signup.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init(); 
+        </script>
+    </body>
+</html>

@@ -1,0 +1,323 @@
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url('/User-Index/Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    background-color: black;
+    font-size: 20px;
+}
+
+div.Flex-Container-1{
+    display: flex;
+    padding-top: 4%;
+    padding-left: 4%;
+    margin-bottom: -8%;
+    gap: 2%;
+}
+
+div.Back{
+    width: 20%;
+}
+
+div.Back a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 15px;
+    font-family: Courier;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Back a:hover{
+    background-color: white;
+    color: black;
+}
+
+div.Title{
+    margin-top: -9%;
+    flex: 1;
+    font-size: 4em;
+    font-family: 'ArchivoBlack';
+    color: white;
+}
+
+
+div.Error{
+    display: none;
+    background-color: #ff8791;
+    width: 40%;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 30.5%;
+    align-items: center;
+}
+
+div.Error div.Icon{
+    width: 35%;
+    padding-left: 1%;
+}
+
+div.Error div.Icon img{
+    width: 20%;
+    height: auto;
+}
+
+div.Error div.Description-Error{
+    flex: 1;
+    font-family: Courier;
+    color: #d93025;
+    padding-right: 1%;
+}
+
+div.Ban{
+    display: none;
+    background-color: #ff8791;
+    width: 40%;
+    border-radius: 10px;
+    height: 45px;
+    margin-left: 30.5%;
+    align-items: center;
+}
+
+div.Ban div.Icon{
+    width: 35%;
+    padding-left: 1%;
+}
+
+div.Ban div.Icon img{
+    width: 20%;
+    height: auto;
+}
+
+div.Ban div.Description-Ban{
+    flex: 1;
+    font-family: Courier;
+    color: #d93025;
+    padding-right: 1%;
+}
+
+div.Submit{
+    margin-left: 30%;
+    background-color: #F5F5F3;
+    width: 40%;
+    height: 450px;
+    border-radius: 10px;
+    position: fixed;
+}
+
+div.Submit div.Title-1{
+    font-family: Courier;
+    padding-top: 6%;
+    padding-left: 20%;
+}
+
+div.Submit div.Email{
+    padding-top: 3%;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Email input{
+    width: 60%;
+    height: 40px;
+    font-family: Courier;
+}
+
+div.Submit div.Title-2{
+    font-family: Courier;
+    padding-top: 3%;
+    padding-left: 20%;
+}
+
+div.Submit div.Password{
+    padding-top: 3%;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Password input{
+    width: 60%;
+    height: 40px;
+    font-family: Courier;
+}
+
+div.Submit div.Flex-Container-2{
+    display: flex;
+    padding-top: 3%;
+    padding-left: 20%;
+    padding-right: 4%;
+    gap: 17%;
+}
+
+div.Submit div.Flex-Container-2 div.Google{
+    width: 12%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Flex-Container-2 div.Google img{
+    width: 100%;
+}
+
+div.Submit div.Flex-Container-2 div.Facebook{
+    width: 12%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Flex-Container-2 div.Facebook img{
+    width: 100%;
+}
+
+div.Submit div.Flex-Container-2 div.Button{
+    flex: 1;
+}
+
+div.Submit div.Flex-Container-2 button{
+    font-family: Courier;
+    background: none;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 15px 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div.Submit div.Flex-Container-2 button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+div.Submit div.Forget{
+    padding-left: 35%;
+    padding-top: 3%;
+}
+
+div.Submit div.Forget a{
+    text-decoration: none;
+    color: black;
+    font-family: Courier;
+}
+
+div.Submit div.Forget a:hover{
+    text-decoration: underline black;
+    transition: 0.5 ease;
+}
+
+div.Submit div.Create{
+    padding-left: 35.5%;
+    padding-top: 3%;
+}
+
+div.Submit div.Create a{
+    text-decoration: none;
+    color: black;
+    font-family: Courier;
+}
+
+div.Submit div.Create a:hover{
+    text-decoration: black underline;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    body{
+        font-size: 12px;
+    }
+
+    div.Flex-Container-1{
+    display: block;
+    padding-top: 6%;
+}
+
+div.Back a{
+    font-size: 1em;
+}
+
+div.Title{
+    margin-top: 10%;
+    margin-left: 17%;
+    flex: 1;
+    font-size: 2em;
+}
+
+div.Error{
+    width: 80%;
+    height: 45px;
+    margin-left: 10%;
+}
+
+div.Error div.Icon{
+    width: 24%;
+    padding-left: 1%;
+}
+
+div.Error div.Icon img{
+    width: 40%;
+}
+
+div.Submit{
+    margin-left: 10%;
+    width: 80%;
+    height: 380px;
+}
+
+div.Submit div.Title-1{
+    padding-top: 10%;
+    padding-left: 15%;
+}
+
+div.Submit div.Email{
+    padding-top: 3%;
+}
+
+div.Submit div.Email input{
+    width: 70%;
+}
+
+div.Submit div.Title-2{
+    padding-top: 6%;
+    padding-left: 15%;
+}
+
+div.Submit div.Password input{
+    width: 70%;
+}
+
+div.Submit div.Flex-Container-2{
+    padding-top: 6%;
+    padding-left: 12%;
+    gap: 18%;
+}
+
+div.Submit div.Flex-Container-2 button{
+    font-size: 1em;
+    color: black;
+}
+
+div.Submit div.Forget{
+    padding-top: 6%;
+}
+
+div.Submit div.Create{
+    padding-top: 6%;
+}
+}

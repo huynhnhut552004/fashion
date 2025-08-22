@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Shopping-Cart.css">
+        <title>Admin-Page</title>
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <section class="Title">
+                <div class="Title">
+                    <h2>SHOPPING CART</h2>
+                </div>
+            </section>
+            <section class="No-Product">
+                <div class="Description">
+                    <p>You have no products in your cart.</p>
+                </div>
+                <div class="Product-Navigation">
+                    <a href="/Admin-Index/Content/Main/Main.html">Continue Shopping</a>
+                    <a href="/Admin-Index/Content/Cart/Check-Out/Check-Out.html">Next</a>
+                </div>
+            </section>
+            <section class="Have-Product">
+                <div class="List-Product" id="List"></div>
+                <div class="Flex-Container">
+                    <div class="Subtotal">Subtotal</div>
+                    <div class="Total"><span id="Total">0</span>$</div>
+                </div>
+                <div class="Check-Out">
+                    <a href="../Check-Out/Check-Out.html">Check out</a>
+                </div>
+            </section>
+        </main>
+        <div id="footer"></div>
+        <script src="Shopping-Cart.js"></script>
+    </body>
+</html>

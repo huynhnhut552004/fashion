@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" minimum-scale="1.0">
+        <style>
+            @font-face {
+                font-family: 'Roboto';
+                src: url('/User-Index/Font/Roboto/Roboto-VariableFont_wdth\,wght.ttf');
+            }
+
+            header{
+                border-bottom: 1px solid black;
+                height: 90px;
+                width: 100%;
+                z-index: 100;
+                position: fixed;
+                background-color: #F5F5F3;
+                box-shadow: 0 4px 10px rgba(25, 27, 29, 0.1);
+                font-size: 16px;
+            }
+
+            header div.Flex-Container{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                font-family: 'Roboto';
+            }
+
+            header div.Flex-Container div.Back{
+                padding-left: 4%;
+                width: 6%;
+            }
+
+            header div.Flex-Container div.Back a{
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                background-color: #28282A;
+                padding: 15px 20px;
+            }
+
+            header div.Flex-Container div.Card-1{
+                width: 65%;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            header div.Flex-Container div.Card-1 a{
+                text-decoration: none;
+                color: black;
+            }
+
+            header div.Flex-Container div.Card-2{
+                width: 5%;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            header div.Flex-Container div.Card-2 a{
+                text-decoration: none;
+                color: black;
+            }
+
+            header div.Flex-Container div.Card-3{
+                width: 6.5%;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            header div.Flex-Container div.Card-3 a{
+                text-decoration: none;
+                color: black;
+            }
+
+            header div.Flex-Container div.Card-4{
+                width: 9%;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            header div.Flex-Container div.Card-4 a{
+                text-decoration: none;
+                color: black;
+            }
+
+            header div.Flex-Container div.Card-6{
+                flex: 1;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            header div.Flex-Container div.Card-6 a{
+                text-decoration: none;
+                color: black;
+            }
+
+            header div.Flex-Container div.Card-6 span{ 
+                font-size: 1.3em;
+            }
+
+            @media (max-width:480px) {
+                header{
+                font-size: 12px;
+                height: 50px;
+            }
+
+             header div.Flex-Container div.Back{
+                padding-left: 1%;
+                width: 16%;
+            }
+
+            header div.Flex-Container div.Back a{
+                padding: 10px 15px;
+                font-size: 1em;
+            }
+
+            header div.Flex-Container div.Card-1{
+                width: 26%;
+            }
+
+            header div.Flex-Container div.Card-2{
+                width: 12%;
+            }
+
+            header div.Flex-Container div.Card-3{
+                width: 15%;
+            }
+
+            header div.Flex-Container div.Card-4{
+                width: 21%;
+            }
+
+            header div.Flex-Container div.Card-6 span{ 
+                font-size: 1.3em;
+            }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="Flex-Container">
+                <div class="Back">
+                    <a href="/Admin-Index/Main/Main-Admin.html">BACK</a>
+                </div>
+                <div class="Card-1" data-Header-Site="Title"> 
+                </div>
+                <div class="Card-2">
+                    <a href="/Admin-Index/Content/About/About.html">ABOUT</a>
+                </div>
+                <div class="Card-3">
+                    <a href="/Admin-Index/Content/Products/Product.html">PRODUCT</a>
+                </div>
+                <div class="Card-4">
+                    <a href="/Admin-Index/Content/Collection/Collection.html">CONLLECTION</a>
+                </div>
+                <div class="Card-6">
+                   <a href="/Admin-Index/Content/Cart/Shopping-Cart/Shopping-Cart.html"><img src="/Admin-Index/Content/icon/uil--cart.png" alt="Cart" width="25" height="25"></a><span id="cartCount">0</span>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>

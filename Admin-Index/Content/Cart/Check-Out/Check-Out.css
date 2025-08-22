@@ -1,0 +1,651 @@
+@font-face{
+    font-family: 'ArchivoBlack';
+    src: url('/User-Index/Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+.Hidden{
+    display: none;
+}
+
+body{
+    font-size: 16px;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+section.Header{
+    font-family: 'ArchivoBlack';
+    font-size: 1.5em;
+    border-bottom: 1px solid #ddd;
+    padding-left: 10%;
+    height: 70px;
+}
+
+div.Next{
+    padding-left: 4%;
+    margin-top: 2%;
+}
+
+div.Next a{
+    text-decoration: none;
+    color: black;
+    font-family: Courier;
+    border: 1px solid black;
+    padding: 15px 20px;
+}
+
+div.Next a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+main{
+    display: flex;
+}
+
+main section.Area-1{
+    width: 55%;
+    margin-top: 3%;
+}
+
+main section.Area-1 div.Area-1{
+    margin-left: 18%;
+    margin-right: 14%;
+    border: 1px solid #ddd;
+}
+
+main section.Area-1 div.Area-1 div.Flex-Container{
+    display: flex;
+    padding-left: 4%;
+    align-items: center;
+}
+
+main section.Area-1 div.Area-1 div.Flex-Container div.Title{
+    width: 90%;
+    font-size: 0.8em;
+    font-family: Arial;
+}
+
+main section.Area-1 div.Area-1 div.Flex-Container div.Edit{
+    flex: 1;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+main section.Area-1 div.Area-1 div.Flex-Container div.Edit a{
+    cursor: pointer;
+}
+
+main section.Area-1 div.Area-1 div.Flex-Container div.Edit a:hover{
+    text-decoration: underline black;
+    transition: 0.3s ease;
+}
+
+main section.Area-1 div.Area-1 div.Imformation{
+    padding-left: 6%;
+    margin-top: -2%;
+    
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Title-1{
+    font-family: arial;
+    font-size: 0.5em;
+    color: #707070;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Phone-Number input{
+    height: 40px;
+    width: 90%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Phone-Number input::-webkit-outer-spin-button,
+main section.Area-1 div.Area-1 div.Imformation div.Phone-Number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Title-2{
+   font-family: arial;
+    font-size: 0.5em;
+    color: #707070;
+    margin-top: 4%;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Address input{
+    height: 40px;
+    width: 90%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Title-3{
+    font-family: arial;
+    font-size: 0.5em;
+    color: #707070;
+    margin-top: 4%;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Detailed input{
+    height: 40px;
+    width: 90%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Error-1{
+    display: none;
+    background-color: #ffc3c7;
+    margin-top: 5%;
+    align-items: center;
+    margin-right: 5.5%;
+    height: 60px;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Error-1 div.Error-Descripton{
+    width: 85%;
+    padding-left: 4%;
+    font-family: arial;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Error-1 div.Error-Icon{
+    flex: 1;
+    padding-right: 4%;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Error-1 div.Error-Icon img{
+    width: 100%;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Continue{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+main section.Area-1 div.Area-1 div.Imformation div.Continue button{
+    background-color: #28282A;
+    color: white;
+    border: none;
+    width: 94.5%;
+    height: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main section.Area-1 div.Area-2{
+    margin-left: 18%;
+    margin-right: 14%;
+    border: 1px solid #ddd;
+    margin-top: 3%;
+}
+
+main section.Area-1 div.Area-2 div.Flex-Container-1{
+    display: flex;
+    padding-left: 4%;
+    align-items: center;
+}
+
+main section.Area-1 div.Area-2 div.Flex-Container-1 div.Title{
+    width: 90%;
+    font-size: 0.8em;
+    font-family: Arial;
+}
+
+main section.Area-1 div.Area-2 div.Flex-Container-1 div.Edit{
+    flex: 1;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+main section.Area-1 div.Area-2 div.Flex-Container-1 div.Edit a{
+    cursor: pointer;
+}
+
+main section.Area-1 div.Area-2 div.Flex-Container-1 div.Edit a:hover{
+    text-decoration: underline black;
+    transition: 0.3s ease;
+}
+
+main section.Area-1 div.Area-2 div.Payment{
+    padding-left: 6%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Security{
+    font-family: arial;
+    font-size: 0.8em;
+    margin-left: -2%;
+    color: #707070;
+    margin-top: -3%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Title-1{
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+    margin-top: 3%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Method{
+    width: 90%;
+    font-family: arial;
+    margin-top: -1%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Title-2{
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+    margin-top: 3%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Card-Number input{
+    height: 40px;
+    width: 90%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Card-Number input::-webkit-outer-spin-button,
+main section.Area-1 div.Area-2 div.Payment div.Card-Number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-2{
+    display: flex;
+    margin-top: 3%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-2 div.Title-3{
+    width: 50%;
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-2 div.Title-4{
+    width: 50%;
+    font-size: 0.8em;
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3{
+    display: flex;
+    padding-right: 7.5%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Month{
+    width: 15%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Month input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Month input::-webkit-outer-spin-button,
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Month input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Year{
+    width: 20%;
+    margin-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Year input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Year input::-webkit-outer-spin-button,
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Year input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Code{
+    flex: 1;
+    margin-left: 15%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-3 div.Code input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-4{
+    display: flex;
+    margin-top: 3%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-4 div.Title-5{
+    width: 30%;
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-4 div.Title-6{
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+    width: 30%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-4 div.Title-7{
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-5{
+    display: flex;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-5 div.First{
+    width: 26%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-5 div.First input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-5 div.Last{
+    margin-left: 4%;
+    width: 26%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-5 div.Last input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-5 div.City{
+    margin-left: 4%;
+    flex: 1;
+    margin-right: 7%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-5 div.City input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-6{
+    display: flex;
+    margin-top: 3%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-6 div.Title-7{
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+    width: 60%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-6 div.Title-8{
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-7{
+    display: flex;
+    margin-right: 7%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-7 div.Billing-Address{
+    width: 59%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-7 div.Billing-Address input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-7 div.Posta-Code{
+    flex: 1;
+    margin-left: 5.5%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-7 div.Posta-Code input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-8{
+    display: flex;
+    margin-top:3%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-8 div.Title-9{
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+    width: 50%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-8 div.Title-10{
+    font-family: Arial;
+    font-size: 0.5em;
+    color: #707070;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-9{
+    display: flex;
+    margin-right: 7.5%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-9 div.Nation{
+    width: 38%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-9 div.Nation input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-9 div.Phone-Number{
+    flex: 1;
+    margin-left: 16%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-9 div.Phone-Number input{
+    height: 40px;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: none;
+    font-family: arial;
+    color: black;
+    padding-left: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-9 div.Phone-Number input::-webkit-outer-spin-button,
+main section.Area-1 div.Area-2 div.Payment div.Flex-Container-9 div.Phone-Number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Error-2{
+    background-color: #ffc3c7;
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    margin-right: 5.5%;
+    height: 60px;
+    display: none;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Error-2 div.Error-Descripton{
+    width: 85%;
+    padding-left: 4%;
+    font-family: arial;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Error-2 div.Error-Icon{
+    flex: 1;
+    padding-right: 4%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Error-2 div.Error-Icon img{
+    width: 100%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Continue{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Continue button{
+    background-color: #28282A;
+    color: white;
+    border: none;
+    width: 94.5%;
+    height: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main section.Area-1 div.Complete{
+    margin: 5% 14% 5% 18%;
+}
+
+main section.Area-1 div.Complete button{
+    background-color: #28282A;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    display: none;
+}
+
+main section.Area-2{
+    width: 45%;
+    background-color: #ddd;
+}
+
+main section.Area-2 div.Background{
+    background-color: white;
+}
+
+@media (max-width: 480px) {
+body{
+    font-size: 10px;
+}
+
+div.Next{
+    padding-left: 1%;
+    margin-top: 5%;
+}
+
+div.Next a{
+    padding: 10px 15px;
+}
+
+section.Header{
+    font-size: 1.5em;
+    height: 40px;
+}
+
+main{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 4%;
+}
+
+main section.Area-1{
+    width: 100%;
+    grid-row: 2/3;
+}
+
+main section.Area-1 div.Area-1{
+    margin-left: 14%;
+}
+
+main section.Area-1 div.Area-2{
+    margin-left: 14%;
+}
+
+main section.Area-1 div.Area-2 div.Payment div.Continue button{
+    width: 96%;
+}
+
+main section.Area-1 div.Complete{
+    margin: 5% 14% 5% 14%;
+}
+
+main section.Area-2{
+    width: 100%;
+    grid-row: 1/2;
+}
+}

@@ -1,0 +1,274 @@
+@font-face{
+    font-family: 'ArchivoBlack';
+    src: url('/User-Index/Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    background-color: #F5F5F3;
+    font-size: 16px;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+section.Title{
+    padding-top: 8%;
+}
+
+section.Title div.Title{
+    font-family: 'ArchivoBlack';
+    padding-left: 4%;
+}
+
+section.No-Product div.Description{
+    padding-left: 4%;
+    font-family: Courier;
+}
+
+section.No-Product div.Product-Navigation{
+    padding-left: 4%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+section.No-Product div.Product-Navigation a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 15px;
+    font-family: Courier;
+}
+
+section.No-Product div.Product-Navigation a:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+section.Have-Product div.List-Product{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+section.Have-Product div.List-Product div.Product{
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+section.Have-Product div.List-Product div.Img{
+    width: 10%;
+}
+
+section.Have-Product div.List-Product div.Img img{
+    width: 90%;
+    border: 1px solid #ddd;
+}
+
+section.Have-Product div.List-Product div.Name{
+    width: 65%;
+    font-family: Courier;
+}
+
+section.Have-Product div.List-Product div.Quantity{
+    width: 17%;
+}
+
+section.Have-Product div.List-Product div.Quantity button{
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    font-family: Courier;
+    cursor: pointer;
+    color: gray;
+}
+
+section.Have-Product div.List-Product div.Quantity input{
+    width: 10px;
+    background: none;
+    border: none;
+    font-family: Courier;
+    font-size: 1em;
+    margin: 0% 10%;
+}
+
+section.Have-Product div.List-Product div.Quantity input::-webkit-outer-spin-button,
+section.Have-Product div.List-Product div.Quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+section.Have-Product div.List-Product div.Price{
+    font-family: Courier;
+    flex: 1;
+}
+
+section.Have-Product div.List-Product div.Delete{
+    margin-top: -0.5%;
+}
+
+section.Have-Product div.List-Product div.Delete button{
+    background: none;
+    border: none;
+    font-size: 1em;
+    font-family: Courier;
+    cursor: pointer;
+    font-weight: bold;
+    color: gray;
+}
+
+section.Have-Product div.Flex-Discount{
+    display: flex;
+    margin-right: 4%;
+    margin-top: 1%;
+    margin-left: 75%;
+}
+
+section.Have-Product div.Flex-Discount div.Title{
+    width: 90%;
+    font-family: Courier ;
+}
+
+section.Have-Product div.Flex-Discount div.Discount{
+    font-family: Courier;
+    font-size: 20px;
+}
+
+section.Have-Product div.Flex-Container{
+    display: flex;
+    margin-right: 4%;
+    margin-top: 1%;
+    margin-left: 75%;
+}
+
+section.Have-Product div.Flex-Container div.Subtotal{
+    width: 80%;
+    font-family: Courier;
+}
+
+section.Have-Product div.Flex-Container div.Total{
+    font-family: Courier;
+    font-size: 20px;
+}
+
+section.Have-Product div.Err{
+    display: none;
+    align-items: center;
+    background-color: #ff8791;
+    margin-left: 75%;
+    width: 21%;
+    margin-top: 0.5%;
+}
+
+section.Have-Product div.Err div.Img{
+    width: 12%;
+}
+
+section.Have-Product div.Err div.Img img{
+    width: 100%;
+}
+
+section.Have-Product div.Err div.Title{
+    font-family: Courier;
+    flex: 1;
+    padding-left: 1%;
+}
+
+section.Have-Product div.Voucher{
+    text-align: right;
+    margin-right: 4%;
+    margin-top: 1%;
+}
+
+section.Have-Product div.Voucher input{
+    height: 40px;
+    width: 17.4%;
+    font-family: Courier;
+    background: none;
+    border: 1px solid black;
+    padding-left: 1%;
+}
+
+section.Have-Product div.Voucher button{
+    background: none;
+    border: 1px solid black;
+    font-size: 1em;
+    font-family: Courier;
+    padding: 11.3px;
+    cursor: pointer;
+}
+
+section.Have-Product div.Voucher button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+section.Have-Product div.Check-Out{
+    padding-right: 4%;
+    text-align: right;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+section.Have-Product div.Check-Out button{
+    color: black;
+    font-family: Courier;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 15px 115px;
+    background: none;
+    font-size: 1em;
+}
+
+section.Have-Product div.Check-Out button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 480px) {
+    body{
+    font-size: 10px;
+}
+
+h2{
+    font-size: 2em;
+}
+
+section.Title{
+    padding-top: 10%;
+}
+
+section.Title div.Title{
+    padding-left: 1%;
+}
+
+section.No-Product div.Description{
+    padding-left: 1%;
+}
+
+section.No-Product div.Product-Navigation{
+    padding-left: 1%;
+    margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+section.Have-Product div.Flex-Container{
+    padding-right: 1%;
+}
+
+section.Have-Product div.Flex-Container div.Total{
+    font-size: 15px;
+}
+
+section.Have-Product div.Check-Out{
+    padding-right: 1%;
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+section.Have-Product div.Check-Out a{
+    padding: 15px 24px;
+}
+}

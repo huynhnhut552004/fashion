@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'ArchivoBlack';
+    src: url('../Font/Archivo_Black/ArchivoBlack-Regular.ttf') ;
+}
+
+body{
+    color: black;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 16px;
+    background-color: #F5F5F3;
+}
+
+.Hidden{
+    visibility: hidden !important;
+}
+
+section.Area-1{
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+
+section.Area-1 div.Brand-Name{
+    position: absolute;
+    font-family: 'ArchivoBlack';
+    color: white;
+    font-size: 5em;
+    top: 1%;
+    bottom: 87%;
+    right: 38%;
+    left: 36%;
+}
+
+section.Area-1 div.Video video{
+    width: 100%;
+}
+
+section.Area-1 div.Flex-Container{
+    display: flex;
+    padding-top: 4%;
+}
+
+section.Area-1 div.Flex-Container div.Category{
+    padding-left: 4%;
+    text-align: left;
+    width: 50%;
+}
+
+section.Area-1 div.Flex-Container div.Category select{
+    font-family: Courier;
+    height: 30px;
+}
+
+option{
+    background: none;
+}
+
+section.Area-1 div.Flex-Container div.Search{
+    text-align: right;
+    width: 50%;
+    padding-right: 4%;
+}
+
+section.Area-1 div.Flex-Container div.Search input{
+    width: 40%;
+    height: 40px;
+    font-family: Courier;
+    padding-left: 1%;
+    margin-bottom: 3%;
+}
+
+#suggestions {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    height: 400px;
+    overflow-y: auto;
+    left: 56%;
+    top: 60%;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+}
+#suggestions li{
+   width: 260px;
+   background-color:white;
+   animation: fadeInSlideIn 0.15s ease-out forwards;
+}
+
+@keyframes fadeInSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.suggest-item {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 8px;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  font-family: Courier;
+}
+
+.suggest-item img {
+  width: 80px;
+  height: 90px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.suggest-item .info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.suggest-item .info p {
+  margin: 4px 0 0;
+  color: black;
+}
+
+.suggest-item:hover {
+  background-color: #f0f0f0;
+}
+section.Area-2 div.Grid-Content{
+    display: flex;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    flex-wrap: wrap;
+    gap: 5.9%;
+}
+
+.Product{
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 30px 15px;
+    margin-top: 5%;
+    font-family: Courier;
+    width: 180px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.Product:hover{
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+
+@media (max-width:480px) {
+    
+body{
+    font-size: 10px;
+}
+
+section.Area-1 div.Brand-Name{
+    font-size: 5em;
+    top: 1%;
+    bottom: 80%;
+    left: 21%;
+    right: 22%;
+}
+
+section.Area-1 div.Video video{
+    width: 100%;
+}
+
+section.Area-1 div.Flex-Container div.Search input{
+    width: 100%;
+    height: 30px;
+    padding-left: 1%;
+}
+
+#suggestions {
+    left: 0%;
+    top: 70%;
+}
+
+#suggestions li{
+   width: 207px;
+}
+
+.suggest-item img {
+  width: 60px;
+  margin-right: 5px;
+}
+
+.suggest-item .info h4 {
+  margin: 0;
+  font-size: 1em;
+}
+
+section.Area-2 div.Grid-Content{
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+    gap: 5%;
+}
+
+.Product{
+    padding: 10px 5px;
+    margin-top: 2%;
+    width: 110px;
+    height: 120px;
+}
+
+.Product img{
+    width: 70px;
+}
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="Detail.css">
+        <title>Fashion orientation</title>
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <section class="Area-1">
+                <div class="Flex-Container">
+                    <div class="Img" id="Img"></div>
+                    <div class="Content">
+                        <div class="Back"><button id="Back">← Back to product</button></div>
+                        <div class="Name-Product" id="Name"></div>
+                        <div class="Price" id="Price"></div>
+                        <div class="Buy">
+                            <button id="Buy">BUY</button>
+                        </div>
+                        <div class="warning">
+                            <div class="Img-Warning">
+                                <img src="/User-Index/icon/circum--warning.png" alt="Waring">
+                            </div>
+                            <div class="Title-Warning">
+                                You must be logged in to purchase!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Comment">
+                        <div class="Title">Comment</div>
+                        <div class="List-Comment">Currently, there are no reviews for this product.</div>
+                    </div>
+                </div>
+            </section>
+            <section class="Area-2">
+                <div class="Title">Description</div>
+                <div class="Description" id="Description"></div>
+            </section>
+        </main>
+        <div id="footer"></div>
+        <script src="Detail.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init(); 
+        </script>
+    </body>
+</html>

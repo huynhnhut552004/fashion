@@ -1,0 +1,184 @@
+body{
+    background-color: #F5F5F3;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: arial;
+}
+
+div.Back{
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+div.Back a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #28282A;
+    padding: 15px 20px;
+}
+
+div.Flex-Container{
+    display: flex;
+    margin: 3% 4% 2% 4%;
+    gap: 20%;
+}
+
+div.Flex-Container div.Edit{
+    width: 20%;
+}
+
+div.Flex-Container div.Edit button{
+    font-size: 1.5em;
+    background-color: #28282A;
+    color: white;
+    font-weight: bold;
+    padding: 15px 35px;
+    cursor: pointer;
+    border: none;
+}
+
+div.Flex-Container div.Ban{
+    width: 20%;
+}
+
+div.Flex-Container div.Ban button{
+    font-size: 1.5em;
+    background-color: #28282A;
+    color: white;
+    font-weight: bold;
+    padding: 15px 35px;
+    cursor: pointer;
+    border: none;
+}
+
+div.Flex-Container div.Unban{
+    width: 20%;
+}
+
+div.Flex-Container div.Unban button{
+    font-size: 1.5em;
+    background-color: #28282A;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+div.Flex-Container div.Delete{
+    width: 20%;
+}
+
+div.Flex-Container div.Delete button{
+    font-size: 1.5em;
+    background-color: #b90000;
+    color: white;
+    font-weight: bold;
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+}
+
+div.Flex-Container-1{
+    display: flex;
+    margin-bottom: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
+    gap: 12%;
+}
+
+div.Flex-Container-1 div.First-Input{
+    width: 25%;
+}
+
+div.Flex-Container-1 div.First-Input input{
+    height: 40px;
+    width: 100%;
+}
+
+div.Flex-Container-1 div.Last-Input{
+    width: 25%;
+}
+
+div.Flex-Container-1 div.Last-Input input{
+    height: 40px;
+    width: 100%;
+}
+
+div.Flex-Container-1 div.Email{
+    width: 25%;
+}
+
+div.Flex-Container-1 div.Email input{
+    height: 40px;
+    width: 100%;
+}
+
+
+table { 
+    width: 100%; 
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+ th, td { 
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left; 
+}
+
+@media (max-width: 480px) {
+body{
+    font-family: Arial;
+    font-size: 10px;
+}
+
+div.Back{
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+div.Flex-Container{
+    display: flex;
+    margin: 5% 1% 3% 1%;
+    gap: 6%;
+}
+
+div.Flex-Container div.Edit button{
+    font-size: 1em;
+    padding: 15px 25px;
+}
+
+div.Flex-Container div.Ban button{
+    font-size: 1em;
+    padding: 15px 25px;
+}
+
+div.Flex-Container div.Unban button{
+    font-size: 1em;
+    padding: 15px 20px;
+}
+
+
+div.Flex-Container div.Delete button{
+    font-size: 1em;
+    padding: 15px 20px;
+}
+
+div.Flex-Container-1 div.First-Input input{
+    height: 20px;
+}
+
+div.Flex-Container-1 div.Last-Input input{
+    height: 20px;
+}
+
+div.Flex-Container-1 div.Email input{
+    height: 20px;
+}
+
+table { 
+    font-size: 1em;
+}
+}

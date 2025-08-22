@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="Voucher.css">
+        <title>Admin</title>
+    </head>
+    <body>
+        <div class="Back">
+            <a href="/Admin-Index/Main/Main-Admin.html">BACK</a>
+        </div>
+        <div class="Flex-Container">
+            <div class="Name">
+                <label>Name voucher</label><br>
+                <input type="text" id="Name" placeholder="Name">
+            </div>
+            <div class="Discount">
+                <label>Discount</label><br>
+                <input type="number" id="Discount" placeholder="Discount %">
+            </div>
+            <div class="Description">
+                <label>Description</label><br>
+                <input type="text" id="Description" placeholder="Description">
+            </div>
+            <div class="Confirm">
+                <button id="Confirm">Confirm</button>
+            </div>
+            <div class="Edit">
+                <button id="Edit">Edit</button>
+            </div>
+            <div class="Delete">
+                <button id="Delete">Delete</button>
+            </div>
+        </div>
+         <table>
+            <thead>
+                <tr>
+                    <th>Creation Time</th>
+                    <th>Name</th>
+                    <th>Discount</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="VoucherTable"></tbody>
+        </table>
+        <script src="Voucher.js"></script>
+    </body>
+</html>

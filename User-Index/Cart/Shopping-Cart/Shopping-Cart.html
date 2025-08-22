@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="Shopping-Cart.css">
+        <title>Fashion orientation</title>
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <section class="Title">
+                <div class="Title" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <h2>SHOPPING CART</h2>
+                </div>
+            </section>
+            <section class="No-Product">
+                <div class="Description" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <p>You have no products in your cart.</p>
+                </div>
+                <div class="Product-Navigation" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <a href="/User-Index/Products/Product.html">Continue Shopping</a>
+                </div>
+            </section>
+            <section class="Have-Product" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                <div class="List-Product" id="List" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"></div>
+                <div class="Flex-Discount">
+                    <div class="Title">Discount</div>
+                    <div class="Discount"><span id="Discount">0</span>%</div>
+                </div>
+                <div class="Flex-Container">
+                    <div class="Subtotal" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">Subtotal</div>
+                    <div class="Total" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500"><span id="Total">0</span>$</div>
+                </div>
+                <div class="Voucher" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <input type="text" id="Voucher" placeholder="Enter voucher code"> 
+                    <button id="Ok">Ok</button>
+                </div>
+                <div class="Err">
+                    <div class="Img">
+                        <img src="/User-Index/icon/Warning.png" alt="Error">
+                    </div>
+                    <div class="Title">
+                        Voucher code does not exist!
+                    </div>
+                </div>
+                <div class="Check-Out" data-aos="fade-up" data-aos-delay="50" data-aos-duration="500">
+                    <button id="Checkout">Check out</button>
+                </div>
+            </section>
+        </main>
+        <div id="footer"></div>
+        <script src="Shopping-Cart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init(); 
+        </script>
+    </body>
+</html>
