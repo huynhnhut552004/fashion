@@ -57,7 +57,7 @@ app.get("/usertoken", authMiddleware, (req, res) => {
 // Các route xử lý file
 const storageProduct = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, 'Img'));
+        cb(null, path.join(__dirname, './Img'));
     },
     filename: function (req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
@@ -68,7 +68,7 @@ app.post('/imgProduct', imgProduct.single('image'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No file uploaded.');
     }
-    res.json({ imageUrl: `https://fashion-bsqk.onrender.com/Img/${req.file.filename}` });
+    res.json({ imageUrl: `https://fashion-bsqk.onrender.com/Back-end/Img/${req.file.filename}` });
 });
 
 app.delete('/deleteProductImage/:filename', (req, res) => {
