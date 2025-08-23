@@ -3,6 +3,8 @@ const path = require('path');
 const express = require("express");
 const cors = require('cors');
 const fs = require("fs");
+const cloudinary = require('cloudinary').v2;
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
 const mime = require("mime");
 const ConnectDB = require("./Config/db");
 const authadminRoute = require("./Route/authadminRoute");
@@ -54,103 +56,81 @@ app.get("/usertoken", authMiddleware, (req, res) => {
     res.json({ user: req.user });
 });
 
-// Các route xử lý file
-const storageProduct = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, './Img'));
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    }
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET
 });
-const imgProduct = multer({ storage: storageProduct });
-app.post('/imgProduct', imgProduct.single('image'), (req, res) => {
+
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: (req, file) => {
+    let folder = '';
+    let resource_type = 'image';
+
+    if (file.mimetype.startsWith('image')) {
+      if (req.originalUrl === '/imgProduct') {
+        folder = 'Products';
+      } else if (req.originalUrl === '/imgPage') {
+        folder = 'Pages';
+      }
+      resource_type = 'image';
+    } else if (file.mimetype.startsWith('video')) {
+      folder = 'Videos';
+      resource_type = 'video';
+    }
+
+    return {
+      folder: folder,
+      resource_type: resource_type
+    };
+  }
+});
+
+const uploadMiddleware = multer({ storage: storage });
+
+app.post('/imgProduct', uploadMiddleware.single('image'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No file uploaded.');
     }
-    res.json({ imageUrl: `https://fashion-bsqk.onrender.com/Back-end/Img/${req.file.filename}` });
+    res.json({ publicId: req.file.filename, imageUrl: req.file.path });
 });
 
-app.delete('/deleteProductImage/:filename', (req, res) => {
-    const filePath = path.join(__dirname, 'Img', req.params.filename);
-    fs.unlink(filePath, (err) => {
-        if (err) {
-            console.error("Failed to delete image:", err);
-            return res.status(500).send("Failed to delete image.");
-        }
-        res.send("Image deleted.");
-    });
-});
-
-const storagePage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../User-Index/Img'));
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    }
-});
-const imgPage = multer({ storage: storagePage });
-app.post('/imgPage', imgPage.single('image'), (req, res) => {
+app.post('/imgPage', uploadMiddleware.single('image'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No file uploaded.');
     }
-    res.json({ imageUrl: `https://fashion-bsqk.onrender.com/User-Index/Img/${req.file.filename}` });
+    res.json({ publicId: req.file.filename, imageUrl: req.file.path });
 });
 
-app.delete('/deletePageImage/:filename', (req, res) => {
-    const filePath = path.join(__dirname, '../User-Index/Img', req.params.filename);
-    fs.unlink(filePath, (err) => {
-        if (err) {
-            console.error("Failed to delete image:", err);
-            return res.status(500).send("Failed to delete image.");
-        }
-        res.send("Image deleted.");
-    });
-});
-
-const storageVideo = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '../User-Index/Video'));
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    }
-});
-
-const fileFilterVideo = (req, file, cb) => {
-    const allowedTypes = ['video/mp4', 'video/mkv', 'video/avi', 'video/mov'];
-    if (allowedTypes.includes(file.mimetype)) {
-        cb(null, true);
-    } else {
-        cb(new Error('Only video files are allowed!'), false);
-    }
-};
-
-const uploadVideo = multer({ storage: storageVideo, fileFilter: fileFilterVideo });
-app.get('/Video/:filename', (req, res) => {
-    const filePath = path.join(__dirname, '../User-Index/Video', req.params.filename);
-    if (!fs.existsSync(filePath)) {
-        return res.status(404).send('File not found');
-    }
-    const mimeType = mime.getType(filePath);
-    res.setHeader('Content-Type', mimeType);
-    fs.createReadStream(filePath).pipe(res);
-});
-app.post('/videoPage', uploadVideo.single('video'), (req, res) => {
+app.post('/videoPage', uploadMiddleware.single('video'), (req, res) => {
     if (!req.file) {
         return res.status(400).send('No video uploaded.');
     }
-    res.json({ videoUrl: `https://fashion-bsqk.onrender.com/User-Index/Video/${req.file.filename}` });
+    res.json({ publicId: req.file.filename, videoUrl: req.file.path });
 });
-app.delete('/deletePageVideo/:filename', (req, res) => {
-    const filePath = path.join(__dirname, '../User-Index/Video', req.params.filename);
-    fs.unlink(filePath, (err) => {
-        if (err) {
-            console.error("Failed to delete video:", err);
+
+app.delete('/deleteImage/:publicId', (req, res) => {
+    const publicId = req.params.publicId;
+
+    cloudinary.uploader.destroy(publicId, (error, result) => {
+        if (error) {
+            console.error("Failed to delete image:", error);
+            return res.status(500).send("Failed to delete image.");
+        }
+        res.send("Image deleted successfully.");
+    });
+});
+
+app.delete('/deleteVideo/:publicId', (req, res) => {
+    const publicId = req.params.publicId;
+
+    cloudinary.uploader.destroy(publicId, { resource_type: 'video' }, (error, result) => {
+        if (error) {
+            console.error("Failed to delete video:", error);
             return res.status(500).send("Failed to delete video.");
         }
-        res.send("Video deleted.");
+        res.send("Video deleted successfully.");
     });
 });
 
