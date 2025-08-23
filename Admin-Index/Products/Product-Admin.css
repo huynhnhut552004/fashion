@@ -157,7 +157,7 @@ table  button{
 }
 
 div.Flex{
-    margin-top: 1%;
+    margin-top: 3%;
     margin-left: 1%;
     margin-right: 1%;
 }
@@ -186,7 +186,7 @@ div.Flex div.Search button{
 
 div.Flex-Container{
     margin: 2% 1% 2% 1%;
-    gap: 3%;
+    gap: 4%;
 }
 
 div.Flex-Container div.Name{
@@ -211,7 +211,7 @@ div.Flex-Container div.Img{
 }
 
 div.Flex-Container div.Description{
-    width: 45%;
+    width: 40%;
 }
 
 div.Flex-Container div.Description input{

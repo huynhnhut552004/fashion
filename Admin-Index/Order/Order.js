@@ -65,7 +65,7 @@ async function fetchOrder() {
     o.items.forEach(or=>{
         const row = document.createElement("tr");
         row.innerHTML = `
-        <td>${or.quantity}</td>
+        <td>${or.quantity}✕</td>
         <td>${or.productId.name}</td>
         <td><img src="${or.productId.image}" alt="Img" width="60"></td>
         <td>${or.productId.price}$</td>
