@@ -158,12 +158,12 @@ async function fectPage(id) {
         brandName.setAttribute('data-key', 'Brand-Name-Body');
 
         const video1Area1= document.querySelector('[data-Video1-Area1]')
-        video1Area1.innerHTML= `<video id="Video-1" src="${sections['Video1-Area1'].video}" loop muted playsinline></video>`;
+        video1Area1.innerHTML= `<video id="Video-1" src="${sections['Video1-Area1'].videoUrl}" loop muted playsinline></video>`;
         video1Area1.setAttribute('data-editable', 'true');
         video1Area1.setAttribute('data-key', 'Video1-Area1');
 
         const video2Area1= document.querySelector('[data-Video2-Area1]');
-        video2Area1.innerHTML=`<video id="Video-2" src="${sections['Video2-Area1'].video}" loop muted playsinline></video>`;
+        video2Area1.innerHTML=`<video id="Video-2" src="${sections['Video2-Area1'].videoUrl}" loop muted playsinline></video>`;
         video2Area1.setAttribute('data-editable', 'true');
         video2Area1.setAttribute('data-key', 'Video2-Area1');
 
@@ -183,7 +183,7 @@ async function fectPage(id) {
         content3Area2.setAttribute('data-key', 'Content3-Area2');
 
         const imgArea2= document.querySelector('[data-Img-Area2]');
-        imgArea2.innerHTML= `<img src="${sections['Img-Area2'].img}" alt="Img">`;
+        imgArea2.innerHTML= `<img src="${sections['Img-Area2'].imgUrl}" alt="Img">`;
         imgArea2.setAttribute('data-editable', 'true');
         imgArea2.setAttribute('data-key', 'Img-Area2');
 

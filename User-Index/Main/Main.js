@@ -51,7 +51,6 @@ async function fetchAndRenderPage(id) {
         brandName.textContent = sections['Brand-Name-Body'].content;
 
         const imgArea1 = document.querySelector('[data-Img-Area1]');
-        // Sửa từ .img sang .imageUrl
         imgArea1.innerHTML = `<img src="${sections['Img-Area1'].imageUrl}" alt="Img">`;
 
         const titleArea1 = document.querySelector('[data-Title-Area1]');
@@ -67,7 +66,6 @@ async function fetchAndRenderPage(id) {
         contentArea2.textContent = sections['Content-Area2'].content;
 
         const imgArea2 = document.querySelector('[data-Img-Area2]');
-        // Sửa từ .img sang .imageUrl
         imgArea2.innerHTML = `<img src="${sections['Img-Area2'].imageUrl}" alt="Img">`;
 
         const titleArea3 = document.querySelector('[data-Title-Area3]');
@@ -77,30 +75,24 @@ async function fetchAndRenderPage(id) {
         content1Area3.textContent = sections['Content1-Area3'].content;
 
         const img1Area3 = document.querySelector('[data-Img1-Area3]');
-        // Sửa từ .img sang .imageUrl
         img1Area3.innerHTML = `<img src="${sections['Img1-Area3'].imageUrl}" alt="Img">`;
 
         const img2Area3 = document.querySelector('[data-Img2-Area3]');
-        // Sửa từ .img sang .imageUrl
         img2Area3.innerHTML = `<img src="${sections['Img2-Area3'].imageUrl}" alt="Img">`;
 
         const img3Area3 = document.querySelector('[data-Img3-Area3]');
-        // Sửa từ .img sang .imageUrl
         img3Area3.innerHTML = `<img src="${sections['Img3-Area3'].imageUrl}" alt="Img">`;
 
         const content2Area3 = document.querySelector('[data-Content2-Area3]');
         content2Area3.textContent = sections['Content2-Area3'].content;
 
         const img4Area3 = document.querySelector('[data-Img4-Area3]');
-        // Sửa từ .img sang .imageUrl
         img4Area3.innerHTML = `<img src="${sections['Img4-Area3'].imageUrl}" alt="Img">`;
 
-        const img5Area3 = document.querySelector('[data-Img5-Area3]');
-        // Sửa từ .img sang .imageUrl
+        const img5Area3 = document.querySelector('[data-Img5-Area3]')
         img5Area3.innerHTML = `<img src="${sections['Img5-Area3'].imageUrl}" alt="Img">`;
 
         const videoArea3 = document.querySelector('[data-Video-Area3]');
-        // Sửa từ .video sang .videoUrl
         videoArea3.innerHTML = `<video id="Video" src="${sections['Video-Area3'].videoUrl}" loop muted playsinline></video>`;
         const video = document.getElementById("Video");
         video.play();
@@ -108,6 +100,7 @@ async function fetchAndRenderPage(id) {
         console.error("Không thể lấy hoặc hiển thị dữ liệu:", error);
     }
 }
+
 async function quantity() {
   const token= localStorage.getItem("token");
   if(!token){
