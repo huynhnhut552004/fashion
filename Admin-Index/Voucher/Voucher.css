@@ -123,6 +123,7 @@ body{
 
 div.Back{
     margin-left: 1%;
+    margin-top: 3%;
 }
 
 div.Back a{
@@ -131,11 +132,11 @@ div.Back a{
 
 div.Flex-Container{
     margin: 2% 1% 2% 1%;
-    gap: 2%;
+    gap: 4%;
 }
 
 div.Flex-Container div.Name{
-    width: 25%;
+    width: 20%;
 }
 
 div.Flex-Container div.Name input{
@@ -161,7 +162,7 @@ div.Flex-Container div.Confirm{
 
 div.Flex-Container div.Confirm button{
     font-size: 1em;
-    padding: 10px 15px;
+    padding: 10px 10px;
 }
 
 div.Flex-Container div.Edit{
@@ -182,7 +183,7 @@ div.Flex-Container div.Delete{
 
 div.Flex-Container div.Delete button{
     font-size: 1em;
-    padding: 10px 15px;
+    padding: 10px 10px;
 }
 
 
