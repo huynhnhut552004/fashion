@@ -1,128 +1,181 @@
 const Product = require("../Models/Product");
+const cloudinary = require('cloudinary').v2; 
 
-exports.getproductmen= async(req, res)=>{
-    const product= await Product.find({gender: "Men"});
-    res.json(product);
-}
-
-exports.getproductwomen= async(req, res)=>{
-    const product= await Product.find({gender: "Women"});
-    res.json(product);
-}
-
-exports.getProductbyId= async(req, res)=>{
-    const {id}= req.params;
-    const product= await Product.findById(id) ;
-    if(!product){ return res.status(404).json({message:"Không tìm thấy sản phẩm!"})};
-    res.json(product);
-}
-
-exports.searchProducts= async(req, res)=>{ 
-    const search= req.query.search||"";
-    try{
-        const result= await Product.find({ 
-            name:{$regex: search, $options:"i"}
-        });
-        res.json(result);
-    }catch (err){
-        console.error("Lỗi searchProducts:", err); 
-        res.status(500).json({message:"Lỗi khi tìm kiếm sản phẩm!"})
+exports.getproductmen = async (req, res) => {
+    try {
+        const product = await Product.find({ gender: "Men" });
+        res.json(product);
+    } catch (err) {
+        res.status(500).json({ message: "Lỗi Server!" });
     }
 };
 
-exports.searchProductMen= async(req, res)=>{  
-    const search= req.query.search||"";
-    const gender= req.params;
-    try{
-        const result= await Product.find({ 
-            name:{$regex: search, $options:"i"},
+exports.getproductwomen = async (req, res) => {
+    try {
+        const product = await Product.find({ gender: "Women" });
+        res.json(product);
+    } catch (err) {
+        res.status(500).json({ message: "Lỗi Server!" });
+    }
+};
+
+exports.getProductbyId = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const product = await Product.findById(id);
+        if (!product) {
+            return res.status(404).json({ message: "Không tìm thấy sản phẩm!" });
+        }
+        res.json(product);
+    } catch (err) {
+        res.status(500).json({ message: "Lỗi Server!" });
+    }
+};
+
+exports.searchProducts = async (req, res) => {
+    const search = req.query.search || "";
+    try {
+        const result = await Product.find({
+            name: { $regex: search, $options: "i" }
+        });
+        res.json(result);
+    } catch (err) {
+        console.error("Lỗi searchProducts:", err);
+        res.status(500).json({ message: "Lỗi khi tìm kiếm sản phẩm!" });
+    }
+};
+
+exports.searchProductMen = async (req, res) => {
+    const search = req.query.search || "";
+    try {
+        const result = await Product.find({
+            name: { $regex: search, $options: "i" },
             gender: "Men"
         });
         res.json(result);
-    }catch (err){
-        console.error("Lỗi searchProducts:", err); 
-        res.status(500).json({message:"Lỗi khi tìm kiếm sản phẩm!"})
+    } catch (err) {
+        console.error("Lỗi searchProducts:", err);
+        res.status(500).json({ message: "Lỗi khi tìm kiếm sản phẩm!" });
     }
 };
 
-exports.searchProductWomen= async(req, res)=>{  
-    const search= req.query.search||"";
-    const gender= req.params;
-    try{
-        const result= await Product.find({ 
-            name:{$regex: search, $options:"i"},
+exports.searchProductWomen = async (req, res) => {
+    const search = req.query.search || "";
+    try {
+        const result = await Product.find({
+            name: { $regex: search, $options: "i" },
             gender: "Women"
         });
         res.json(result);
-    }catch (err){
-        console.error("Lỗi searchProducts:", err); 
-        res.status(500).json({message:"Lỗi khi tìm kiếm sản phẩm!"})
+    } catch (err) {
+        console.error("Lỗi searchProducts:", err);
+        res.status(500).json({ message: "Lỗi khi tìm kiếm sản phẩm!" });
     }
 };
 
-exports.getByCategory= async (req, res) => {
-  const { categoryId } = req.params;
-  try {
-    const products = await Product.find({ category: categoryId}).populate("category");
-    res.json(products);
-  } catch (err) {
-    console.error("Lỗi getByCategory:", err);
-    res.status(500).json({ message: "Lỗi khi lấy sản phẩm theo danh mục!" });
-  }
-};
-
-exports.getByCategorygender= async (req, res) => {
-  const { categoryId, gender } = req.params;
-  try {
-    const products = await Product.find({ category: categoryId, gender: gender }).populate("category");
-    res.json(products);
-  } catch (err) {
-    console.error("Lỗi getByCategory:", err);
-    res.status(500).json({ message: "Lỗi khi lấy sản phẩm theo danh mục!" });
-  }
-};
-
-exports.get= async(req, res)=>{
-    const product= await Product.find();
-    res.json(product);
-};
-
-exports.post= async(req, res)=>{
-    const {name, price, image, description, category, gender}= req.body;
-    if(!name || ! price || !image || !description || !category || !gender){
-        res.status(400).json({message: "thiếu thông tin!"});
-        return;
+exports.getByCategory = async (req, res) => {
+    const { categoryId } = req.params;
+    try {
+        const products = await Product.find({ category: categoryId }).populate("category");
+        res.json(products);
+    } catch (err) {
+        console.error("Lỗi getByCategory:", err);
+        res.status(500).json({ message: "Lỗi khi lấy sản phẩm theo danh mục!" });
     }
-    try{
-        const newProduct= new Product({name, price, image, description, category, gender});
+};
+
+exports.getByCategorygender = async (req, res) => {
+    const { categoryId, gender } = req.params;
+    try {
+        const products = await Product.find({ category: categoryId, gender: gender }).populate("category");
+        res.json(products);
+    } catch (err) {
+        console.error("Lỗi getByCategory:", err);
+        res.status(500).json({ message: "Lỗi khi lấy sản phẩm theo danh mục!" });
+    }
+};
+
+exports.get = async (req, res) => {
+    try {
+        const product = await Product.find();
+        res.json(product);
+    } catch (err) {
+        res.status(500).json({ message: "Lỗi Server!" });
+    }
+};
+
+exports.post = async (req, res) => {
+    const { name, price, description, category, gender, image } = req.body;
+    
+    // Kiểm tra đầy đủ thông tin
+    if (!name || !price || !description || !category || !gender || !image || !image.publicId || !image.imageUrl) {
+        return res.status(400).json({ message: "Thiếu thông tin!" });
+    }
+    
+    try {
+        const newProduct = new Product({
+            name,
+            price,
+            description,
+            category,
+            gender,
+            image: {
+                publicId: image.publicId,
+                imageUrl: image.imageUrl
+            }
+        });
         await newProduct.save();
-        res.json({message:"thêm thành công!", product: newProduct});
-    }catch(err){
-        res.status(500).json({message:"Lỗi Server!"});
+        res.json({ message: "Thêm thành công!", product: newProduct });
+    } catch (err) {
+        console.error("Lỗi khi thêm sản phẩm:", err);
+        res.status(500).json({ message: "Lỗi Server!" });
     }
 };
 
-exports.delete= async(req, res)=>{
-    const {id}= req.params;
-    try{
-        const deleted= await Product.findByIdAndDelete(id);
-        if(!deleted) return res.status(404).json({message:"Không tìm thấy sản phẩm!"});
-    }catch (err){
-        res.status(500).json({message:"Lỗi Server!"});
+exports.delete = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const deletedProduct = await Product.findById(id);
+        if (!deletedProduct) {
+            return res.status(404).json({ message: "Không tìm thấy sản phẩm!" });
+        }
+
+        if (deletedProduct.image && deletedProduct.image.publicId) {
+            await cloudinary.uploader.destroy(deletedProduct.image.publicId);
+        }
+        await Product.findByIdAndDelete(id);
+
+        res.json({ message: "Đã xóa thành công sản phẩm và ảnh!" });
+    } catch (err) {
+        console.error("Lỗi khi xóa sản phẩm:", err);
+        res.status(500).json({ message: "Lỗi Server!" });
     }
 };
 
-exports.patch= async(req, res)=>{
-    const {id}= req.params;
-    try{
-        const patched= await Product.findByIdAndUpdate(
+exports.patch = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const oldProduct = await Product.findById(id);
+        if (!oldProduct) {
+            return res.status(404).json({ message: "Không tìm thấy sản phẩm!" });
+        }
+
+        const newImage = req.body.image;
+        if (newImage && newImage.publicId && newImage.imageUrl) {
+            if (oldProduct.image && oldProduct.image.publicId) {
+                await cloudinary.uploader.destroy(oldProduct.image.publicId);
+            }
+        }
+        
+        const patched = await Product.findByIdAndUpdate(
             id,
             req.body,
-            {new: true}
+            { new: true }
         );
-        if(!patched) return res.status(404).json({message:"Không tìm thấy sản phẩm!"});
-        res.json({message:"Đã sửa!", product: patched});
-    }catch (err){
-        res.status(500).json({message:"Lỗi server!"});
+        
+        res.json({ message: "Đã sửa!", product: patched });
+    } catch (err) {
+        console.error("Lỗi khi cập nhật sản phẩm:", err);
+        res.status(500).json({ message: "Lỗi server!" });
     }
 };
