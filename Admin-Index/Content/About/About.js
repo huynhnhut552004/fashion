@@ -275,28 +275,32 @@ document.addEventListener('dblclick', async (e) => {
     if (target.tagName === 'IMG' && target.parentElement.dataset.editable === 'true') {
         const sectionKey = target.parentElement.dataset.key;
         const token = localStorage.getItem("token");
+
+        const oldPublicId = target.parentElement.dataset.publicId;
         const oldImageUrl = target.src;
-        const oldFilename = oldImageUrl.split('/').pop();
+
         const input = document.createElement('input');
         input.type = 'file';
         input.accept = 'image/*';
         input.style.display = 'none';
+
         input.addEventListener('change', async () => {
             const file = input.files[0];
             if (!file) return;
             const formData = new FormData();
             formData.append('image', file);
+
             try {
-                await fetch(`https://fashion-bsqk.onrender.com/deletePageImage/${oldFilename}`, {
-                    method: 'DELETE'
-                });
                 const res = await fetch('https://fashion-bsqk.onrender.com/imgPage', {
                     method: 'POST',
                     body: formData
                 });
                 const data = await res.json();
+                const newPublicId = data.publicId;
                 const newImageUrl = data.imageUrl;
+
                 target.src = newImageUrl;
+                target.parentElement.dataset.publicId = newPublicId; 
                 await fetch(`${API}/${pageId}`, {
                     method: 'PATCH',
                     headers: {
@@ -304,10 +308,20 @@ document.addEventListener('dblclick', async (e) => {
                         authorization: `Bearer ${token}`
                     },
                     body: JSON.stringify({
-                        [`sections.${sectionKey}.img`]: newImageUrl
+                        sections: {
+                            [sectionKey]: {
+                                publicId: newPublicId,
+                                imageUrl: newImageUrl
+                            }
+                        }
                     })
                 });
 
+                if (oldPublicId) {
+                    await fetch(`https://fashion-bsqk.onrender.com/deleteImage/${oldPublicId}`, {
+                        method: 'DELETE'
+                    });
+                }
             } catch (err) {
                 console.error("Lỗi khi thay ảnh:", err);
                 alert("Unable to update photo.");

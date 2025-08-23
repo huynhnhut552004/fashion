@@ -230,8 +230,9 @@ document.addEventListener('dblclick', async (e) => {
     if (target.tagName === 'VIDEO' && target.parentElement.dataset.editable === 'true') {
         const sectionKey = target.parentElement.dataset.key;
         const token = localStorage.getItem("token");
+
+        const oldPublicId = target.parentElement.dataset.publicId;
         const oldVideoUrl = target.src;
-        const oldFilename = oldVideoUrl.split('/').pop();
 
         const input = document.createElement('input');
         input.type = 'file';
@@ -241,25 +242,21 @@ document.addEventListener('dblclick', async (e) => {
         input.addEventListener('change', async () => {
             const file = input.files[0];
             if (!file) return;
-
             const formData = new FormData();
             formData.append('video', file);
 
             try {
-                await fetch(`https://fashion-bsqk.onrender.com/deletePageVideo/${oldFilename}`, {
-                    method: 'DELETE'
-                });
-
                 const res = await fetch('https://fashion-bsqk.onrender.com/videoPage', {
                     method: 'POST',
                     body: formData
                 });
-
                 const data = await res.json();
+                const newPublicId = data.publicId;
                 const newVideoUrl = data.videoUrl;
 
                 target.src = newVideoUrl;
- 
+                target.parentElement.dataset.publicId = newPublicId;
+
                 await fetch(`${API}/${pageId}`, {
                     method: 'PATCH',
                     headers: {
@@ -267,9 +264,20 @@ document.addEventListener('dblclick', async (e) => {
                         authorization: `Bearer ${token}`
                     },
                     body: JSON.stringify({
-                        [`sections.${sectionKey}.video`]: newVideoUrl
+                        sections: {
+                            [sectionKey]: {
+                                publicId: newPublicId,
+                                videoUrl: newVideoUrl
+                            }
+                        }
                     })
                 });
+
+                if (oldPublicId) {
+                    await fetch(`https://fashion-bsqk.onrender.com/deleteVideo/${oldPublicId}`, {
+                        method: 'DELETE'
+                    });
+                }
             } catch (err) {
                 console.error("Lỗi khi thay video:", err);
                 alert("Unable to update video.");
