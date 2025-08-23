@@ -51,10 +51,10 @@ async function fectPage(id) {
         brandName.textContent = sections['Brand-Name-Body'].content;
 
         const video1Area1 = document.querySelector('[data-Video1-Area1]')
-        video1Area1.innerHTML = `<video id="Video-1" src="${sections['Video1-Area1'].video}" loop muted playsinline></video> <div class="video-overlay"></div>`;
+        video1Area1.innerHTML = `<video id="Video-1" src="${sections['Video1-Area1'].videoUrl}" loop muted playsinline></video> <div class="video-overlay"></div>`;
 
         const video2Area1 = document.querySelector('[data-Video2-Area1]');
-        video2Area1.innerHTML = `<video id="Video-2" src="${sections['Video2-Area1'].video}" loop muted playsinline></video> <div class="video-overlay"></div>`;
+        video2Area1.innerHTML = `<video id="Video-2" src="${sections['Video2-Area1'].videoUrl}" loop muted playsinline></video> <div class="video-overlay"></div>`;
 
         const content1Area2 = document.querySelector('[data-Content1-Area2]');
         content1Area2.textContent = sections['Content1-Area2'].content;
@@ -67,7 +67,7 @@ async function fectPage(id) {
         content3Area2.textContent = sections['Content3-Area2'].content;
 
         const imgArea2 = document.querySelector('[data-Img-Area2]');
-        imgArea2.innerHTML = `<img src="${sections['Img-Area2'].img}" alt="Img">`;
+        imgArea2.innerHTML = `<img src="${sections['Img-Area2'].imgUrl}" alt="Img">`;
 
         const content1Area3 = document.querySelector('[data-Content1-Area3]');
         content1Area3.textContent = sections['Content1-Area3'].content;

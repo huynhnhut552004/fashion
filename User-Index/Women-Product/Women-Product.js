@@ -64,7 +64,7 @@ async function fetchPage(id) {
     brandName.textContent= sections['Brand-Name-Body'].content;
 
     const videoArea1= document.querySelector('[data-Video-Area1]');
-    videoArea1.innerHTML=`<video id="Video" src="${sections['Video-Area1'].video}" loop muted playsinline></video>`;
+    videoArea1.innerHTML=`<video id="Video" src="${sections['Video-Area1'].videoUrl}" loop muted playsinline></video>`;
 
     document.getElementById("Video").play();
 

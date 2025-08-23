@@ -171,7 +171,7 @@ async function fetchPage(id) {
     brandName.setAttribute('data-key', 'Brand-Name-Body');
 
     const videoArea1= document.querySelector('[data-Video-Area1]');
-    videoArea1.innerHTML=`<video id="Video" src="${sections['Video-Area1'].video}" loop muted playsinline></video>`;
+    videoArea1.innerHTML=`<video id="Video" src="${sections['Video-Area1'].videoUrl}" loop muted playsinline></video>`;
     videoArea1.setAttribute('data-editable', 'true');
     videoArea1.setAttribute('data-key', 'Video-Area1');
 

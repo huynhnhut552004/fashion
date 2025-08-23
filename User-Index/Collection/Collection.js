@@ -54,46 +54,46 @@ async function fetchPage(id) {
     descriptionVideo1.innerHTML=`<h3>${sections['Description-Video1'].content}</h3>`;
    
     const video1= document.querySelector('[data-Video1]');
-    video1.innerHTML=` <video id="video-1" src="${sections['Video1'].video}" loop muted playsinline></video>`;
+    video1.innerHTML=` <video id="video-1" src="${sections['Video1'].videoUrl}" loop muted playsinline></video>`;
 
     const content1= document.querySelector('[data-Content1]');
     content1.textContent= sections['Content1'].content;
 
     const video2= document.querySelector('[data-Video2]');
-    video2.innerHTML=`<video id="video-2" src="${sections['Video2'].video}" loop muted playsinline></video>`;
+    video2.innerHTML=`<video id="video-2" src="${sections['Video2'].videoUrl}" loop muted playsinline></video>`;
   
     const title1= document.querySelector('[data-Title1]');
     title1.innerHTML=`<h3>${sections['Title1'].content}</h3>`;
   
     const img1= document.querySelector('[data-Img1]');
-    img1.innerHTML=`<img src="${sections['Img1'].img}" alt="Img">`;
+    img1.innerHTML=`<img src="${sections['Img1'].imgUrl}" alt="Img">`;
    
     const img2= document.querySelector('[data-Img2]');
-    img2.innerHTML=`<img src="${sections['Img2'].img}" alt="Img">`;
+    img2.innerHTML=`<img src="${sections['Img2'].imgUrl}" alt="Img">`;
 
     const img3= document.querySelector('[data-Img3]');
-    img3.innerHTML=`<img src="${sections['Img3'].img}" alt="Img">`;
+    img3.innerHTML=`<img src="${sections['Img3'].imgUrl}" alt="Img">`;
 
     const img4= document.querySelector('[data-Img4]');
-    img4.innerHTML=`<img src="${sections['Img4'].img}" alt="Img">`;
+    img4.innerHTML=`<img src="${sections['Img4'].imgUrl}" alt="Img">`;
 
     const img5= document.querySelector('[data-Img5]');
-    img5.innerHTML=`<img src="${sections['Img5'].img}" alt="Img">`;
+    img5.innerHTML=`<img src="${sections['Img5'].imgUrl}" alt="Img">`;
 
     const img6= document.querySelector('[data-Img6]');
-    img6.innerHTML=`<img src="${sections['Img6'].img}" alt="Img">`
+    img6.innerHTML=`<img src="${sections['Img6'].imgUrl}" alt="Img">`
 
     const img7= document.querySelector('[data-Img7]');
-    img7.innerHTML=`<img src="${sections['Img7'].img}" alt="Img">`;
+    img7.innerHTML=`<img src="${sections['Img7'].imgUrl}" alt="Img">`;
 
     const img8= document.querySelector('[data-Img8]');
-    img8.innerHTML=`<img src="${sections['Img8'].img}" alt="Img">`;
+    img8.innerHTML=`<img src="${sections['Img8'].imgUrl}" alt="Img">`;
 
     const img9= document.querySelector('[data-Img9]');
-    img9.innerHTML=`<img src="${sections['Img9'].img}" alt="Img">`;
+    img9.innerHTML=`<img src="${sections['Img9'].imgUrl}" alt="Img">`;
 
     const video3= document.querySelector('[data-Video3]');
-    video3.innerHTML=` <video id="video-3" src="${sections['Video3'].video}" loop muted playsinline></video>`;
+    video3.innerHTML=` <video id="video-3" src="${sections['Video3'].videoUrl}" loop muted playsinline></video>`;
 
     const content2= document.querySelector('[data-Content2]');
     content2.textContent= sections['Content2'].content;
@@ -102,37 +102,37 @@ async function fetchPage(id) {
     title2.innerHTML=`<h3>${sections['Title2'].content}</h3>`;
 
     const img10= document.querySelector('[data-Img10]');
-    img10.innerHTML=`<img src="${sections['Img10'].img}" alt="Img">`;
+    img10.innerHTML=`<img src="${sections['Img10'].imgUrl}" alt="Img">`;
 
     const img11= document.querySelector('[data-Img11]');
-    img11.innerHTML=`<img src="${sections['Img11'].img}" alt="Img">`;
+    img11.innerHTML=`<img src="${sections['Img11'].imgUrl}" alt="Img">`;
 
     const img12= document.querySelector('[data-Img12]');
-    img12.innerHTML=`<img src="${sections['Img12'].img}" alt="Img">`;
+    img12.innerHTML=`<img src="${sections['Img12'].imgUrl}" alt="Img">`;
 
     const img13= document.querySelector('[data-Img13]');
-    img13.innerHTML=`<img src="${sections['Img13'].img}" alt="Img">`;
+    img13.innerHTML=`<img src="${sections['Img13'].imgUrl}" alt="Img">`;
   
     const img14= document.querySelector('[data-Img14]');
-    img14.innerHTML=`<img src="${sections['Img14'].img}" alt="Img">`;
+    img14.innerHTML=`<img src="${sections['Img14'].imgUrl}" alt="Img">`;
    
     const img15= document.querySelector('[data-Img15]');
-    img15.innerHTML=`<img src="${sections['Img15'].img}" alt="Img">`;
+    img15.innerHTML=`<img src="${sections['Img15'].imgUrl}" alt="Img">`;
 
     const img16= document.querySelector('[data-Img16]');
-    img16.innerHTML=`<img src="${sections['Img16'].img}" alt="Img">`;
+    img16.innerHTML=`<img src="${sections['Img16'].imgUrl}" alt="Img">`;
    
     const img17= document.querySelector('[data-Img17]');
-    img17.innerHTML=`<img src="${sections['Img17'].img}" alt="Img">`;
+    img17.innerHTML=`<img src="${sections['Img17'].imgUrl}" alt="Img">`;
   
     const img18= document.querySelector('[data-Img18]');
-    img18.innerHTML=`<img src="${sections['Img18'].img}" alt="Img">`;
+    img18.innerHTML=`<img src="${sections['Img18'].imgUrl}" alt="Img">`;
 
     const content3= document.querySelector('[data-Content3]');
     content3.textContent= sections['Content3'].content;
 
     const video4= document.querySelector('[data-Video4]');
-    video4.innerHTML=`<video id="video-4" src="${sections['Video4'].video}" loop muted playsinline></video>`;
+    video4.innerHTML=`<video id="video-4" src="${sections['Video4'].videoUrl}" loop muted playsinline></video>`;
    
     document.getElementById("video-1").play();
     document.getElementById("video-2").play();

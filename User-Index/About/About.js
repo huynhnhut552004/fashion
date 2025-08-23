@@ -48,7 +48,7 @@ async function fetchPage(id) {
     const sections= data.sections;
 
     const imgArea1= document.querySelector('[data-Img-Area1]');
-    imgArea1.innerHTML=`<img src="${sections['Img-Area1'].img}" alt="Img">`;
+    imgArea1.innerHTML=`<img src="${sections['Img-Area1'].imgUrl}" alt="Img">`;
 
     const brandName= document.querySelector('[data-Brand-Name]');
     brandName.textContent= sections['Brand-Name-Body'].content;

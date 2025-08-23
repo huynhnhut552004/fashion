@@ -153,7 +153,7 @@ async function fetchPage(id) {
     const sections= data.sections;
 
     const imgArea1= document.querySelector('[data-Img-Area1]');
-    imgArea1.innerHTML=`<img src="${sections['Img-Area1'].img}" alt="Img">`;
+    imgArea1.innerHTML=`<img src="${sections['Img-Area1'].imgUrl}" alt="Img">`;
     imgArea1.setAttribute('data-editable', 'true');
     imgArea1.setAttribute('data-key', 'Img-Area1');
 
