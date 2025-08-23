@@ -132,7 +132,7 @@ document.addEventListener('dblclick', async (e) => {
 
 async function Checkadmin() {
     const token= localStorage.getItem("token");
-    const res= await fetch("hhttps://fashion-bsqk.onrender.com/admin",{
+    const res= await fetch("https://fashion-bsqk.onrender.com/admin",{
         headers: {authorization:`Bearer ${token}`},
     });
     if(!res.ok){
