@@ -15,33 +15,33 @@ async function checkadmin() {
 
 async function fetchProduct() {
     const name = document.getElementById("searchInput").value;
-    let url= `${API}/search?`;
+    let url = `${API}/search?`;
     if (name) url += `search=${encodeURIComponent(name)}`;
-    const res= await fetch(url);
-    const data= await res.json();
-    const table= document.getElementById("productTable");
-    table.innerHTML=""; 
-    data.forEach(p =>{
-        const row= document.createElement("tr");
-        const escapedGender= p.gender.replace(/'/g, "\\'");
+    const res = await fetch(url);
+    const data = await res.json();
+    const table = document.getElementById("productTable");
+    table.innerHTML = "";
+    data.forEach(p => {
+        const row = document.createElement("tr");
+        const escapedGender = p.gender.replace(/'/g, "\\'");
         const escapedName = p.name.replace(/'/g, "\\'");
         const escapedDescription = p.description.replace(/'/g, "\\'");
-        const escapedImage = p.image.replace(/'/g, "\\'");
-        row.innerHTML=`
+        const escapedImage = p.image.imageUrl.replace(/'/g, "\\'");
+
+        row.innerHTML = `
         <td>${p.gender}</td>
         <td>${p.name}</td>
         <td>${p.price}$</td>
-        <td><img src="${p.image}" width="60"></td>
+        <td><img src="${p.image.imageUrl}" width="60"></td>
         <td>${p.description}</td>
         <td>
             <button onclick="deleteProduct('${p._id}')">Delete</button>
-            <button onclick="editProduct('${p._id}', '${escapedGender}', '${p.category}', '${escapedName}', ${p.price}, '${escapedImage}', '${escapedDescription}')">Edit</button>
+            <button onclick="editProduct('${p._id}', '${escapedGender}', '${p.category}', '${escapedName}', ${p.price}, '${escapedImage}', '${escapedDescription}', '${p.image.publicId}')">Edit</button>
         </td>
         `;
         table.appendChild(row);
     });
 }
-
 async function loadCategories() {
     const res= await fetch("https://fashion-bsqk.onrender.com/Category");
     const category= await res.json();

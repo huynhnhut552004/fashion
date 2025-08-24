@@ -122,7 +122,7 @@ document.getElementById("Category").addEventListener("change", async ()=>{
      const div= document.createElement("div");
         div.className="Product"; 
         div.innerHTML=`
-        <img src="${p.image}" width="120"><br>
+        <img src="${p.image.imageUrl}" width="120"><br>
         ${p.name}<br>
         ${p.price}$<br>
         `;
