@@ -158,7 +158,7 @@ async function fetchAndRenderPage(id) {
         brandName.setAttribute('data-key', 'Brand-Name-Body');
 
         const imgArea1 = document.querySelector('[data-Img-Area1]');
-        imgArea1.innerHTML = `<img src="${sections['Img-Area1'].imgUrl}" alt="Img">`;
+        imgArea1.innerHTML = `<img src="${sections['Img-Area1'].imageUrl}" alt="Img">`;
         imgArea1.setAttribute('data-editable', 'true');
         imgArea1.setAttribute('data-key', 'Img-Area1');
 
@@ -183,7 +183,7 @@ async function fetchAndRenderPage(id) {
         contentArea2.setAttribute('data-key', 'Content-Area2');
 
         const imgArea2= document.querySelector('[data-Img-Area2]');
-        imgArea2.innerHTML= `<img src="${sections['Img-Area2'].imgUrl}" alt="Img">`;
+        imgArea2.innerHTML= `<img src="${sections['Img-Area2'].imageUrl}" alt="Img">`;
         imgArea2.setAttribute('data-editable', 'true');
         imgArea2.setAttribute('data-key', 'Img-Area2');
 
@@ -198,17 +198,17 @@ async function fetchAndRenderPage(id) {
         content1Area3.setAttribute('data-key', 'Content1-Area3');
 
         const img1Area3= document.querySelector('[data-Img1-Area3]');
-        img1Area3.innerHTML= `<img src="${sections['Img1-Area3'].imgUrl}" alt="Img">`;
+        img1Area3.innerHTML= `<img src="${sections['Img1-Area3'].imageUrl}" alt="Img">`;
         img1Area3.setAttribute('data-editable', 'true');
         img1Area3.setAttribute('data-key', 'Img1-Area3');
 
         const img2Area3= document.querySelector('[data-Img2-Area3]');
-        img2Area3.innerHTML= `<img src="${sections['Img2-Area3'].imgUrl}" alt="Img">`;
+        img2Area3.innerHTML= `<img src="${sections['Img2-Area3'].imageUrl}" alt="Img">`;
         img2Area3.setAttribute('data-editable', 'true');
         img2Area3.setAttribute('data-key', 'Img2-Area3');
 
         const img3Area3= document.querySelector('[data-Img3-Area3]');
-        img3Area3.innerHTML=`<img src="${sections['Img3-Area3'].imgUrl}" alt="Img">`;
+        img3Area3.innerHTML=`<img src="${sections['Img3-Area3'].imageUrl}" alt="Img">`;
         img3Area3.setAttribute('data-editable', 'true');
         img3Area3.setAttribute('data-key', 'Img3-Area3');
 
@@ -218,12 +218,12 @@ async function fetchAndRenderPage(id) {
         content2Area3.setAttribute('data-key', 'Content2-Area3');
 
         const img4Area3= document.querySelector('[data-Img4-Area3]');
-        img4Area3.innerHTML= `<img src="${sections['Img4-Area3'].imgUrl}" alt="Img">`;
+        img4Area3.innerHTML= `<img src="${sections['Img4-Area3'].imageUrl}" alt="Img">`;
         img4Area3.setAttribute('data-editable', 'true');
         img4Area3.setAttribute('data-key', 'Img4-Area3');
 
         const img5Area3= document.querySelector('[data-Img5-Area3]');
-        img5Area3.innerHTML= `<img src="${sections['Img5-Area3'].imgUrl}" alt="Img">`;
+        img5Area3.innerHTML= `<img src="${sections['Img5-Area3'].imageUrl}" alt="Img">`;
         img5Area3.setAttribute('data-editable', 'true');
         img5Area3.setAttribute('data-key', 'Img5-Area3');
 

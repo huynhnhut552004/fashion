@@ -66,31 +66,31 @@ async function fetchPage(id) {
     title1.innerHTML=`<h3>${sections['Title1'].content}</h3>`;
   
     const img1= document.querySelector('[data-Img1]');
-    img1.innerHTML=`<img src="${sections['Img1'].imgUrl}" alt="Img">`;
+    img1.innerHTML=`<img src="${sections['Img1'].imageUrl}" alt="Img">`;
    
     const img2= document.querySelector('[data-Img2]');
-    img2.innerHTML=`<img src="${sections['Img2'].imgUrl}" alt="Img">`;
+    img2.innerHTML=`<img src="${sections['Img2'].imageUrl}" alt="Img">`;
 
     const img3= document.querySelector('[data-Img3]');
-    img3.innerHTML=`<img src="${sections['Img3'].imgUrl}" alt="Img">`;
+    img3.innerHTML=`<img src="${sections['Img3'].imageUrl}" alt="Img">`;
 
     const img4= document.querySelector('[data-Img4]');
-    img4.innerHTML=`<img src="${sections['Img4'].imgUrl}" alt="Img">`;
+    img4.innerHTML=`<img src="${sections['Img4'].imageUrl}" alt="Img">`;
 
     const img5= document.querySelector('[data-Img5]');
-    img5.innerHTML=`<img src="${sections['Img5'].imgUrl}" alt="Img">`;
+    img5.innerHTML=`<img src="${sections['Img5'].imageUrl}" alt="Img">`;
 
     const img6= document.querySelector('[data-Img6]');
-    img6.innerHTML=`<img src="${sections['Img6'].imgUrl}" alt="Img">`
+    img6.innerHTML=`<img src="${sections['Img6'].imageUrl}" alt="Img">`
 
     const img7= document.querySelector('[data-Img7]');
-    img7.innerHTML=`<img src="${sections['Img7'].imgUrl}" alt="Img">`;
+    img7.innerHTML=`<img src="${sections['Img7'].imageUrl}" alt="Img">`;
 
     const img8= document.querySelector('[data-Img8]');
-    img8.innerHTML=`<img src="${sections['Img8'].imgUrl}" alt="Img">`;
+    img8.innerHTML=`<img src="${sections['Img8'].imageUrl}" alt="Img">`;
 
     const img9= document.querySelector('[data-Img9]');
-    img9.innerHTML=`<img src="${sections['Img9'].imgUrl}" alt="Img">`;
+    img9.innerHTML=`<img src="${sections['Img9'].imageUrl}" alt="Img">`;
 
     const video3= document.querySelector('[data-Video3]');
     video3.innerHTML=` <video id="video-3" src="${sections['Video3'].videoUrl}" loop muted playsinline></video>`;
@@ -102,31 +102,31 @@ async function fetchPage(id) {
     title2.innerHTML=`<h3>${sections['Title2'].content}</h3>`;
 
     const img10= document.querySelector('[data-Img10]');
-    img10.innerHTML=`<img src="${sections['Img10'].imgUrl}" alt="Img">`;
+    img10.innerHTML=`<img src="${sections['Img10'].imageUrl}" alt="Img">`;
 
     const img11= document.querySelector('[data-Img11]');
-    img11.innerHTML=`<img src="${sections['Img11'].imgUrl}" alt="Img">`;
+    img11.innerHTML=`<img src="${sections['Img11'].imageUrl}" alt="Img">`;
 
     const img12= document.querySelector('[data-Img12]');
-    img12.innerHTML=`<img src="${sections['Img12'].imgUrl}" alt="Img">`;
+    img12.innerHTML=`<img src="${sections['Img12'].imageUrl}" alt="Img">`;
 
     const img13= document.querySelector('[data-Img13]');
-    img13.innerHTML=`<img src="${sections['Img13'].imgUrl}" alt="Img">`;
+    img13.innerHTML=`<img src="${sections['Img13'].imageUrl}" alt="Img">`;
   
     const img14= document.querySelector('[data-Img14]');
-    img14.innerHTML=`<img src="${sections['Img14'].imgUrl}" alt="Img">`;
+    img14.innerHTML=`<img src="${sections['Img14'].imageUrl}" alt="Img">`;
    
     const img15= document.querySelector('[data-Img15]');
-    img15.innerHTML=`<img src="${sections['Img15'].imgUrl}" alt="Img">`;
+    img15.innerHTML=`<img src="${sections['Img15'].imageUrl}" alt="Img">`;
 
     const img16= document.querySelector('[data-Img16]');
-    img16.innerHTML=`<img src="${sections['Img16'].imgUrl}" alt="Img">`;
+    img16.innerHTML=`<img src="${sections['Img16'].imageUrl}" alt="Img">`;
    
     const img17= document.querySelector('[data-Img17]');
-    img17.innerHTML=`<img src="${sections['Img17'].imgUrl}" alt="Img">`;
+    img17.innerHTML=`<img src="${sections['Img17'].imageUrl}" alt="Img">`;
   
     const img18= document.querySelector('[data-Img18]');
-    img18.innerHTML=`<img src="${sections['Img18'].imgUrl}" alt="Img">`;
+    img18.innerHTML=`<img src="${sections['Img18'].imageUrl}" alt="Img">`;
 
     const content3= document.querySelector('[data-Content3]');
     content3.textContent= sections['Content3'].content;

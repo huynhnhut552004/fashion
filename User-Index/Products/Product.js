@@ -67,7 +67,7 @@ async function fectPage(id) {
         content3Area2.textContent = sections['Content3-Area2'].content;
 
         const imgArea2 = document.querySelector('[data-Img-Area2]');
-        imgArea2.innerHTML = `<img src="${sections['Img-Area2'].imgUrl}" alt="Img">`;
+        imgArea2.innerHTML = `<img src="${sections['Img-Area2'].imageUrl}" alt="Img">`;
 
         const content1Area3 = document.querySelector('[data-Content1-Area3]');
         content1Area3.textContent = sections['Content1-Area3'].content;
