@@ -69,25 +69,35 @@ async function Confirm() {
         const formData= new FormData();
         formData.append('image', imageFile);
         try{
-            const uploadRes= await fetch("https://fashion-bsqk.onrender.com/imgProduct",{
-                method:"POST",
-                body:formData
+             const uploadRes = await fetch("https://fashion-bsqk.onrender.com/imgProduct", {
+            method: "POST",
+            body: formData
             });
             if (!uploadRes.ok){
                 throw new Error(`Upload failed status: ${uploadRes.status}`);
             }
             const uploadData= await uploadRes.json();
-            imageUrl= uploadData.imageUrl;
+            const publicId = uploadData.publicId;
+            const imageUrl = uploadData.imageUrl;
         }catch(err){
             console.error("Error uploading image:", err);
             alert("Unable to upload photo. Please try again.");
             return;
         }
         await fetch(API,{
-            method:"POST",
-            headers:{"Content-Type": "application/json",
-            authorization: `Bearer ${token}`},
-            body: JSON.stringify({gender, category, name, price, image: imageUrl, description})
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                authorization: `Bearer ${token}`
+            },
+            body: JSON.stringify({
+                gender,
+                category,
+                name,
+                price,
+                description,
+                image: { publicId, imageUrl }
+            })
         });
         clearInputs();
         fetchProduct();
@@ -104,75 +114,76 @@ async function deleteProduct(id) {
         fetchProduct();
     }
 
-function editProduct(id, gender, category, name, price, image, description){
+function editProduct(id, gender, category, name, price, image, description, publicId) {
     document.getElementById("Genderfilter").value = gender;
     document.getElementById("filterCategory").value = category;
-    document.getElementById("Name").value= name;
-    document.getElementById("Price").value= price;
+    document.getElementById("Name").value = name;
+    document.getElementById("Price").value = price;
     document.getElementById("currentImage").src = image;
-    document.getElementById("Description").value= description;
-    const btn=document.getElementById("Confirm");
-    if(btn){
-        btn.innerText="Update";
-        btn.dataset.editingId= id;
-        btn.onclick= async function () {
-            const currentId= this.dataset.editingId;
-            const token= localStorage.getItem("token");
-            const updatedgender= document.getElementById("Genderfilter").value;
-            const updatedCategory= document.getElementById("filterCategory").value;
+    document.getElementById("Description").value = description;
+
+    const btn = document.getElementById("Confirm");
+    if (btn) {
+        btn.innerText = "Update";
+        btn.dataset.editingId = id;
+        btn.onclick = async function () {
+            const currentId = this.dataset.editingId;
+            const token = localStorage.getItem("token");
+            const updatedgender = document.getElementById("Genderfilter").value;
+            const updatedCategory = document.getElementById("filterCategory").value;
             const updatedName = document.getElementById("Name").value;
             const updatedPrice = document.getElementById("Price").value;
             const updatedDescription = document.getElementById("Description").value;
             const updatedImageFile = document.getElementById("imageInput").files[0];
-            let finalImageUrl= image;
+            let finalImage = { publicId, imageUrl: image };
             if (updatedImageFile) {
-            const formData = new FormData();
-            formData.append('image', updatedImageFile);
-            try {
-                const uploadRes = await fetch("https://fashion-bsqk.onrender.com/imgProduct", {
-                    method: "POST",
-                    body: formData,
-                });
-                if (!uploadRes.ok) {
-                    throw new Error(`Upload failed! status: ${uploadRes.status}`);
-                }
-                const uploadData = await uploadRes.json();
-                finalImageUrl = uploadData.imageUrl;
-                const oldFilename = image.split('/').pop();
-                if (oldFilename && oldFilename !== uploadData.imageUrl.split('/').pop()) {
-                    await fetch(`https://fashion-bsqk.onrender.com/deleteProductImage/${oldFilename}`, {
-                        method: "DELETE"
+                const formData = new FormData();
+                formData.append('image', updatedImageFile);
+
+                try {
+                    const uploadRes = await fetch("https://fashion-bsqk.onrender.com/imgProduct", {
+                        method: "POST",
+                        body: formData,
                     });
+
+                    if (!uploadRes.ok) {
+                        throw new Error(`Upload failed! status: ${uploadRes.status}`);
+                    }
+                    const uploadData = await uploadRes.json();
+                    finalImage = { publicId: uploadData.publicId, imageUrl: uploadData.imageUrl };
+                } catch (err) {
+                    console.error("Error uploading image for update:", err);
+                    alert("Unable to update photo, please try again.");
+                    return;
                 }
-            } catch (err) {
-                console.error("Error uploading image for update:", err);
-                alert("Unable to update photo, please try again.");
-                return;
             }
-        }
-            await fetch(`${API}/${currentId}`,{
-                method:"PATCH",
-                headers:{
+
+            // Gửi dữ liệu cập nhật
+            await fetch(`${API}/${currentId}`, {
+                method: "PATCH",
+                headers: {
                     "Content-Type": "application/json",
-                    authorization: `Bearer ${token}`},
+                    authorization: `Bearer ${token}`
+                },
                 body: JSON.stringify({
                     gender: updatedgender,
                     category: updatedCategory,
                     name: updatedName,
                     price: updatedPrice,
-                    image: finalImageUrl,
+                    image: finalImage, 
                     description: updatedDescription
                 })
             });
+
             delete btn.dataset.editingId;
-            btn.innerText="Confirm";
-            btn.onclick= Confirm;
+            btn.innerText = "Confirm";
+            btn.onclick = Confirm;
             clearInputs();
             fetchProduct();
+            alert("Cập nhật sản phẩm thành công!");
+        }
     }
 }
-}
-
 const gender= document.getElementById("Genderfilter");
 const category= document.getElementById("filterCategory");
 
