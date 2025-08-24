@@ -59,7 +59,7 @@ async function fetchProduct(){
   fetch(`https://fashion-bsqk.onrender.com/Product/${id}`)
     .then(res => res.json())
     .then(data => {
-       document.getElementById("Img").innerHTML=`<img src="${data.image}" alt="Img">`
+       document.getElementById("Img").innerHTML=`<img src="${data.image.imageUrl}" alt="Img">`
         document.getElementById("Name").innerHTML = data.name;
         document.getElementById("Price") .innerHTML = `${data.price}$`;
         document.getElementById("Description").innerHTML = data.description;
