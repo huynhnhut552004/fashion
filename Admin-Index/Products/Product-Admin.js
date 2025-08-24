@@ -1,90 +1,104 @@
-const API="https://fashion-bsqk.onrender.com/Product";
-async function checkadmin() {
-    const token= localStorage.getItem("token");
-    const res= await fetch("https://fashion-bsqk.onrender.com/admin",{
-        headers: {authorization:`Bearer ${token}`},
-    });
-    if(!res.ok){
-        alert("You do not have enough Admin access rights!");
-        window.location.href="/User-Index/Login/Admin-Login/Admin-Login.html";
-    }else{
-        const data= await res.json();
-        console.log(data);
-    } 
-};
+const API = "https://fashion-bsqk.onrender.com/Product";
 
+async function checkadmin() {
+    const token = localStorage.getItem("token");
+    const res = await fetch("https://fashion-bsqk.onrender.com/admin", {
+        headers: { authorization: `Bearer ${token}` },
+    });
+    if (!res.ok) {
+        alert("You do not have enough Admin access rights!");
+        window.location.href = "/User-Index/Login/Admin-Login/Admin-Login.html";
+    } else {
+        const data = await res.json();
+        console.log(data);
+    }
+}
+
+// Hàm này đã được sửa lại để truy cập đúng thuộc tính của ảnh và truyền publicId
 async function fetchProduct() {
     const name = document.getElementById("searchInput").value;
     let url = `${API}/search?`;
     if (name) url += `search=${encodeURIComponent(name)}`;
     const res = await fetch(url);
     const data = await res.json();
+    displayProducts(data);
+}
+
+// Hàm để tải danh mục, không cần sửa đổi
+async function loadCategories() {
+    const res = await fetch("https://fashion-bsqk.onrender.com/Category");
+    const category = await res.json();
+    const select = document.getElementById("filterCategory");
+    category.forEach(cat => {
+        const option = document.createElement("option");
+        option.value = cat._id;
+        option.textContent = cat.name;
+        select.appendChild(option);
+    });
+}
+
+// Hàm để hiển thị sản phẩm, tách riêng logic hiển thị để tái sử dụng
+function displayProducts(products) {
     const table = document.getElementById("productTable");
     table.innerHTML = "";
-    data.forEach(p => {
+    products.forEach(p => {
         const row = document.createElement("tr");
         const escapedGender = p.gender.replace(/'/g, "\\'");
         const escapedName = p.name.replace(/'/g, "\\'");
         const escapedDescription = p.description.replace(/'/g, "\\'");
-        const escapedImage = p.image.imageUrl.replace(/'/g, "\\'");
+        // Đảm bảo p.image tồn tại trước khi truy cập
+        const escapedImage = p.image?.imageUrl?.replace(/'/g, "\\'") || '';
+        const imageUrl = p.image?.imageUrl || '';
+        const publicId = p.image?.publicId || '';
 
         row.innerHTML = `
-        <td>${p.gender}</td>
-        <td>${p.name}</td>
-        <td>${p.price}$</td>
-        <td><img src="${p.image.imageUrl}" width="60"></td>
-        <td>${p.description}</td>
-        <td>
-            <button onclick="deleteProduct('${p._id}')">Delete</button>
-            <button onclick="editProduct('${p._id}', '${escapedGender}', '${p.category}', '${escapedName}', ${p.price}, '${escapedImage}', '${escapedDescription}', '${p.image.publicId}')">Edit</button>
-        </td>
+            <td>${p.gender}</td>
+            <td>${p.name}</td>
+            <td>${p.price}$</td>
+            <td><img src="${imageUrl}" width="60"></td>
+            <td>${p.description}</td>
+            <td>
+                <button onclick="deleteProduct('${p._id}')">Delete</button>
+                <button onclick="editProduct('${p._id}', '${escapedGender}', '${p.category}', '${escapedName}', ${p.price}, '${escapedImage}', '${escapedDescription}', '${publicId}')">Edit</button>
+            </td>
         `;
         table.appendChild(row);
     });
 }
-async function loadCategories() {
-    const res= await fetch("https://fashion-bsqk.onrender.com/Category");
-    const category= await res.json();
-    const select= document.getElementById("filterCategory");
-    category.forEach(cat =>{
-        const option= document.createElement("option");
-        option.value= cat._id;
-        option.textContent= cat.name;
-        select.appendChild(option);
-    });
-}
+
+// Hàm Confirm đã được sửa để lưu publicId
 async function Confirm() {
-        const token= localStorage.getItem("token");
-        const gender= document.getElementById("Genderfilter").value;
-        const name= document.getElementById("Name").value;
-        const price= document.getElementById("Price").value;
-        const description= document.getElementById("Description").value;
-        const imageFile= document.getElementById("imageInput").files[0];
-        const category= document.getElementById("filterCategory").value;
-        let imageUrl='';
-        if (!imageFile){
-            alert("Products must have images!");
-            return;
-        }
-        const formData= new FormData();
-        formData.append('image', imageFile);
-        try{
-             const uploadRes = await fetch("https://fashion-bsqk.onrender.com/imgProduct", {
+    const token = localStorage.getItem("token");
+    const gender = document.getElementById("Genderfilter").value;
+    const name = document.getElementById("Name").value;
+    const price = document.getElementById("Price").value;
+    const description = document.getElementById("Description").value;
+    const imageFile = document.getElementById("imageInput").files[0];
+    const category = document.getElementById("filterCategory").value;
+    
+    if (!imageFile) {
+        alert("Products must have images!");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('image', imageFile);
+    
+    try {
+        const uploadRes = await fetch("https://fashion-bsqk.onrender.com/imgProduct", {
             method: "POST",
             body: formData
-            });
-            if (!uploadRes.ok){
-                throw new Error(`Upload failed status: ${uploadRes.status}`);
-            }
-            const uploadData= await uploadRes.json();
-            const publicId = uploadData.publicId;
-            const imageUrl = uploadData.imageUrl;
-        }catch(err){
-            console.error("Error uploading image:", err);
-            alert("Unable to upload photo. Please try again.");
-            return;
+        });
+        
+        if (!uploadRes.ok) {
+            throw new Error(`Upload failed status: ${uploadRes.status}`);
         }
-        await fetch(API,{
+        
+        const uploadData = await uploadRes.json();
+        const publicId = uploadData.publicId;
+        const imageUrl = uploadData.imageUrl;
+        
+        await fetch(API, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -99,20 +113,27 @@ async function Confirm() {
                 image: { publicId, imageUrl }
             })
         });
+        
         clearInputs();
         fetchProduct();
+        alert("Thêm sản phẩm thành công!");
+    } catch (err) {
+        console.error("Error adding product:", err);
+        alert("Unable to upload photo. Please try again.");
+    }
 }
 
+// Các hàm khác không cần sửa đổi
 async function deleteProduct(id) {
-        const token = localStorage.getItem("token");
-        const res = await fetch(`${API}/${id}`, {
-            method: "DELETE",
-            headers: {
-                authorization: `Bearer ${token}`
-            }
-        });
-        fetchProduct();
-    }
+    const token = localStorage.getItem("token");
+    const res = await fetch(`${API}/${id}`, {
+        method: "DELETE",
+        headers: {
+            authorization: `Bearer ${token}`
+        }
+    });
+    fetchProduct();
+}
 
 function editProduct(id, gender, category, name, price, image, description, publicId) {
     document.getElementById("Genderfilter").value = gender;
@@ -136,6 +157,7 @@ function editProduct(id, gender, category, name, price, image, description, publ
             const updatedDescription = document.getElementById("Description").value;
             const updatedImageFile = document.getElementById("imageInput").files[0];
             let finalImage = { publicId, imageUrl: image };
+            
             if (updatedImageFile) {
                 const formData = new FormData();
                 formData.append('image', updatedImageFile);
@@ -158,7 +180,6 @@ function editProduct(id, gender, category, name, price, image, description, publ
                 }
             }
 
-            // Gửi dữ liệu cập nhật
             await fetch(`${API}/${currentId}`, {
                 method: "PATCH",
                 headers: {
@@ -170,7 +191,7 @@ function editProduct(id, gender, category, name, price, image, description, publ
                     category: updatedCategory,
                     name: updatedName,
                     price: updatedPrice,
-                    image: finalImage, 
+                    image: finalImage,
                     description: updatedDescription
                 })
             });
@@ -184,143 +205,49 @@ function editProduct(id, gender, category, name, price, image, description, publ
         }
     }
 }
-const gender= document.getElementById("Genderfilter");
-const category= document.getElementById("filterCategory");
 
 async function fetchProductfillter() {
-    const valuegender= gender.value;
-    const valuecaterogy= category.value;
-    const table= document.getElementById("productTable");
-    table.innerHTML="";
-    if(valuecaterogy=="" && valuegender==""){
-        fetchProduct();
-    } else if(valuecaterogy=="" && valuegender==="Men"){
-            const res= await fetch("https://fashion-bsqk.onrender.com/Product/Menproduct");
-            const data= await res.json();
-            data.forEach(p=>{
-                const row= document.createElement("tr");
-            const escapedGender= p.gender.replace(/'/g, "\\'");
-            const escapedName = p.name.replace(/'/g, "\\'");
-            const escapedDescription = p.description.replace(/'/g, "\\'");
-            const escapedImage = p.image.replace(/'/g, "\\'");
-            row.innerHTML=`
-            <td>${p.gender}</td>
-            <td>${p.name}</td>
-            <td>${p.price}$</td>
-            <td><img src="${p.image}" width="60"></td>
-            <td>${p.description}</td>
-            <td>
-                <button onclick="deleteProduct('${p._id}')">Delete</button>
-                <button onclick="editProduct('${p._id}', '${escapedGender}', '${p.category}', '${escapedName}', ${p.price}, '${escapedImage}', '${escapedDescription}')">Edit</button>
-            </td>
-            `;
-            table.appendChild(row);
-            })
-    } else if(valuecaterogy=="" && valuegender==="Women"){
-        const res= await fetch("https://fashion-bsqk.onrender.com/Product/Womenproduct");
-            const data= await res.json();
-            data.forEach(p=>{
-                const row= document.createElement("tr");
-            const escapedGender= p.gender.replace(/'/g, "\\'");
-            const escapedName = p.name.replace(/'/g, "\\'");
-            const escapedDescription = p.description.replace(/'/g, "\\'");
-            const escapedImage = p.image.replace(/'/g, "\\'");
-            row.innerHTML=`
-            <td>${p.gender}</td>
-            <td>${p.name}</td>
-            <td>${p.price}$</td>
-            <td><img src="${p.image}" width="60"></td>
-            <td>${p.description}</td>
-            <td>
-                <button onclick="deleteProduct('${p._id}')">Delete</button>
-                <button onclick="editProduct('${p._id}', '${escapedGender}', '${p.category}', '${escapedName}', ${p.price}, '${escapedImage}', '${escapedDescription}')">Edit</button>
-            </td>
-            `;
-            table.appendChild(row);
-            })
-    } else if(valuecaterogy!=="" && valuegender==""){
-        const res= await fetch(`https://fashion-bsqk.onrender.com/Product/category/${valuecaterogy}`);
-            const data= await res.json();
-            data.forEach(p=>{
-                const row= document.createElement("tr");
-            const escapedGender= p.gender.replace(/'/g, "\\'");
-            const escapedName = p.name.replace(/'/g, "\\'");
-            const escapedDescription = p.description.replace(/'/g, "\\'");
-            const escapedImage = p.image.replace(/'/g, "\\'");
-            row.innerHTML=`
-            <td>${p.gender}</td>
-            <td>${p.name}</td>
-            <td>${p.price}$</td>
-            <td><img src="${p.image}" width="60"></td>
-            <td>${p.description}</td>
-            <td>
-                <button onclick="deleteProduct('${p._id}')">Delete</button>
-                <button onclick="editProduct('${p._id}', '${escapedGender}', '${p.category}', '${escapedName}', ${p.price}, '${escapedImage}', '${escapedDescription}')">Edit</button>
-            </td>
-            `;
-            table.appendChild(row);
-            })
-    }else if(valuecaterogy!=="" && valuegender=="Men"){
-        const res= await fetch(`https://fashion-bsqk.onrender.com/Product/category/${valuecaterogy}/gender/Men`);
-            const data= await res.json();
-            data.forEach(p=>{
-                const row= document.createElement("tr");
-            const escapedGender= p.gender.replace(/'/g, "\\'");
-            const escapedName = p.name.replace(/'/g, "\\'");
-            const escapedDescription = p.description.replace(/'/g, "\\'");
-            const escapedImage = p.image.replace(/'/g, "\\'");
-            row.innerHTML=`
-            <td>${p.gender}</td>
-            <td>${p.name}</td>
-            <td>${p.price}$</td>
-            <td><img src="${p.image}" width="60"></td>
-            <td>${p.description}</td>
-            <td>
-                <button onclick="deleteProduct('${p._id}')">Delete</button>
-                <button onclick="editProduct('${p._id}', '${escapedGender}', '${p.category}', '${escapedName}', ${p.price}, '${escapedImage}', '${escapedDescription}')">Edit</button>
-            </td>
-            `;
-            table.appendChild(row);
-            })
-    }else if(valuecaterogy!=="" && valuegender=="Women"){
-        const res= await fetch(`https://fashion-bsqk.onrender.com/Product/category/${valuecaterogy}/gender/Women`);
-            const data= await res.json();
-            data.forEach(p=>{
-                const row= document.createElement("tr");
-            const escapedGender= p.gender.replace(/'/g, "\\'");
-            const escapedName = p.name.replace(/'/g, "\\'");
-            const escapedDescription = p.description.replace(/'/g, "\\'");
-            const escapedImage = p.image.replace(/'/g, "\\'");
-            row.innerHTML=`
-            <td>${p.gender}</td>
-            <td>${p.name}</td>
-            <td>${p.price}$</td>
-            <td><img src="${p.image}" width="60"></td>
-            <td>${p.description}</td>
-            <td>
-                <button onclick="deleteProduct('${p._id}')">Delete</button>
-                <button onclick="editProduct('${p._id}', '${escapedGender}', '${p.category}', '${escapedName}', ${p.price}, '${escapedImage}', '${escapedDescription}')">Edit</button>
-            </td>
-            `;
-            table.appendChild(row);
-            })
+    const valuegender = gender.value;
+    const valuecategory = category.value;
+    let url = `${API}`;
+
+    if (valuegender && valuecategory) {
+        url = `${API}/category/${valuecategory}/gender/${valuegender}`;
+    } else if (valuegender) {
+        url = `${API}/gender/${valuegender}`;
+    } else if (valuecategory) {
+        url = `${API}/category/${valuecategory}`;
+    } else {
+        url = `${API}`;
+    }
+    
+    try {
+        const res = await fetch(url);
+        if (!res.ok) {
+            throw new Error(`Failed to fetch products: ${res.status}`);
+        }
+        const data = await res.json();
+        displayProducts(data);
+    } catch (err) {
+        console.error("Lỗi khi lọc sản phẩm:", err);
+        document.getElementById("productTable").innerHTML = "<tr><td colspan='6'>Không tìm thấy sản phẩm phù hợp.</td></tr>";
     }
 }
 
-
+const gender = document.getElementById("Genderfilter");
+const category = document.getElementById("filterCategory");
 gender.addEventListener("change", fetchProductfillter);
 category.addEventListener("change", fetchProductfillter);
 
-function clearInputs(){
+function clearInputs() {
     document.getElementById("Name").value = "";
     document.getElementById("Price").value = "";
-    document.getElementById("imageInput").value = ""; 
+    document.getElementById("imageInput").value = "";
     document.getElementById("Description").value = "";
+    document.getElementById("currentImage").src = ""; 
 }
 
-
-
-document.addEventListener("DOMContentLoaded", ()=>{
+document.addEventListener("DOMContentLoaded", () => {
     checkadmin();
     fetchProduct();
     loadCategories();
