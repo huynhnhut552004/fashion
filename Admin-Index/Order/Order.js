@@ -67,7 +67,7 @@ async function fetchOrder() {
         row.innerHTML = `
         <td>${or.quantity}✕</td>
         <td>${or.productId.name}</td>
-        <td><img src="${or.productId.image}" alt="Img" width="60"></td>
+        <td><img src="${or.productId.image.imageUrl}" alt="Img" width="60"></td>
         <td>${or.productId.price}$</td>
         `;
         orderTable.appendChild(row);

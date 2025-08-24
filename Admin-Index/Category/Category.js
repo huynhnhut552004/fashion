@@ -43,7 +43,7 @@ async function fetchCategory() {
         row.innerHTML = `
           <td>${p.gender}</td>
           <td>${p.name}</td>
-          <td><img src="${p.image}" width="60"></td>
+          <td><img src="${p.image.imageUrl}" width="60"></td>
           <td>${p.price}$</td>
           <td>${p.description}</td>
         `;

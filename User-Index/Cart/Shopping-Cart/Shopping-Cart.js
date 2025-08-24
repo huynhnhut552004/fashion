@@ -54,7 +54,7 @@ async function fetchProduct() {
         data.items.forEach(p => {
         const img = document.createElement("div");
         img.className = "Img";
-        img.innerHTML = `<img src="${p.productId.image}" alt="Img">`;
+        img.innerHTML = `<img src="${p.productId.image.imageUrl}" alt="Img">`;
 
         const name = document.createElement("div");
         name.className = "Name";
