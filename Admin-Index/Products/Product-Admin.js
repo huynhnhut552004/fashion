@@ -14,7 +14,6 @@ async function checkadmin() {
     }
 }
 
-// Hàm này đã được sửa lại để truy cập đúng thuộc tính của ảnh và truyền publicId
 async function fetchProduct() {
     const name = document.getElementById("searchInput").value;
     let url = `${API}/search?`;
@@ -24,7 +23,6 @@ async function fetchProduct() {
     displayProducts(data);
 }
 
-// Hàm để tải danh mục, không cần sửa đổi
 async function loadCategories() {
     const res = await fetch("https://fashion-bsqk.onrender.com/Category");
     const category = await res.json();
@@ -37,7 +35,6 @@ async function loadCategories() {
     });
 }
 
-// Hàm để hiển thị sản phẩm, tách riêng logic hiển thị để tái sử dụng
 function displayProducts(products) {
     const table = document.getElementById("productTable");
     table.innerHTML = "";
@@ -46,7 +43,6 @@ function displayProducts(products) {
         const escapedGender = p.gender.replace(/'/g, "\\'");
         const escapedName = p.name.replace(/'/g, "\\'");
         const escapedDescription = p.description.replace(/'/g, "\\'");
-        // Đảm bảo p.image tồn tại trước khi truy cập
         const escapedImage = p.image?.imageUrl?.replace(/'/g, "\\'") || '';
         const imageUrl = p.image?.imageUrl || '';
         const publicId = p.image?.publicId || '';
@@ -66,7 +62,6 @@ function displayProducts(products) {
     });
 }
 
-// Hàm Confirm đã được sửa để lưu publicId
 async function Confirm() {
     const token = localStorage.getItem("token");
     const gender = document.getElementById("Genderfilter").value;
@@ -116,14 +111,12 @@ async function Confirm() {
         
         clearInputs();
         fetchProduct();
-        alert("Thêm sản phẩm thành công!");
     } catch (err) {
         console.error("Error adding product:", err);
         alert("Unable to upload photo. Please try again.");
     }
 }
 
-// Các hàm khác không cần sửa đổi
 async function deleteProduct(id) {
     const token = localStorage.getItem("token");
     const res = await fetch(`${API}/${id}`, {
@@ -201,7 +194,6 @@ function editProduct(id, gender, category, name, price, image, description, publ
             btn.onclick = Confirm;
             clearInputs();
             fetchProduct();
-            alert("Cập nhật sản phẩm thành công!");
         }
     }
 }
@@ -230,7 +222,7 @@ async function fetchProductfillter() {
         displayProducts(data);
     } catch (err) {
         console.error("Lỗi khi lọc sản phẩm:", err);
-        document.getElementById("productTable").innerHTML = "<tr><td colspan='6'>Không tìm thấy sản phẩm phù hợp.</td></tr>";
+        document.getElementById("productTable").innerHTML = "<tr><td colspan='6'></td></tr>";
     }
 }
 
