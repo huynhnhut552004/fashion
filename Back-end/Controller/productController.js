@@ -107,7 +107,6 @@ exports.get = async (req, res) => {
 exports.post = async (req, res) => {
     const { name, price, description, category, gender, image } = req.body;
     
-    // Kiểm tra đầy đủ thông tin
     if (!name || !price || !description || !category || !gender || !image || !image.publicId || !image.imageUrl) {
         return res.status(400).json({ message: "Thiếu thông tin!" });
     }
@@ -154,23 +153,28 @@ exports.delete = async (req, res) => {
 
 exports.patch = async (req, res) => {
     const { id } = req.params;
+    const { image, ...updateData } = req.body; 
+    
     try {
         const oldProduct = await Product.findById(id);
         if (!oldProduct) {
             return res.status(404).json({ message: "Không tìm thấy sản phẩm!" });
         }
 
-        const newImage = req.body.image;
-        if (newImage && newImage.publicId && newImage.imageUrl) {
+        if (image && image.publicId && image.imageUrl) {
             if (oldProduct.image && oldProduct.image.publicId) {
                 await cloudinary.uploader.destroy(oldProduct.image.publicId);
             }
+            updateData.image = {
+                publicId: image.publicId,
+                imageUrl: image.imageUrl
+            };
         }
         
         const patched = await Product.findByIdAndUpdate(
             id,
-            req.body,
-            { new: true }
+            updateData,
+            { new: true, runValidators: true } 
         );
         
         res.json({ message: "Đã sửa!", product: patched });
