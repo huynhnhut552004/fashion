@@ -181,7 +181,7 @@ async function quantity() {
   if(!token){
     return;
   }else{
-    const cart= await fetch("hhttps://fashion-bsqk.onrender.com/Cart", {
+    const cart= await fetch("https://fashion-bsqk.onrender.com/Cart", {
       headers:{"Content-Type": "application/json",
           authorization: `Bearer ${token}`}
       });
