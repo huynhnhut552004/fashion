@@ -264,8 +264,8 @@ document.addEventListener('dblclick', async (e) => {
                         authorization: `Bearer ${token}`
                     },
                     body: JSON.stringify({
-                        sections: {
-                            [sectionKey]: {
+                        $set: {
+                            [`sections.${sectionKey}`]: {
                                 publicId: newPublicId,
                                 videoUrl: newVideoUrl
                             }

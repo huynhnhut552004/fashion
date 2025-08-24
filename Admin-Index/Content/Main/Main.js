@@ -144,7 +144,7 @@ async function Checkadmin() {
     }
 }
 
-const pageId = "6898bc9c1be788818af2847c"; 
+const pageId = "68aabdbbb697bb5cea509f22"; 
 
 async function fetchAndRenderPage(id) {
     try {
@@ -319,8 +319,8 @@ document.addEventListener('dblclick', async (e) => {
                         authorization: `Bearer ${token}`
                     },
                     body: JSON.stringify({
-                        sections: {
-                            [sectionKey]: {
+                        $set: {
+                            [`sections.${sectionKey}`]: {
                                 publicId: newPublicId,
                                 imageUrl: newImageUrl
                             }
@@ -384,8 +384,8 @@ document.addEventListener('dblclick', async (e) => {
                         authorization: `Bearer ${token}`
                     },
                     body: JSON.stringify({
-                        sections: {
-                            [sectionKey]: {
+                        $set: {
+                            [`sections.${sectionKey}`]: {
                                 publicId: newPublicId,
                                 videoUrl: newVideoUrl
                             }

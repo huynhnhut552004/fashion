@@ -144,7 +144,7 @@ async function Checkadmin() {
     }
 }
 
-const pageId= "689b4ae4be6f8acd1fed65f6";
+const pageId= "68aabe1d13bc0097de9b3895";
 
 async function fectPage(id) {
     try{
@@ -264,7 +264,6 @@ document.addEventListener('dblclick', async (e) => {
     if (target.tagName === 'IMG' && target.parentElement.dataset.editable === 'true') {
         const sectionKey = target.parentElement.dataset.key;
         const token = localStorage.getItem("token");
-
         const oldPublicId = target.parentElement.dataset.publicId;
         const oldImageUrl = target.src;
 
@@ -289,7 +288,8 @@ document.addEventListener('dblclick', async (e) => {
                 const newImageUrl = data.imageUrl;
 
                 target.src = newImageUrl;
-                target.parentElement.dataset.publicId = newPublicId; 
+                target.parentElement.dataset.publicId = newPublicId;
+
                 await fetch(`${API}/${pageId}`, {
                     method: 'PATCH',
                     headers: {
@@ -297,8 +297,8 @@ document.addEventListener('dblclick', async (e) => {
                         authorization: `Bearer ${token}`
                     },
                     body: JSON.stringify({
-                        sections: {
-                            [sectionKey]: {
+                        $set: {
+                            [`sections.${sectionKey}`]: {
                                 publicId: newPublicId,
                                 imageUrl: newImageUrl
                             }
@@ -322,6 +322,7 @@ document.addEventListener('dblclick', async (e) => {
         document.body.removeChild(input);
     }
 });
+
 
 document.addEventListener('dblclick', async (e) => {
     const target = e.target;
@@ -362,8 +363,8 @@ document.addEventListener('dblclick', async (e) => {
                         authorization: `Bearer ${token}`
                     },
                     body: JSON.stringify({
-                        sections: {
-                            [sectionKey]: {
+                        $set: {
+                            [`sections.${sectionKey}`]: {
                                 publicId: newPublicId,
                                 videoUrl: newVideoUrl
                             }
