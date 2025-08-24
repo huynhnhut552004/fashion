@@ -99,7 +99,7 @@ async function fetchProduct() {
         });
         div.className="Product";
         div.innerHTML=`
-        <img src="${p.image}" width="120"><br>
+        <img src="${p.image.imageUrl}" width="120"><br>
         ${p.name}<br>
         ${p.price}$<br>
         `;
