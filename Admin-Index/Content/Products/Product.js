@@ -183,7 +183,7 @@ async function fectPage(id) {
         content3Area2.setAttribute('data-key', 'Content3-Area2');
 
         const imgArea2= document.querySelector('[data-Img-Area2]');
-        imgArea2.innerHTML= `<img src="${sections['Img-Area2'].imgUrl}" alt="Img">`;
+        imgArea2.innerHTML= `<img src="${sections['Img-Area2'].imageUrl}" alt="Img">`;
         imgArea2.setAttribute('data-editable', 'true');
         imgArea2.setAttribute('data-key', 'Img-Area2');
 

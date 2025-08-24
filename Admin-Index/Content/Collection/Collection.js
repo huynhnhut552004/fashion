@@ -183,47 +183,47 @@ async function fetchPage(id) {
     title1.setAttribute('data-key', 'Title1');
 
     const img1= document.querySelector('[data-Img1]');
-    img1.innerHTML=`<img src="${sections['Img1'].imgUrl}" alt="Img">`;
+    img1.innerHTML=`<img src="${sections['Img1'].imageUrl}" alt="Img">`;
     img1.setAttribute('data-editable', 'true');
     img1.setAttribute('data-key', 'Img1');
 
     const img2= document.querySelector('[data-Img2]');
-    img2.innerHTML=`<img src="${sections['Img2'].imgUrl}" alt="Img">`;
+    img2.innerHTML=`<img src="${sections['Img2'].imageUrl}" alt="Img">`;
     img2.setAttribute('data-editable', 'true');
     img2.setAttribute('data-key', 'Img2');
 
     const img3= document.querySelector('[data-Img3]');
-    img3.innerHTML=`<img src="${sections['Img3'].imgUrl}" alt="Img">`;
+    img3.innerHTML=`<img src="${sections['Img3'].imageUrl}" alt="Img">`;
     img3.setAttribute('data-editable', 'true');
     img3.setAttribute('data-key', 'Img3');
 
     const img4= document.querySelector('[data-Img4]');
-    img4.innerHTML=`<img src="${sections['Img4'].imgUrl}" alt="Img">`;
+    img4.innerHTML=`<img src="${sections['Img4'].imageUrl}" alt="Img">`;
     img4.setAttribute('data-editable', 'true');
     img4.setAttribute('data-key', 'Img4');
 
     const img5= document.querySelector('[data-Img5]');
-    img5.innerHTML=`<img src="${sections['Img5'].imgUrl}" alt="Img">`;
+    img5.innerHTML=`<img src="${sections['Img5'].imageUrl}" alt="Img">`;
     img5.setAttribute('data-editable', 'true');
     img5.setAttribute('data-key', 'Img5');
 
     const img6= document.querySelector('[data-Img6]');
-    img6.innerHTML=`<img src="${sections['Img6'].imgUrl}" alt="Img">`;
+    img6.innerHTML=`<img src="${sections['Img6'].imageUrl}" alt="Img">`;
     img6.setAttribute('data-editable', 'true');
     img6.setAttribute('data-key', 'Img6');
 
     const img7= document.querySelector('[data-Img7]');
-    img7.innerHTML=`<img src="${sections['Img7'].imgUrl}" alt="Img">`;
+    img7.innerHTML=`<img src="${sections['Img7'].imageUrl}" alt="Img">`;
     img7.setAttribute('data-editable', 'true');
     img7.setAttribute('data-key', 'Img7');
 
     const img8= document.querySelector('[data-Img8]');
-    img8.innerHTML=`<img src="${sections['Img8'].imgUrl}" alt="Img">`;
+    img8.innerHTML=`<img src="${sections['Img8'].imageUrl}" alt="Img">`;
     img8.setAttribute('data-editable', 'true');
     img8.setAttribute('data-key', 'Img8');
 
     const img9= document.querySelector('[data-Img9]');
-    img9.innerHTML=`<img src="${sections['Img9'].imgUrl}" alt="Img">`;
+    img9.innerHTML=`<img src="${sections['Img9'].imageUrl}" alt="Img">`;
     img9.setAttribute('data-editable', 'true');
     img9.setAttribute('data-key', 'Img9');
 
@@ -243,47 +243,47 @@ async function fetchPage(id) {
     title2.setAttribute('data-key', 'Title2');
 
     const img10= document.querySelector('[data-Img10]');
-    img10.innerHTML=`<img src="${sections['Img10'].imgUrl}" alt="Img">`;
+    img10.innerHTML=`<img src="${sections['Img10'].imageUrl}" alt="Img">`;
     img10.setAttribute('data-editable', 'true');
     img10.setAttribute('data-key', 'Img10');
 
     const img11= document.querySelector('[data-Img11]');
-    img11.innerHTML=`<img src="${sections['Img11'].imgUrl}" alt="Img">`;
+    img11.innerHTML=`<img src="${sections['Img11'].imageUrl}" alt="Img">`;
     img11.setAttribute('data-editable', 'true');
     img11.setAttribute('data-key', 'Img11');
 
     const img12= document.querySelector('[data-Img12]');
-    img12.innerHTML=`<img src="${sections['Img12'].imgUrl}" alt="Img">`;
+    img12.innerHTML=`<img src="${sections['Img12'].imageUrl}" alt="Img">`;
     img12.setAttribute('data-editable', 'true');
     img12.setAttribute('data-key', 'Img12');
 
     const img13= document.querySelector('[data-Img13]');
-    img13.innerHTML=`<img src="${sections['Img13'].imgUrl}" alt="Img">`;
+    img13.innerHTML=`<img src="${sections['Img13'].imageUrl}" alt="Img">`;
     img13.setAttribute('data-editable', 'true');
     img13.setAttribute('data-key', 'Img13');
 
     const img14= document.querySelector('[data-Img14]');
-    img14.innerHTML=`<img src="${sections['Img14'].imgUrl}" alt="Img">`;
+    img14.innerHTML=`<img src="${sections['Img14'].imageUrl}" alt="Img">`;
     img14.setAttribute('data-editable', 'true');
     img14.setAttribute('data-key', 'Img14');
 
     const img15= document.querySelector('[data-Img15]');
-    img15.innerHTML=`<img src="${sections['Img15'].imgUrl}" alt="Img">`;
+    img15.innerHTML=`<img src="${sections['Img15'].imageUrl}" alt="Img">`;
     img15.setAttribute('data-editable', 'true');
     img15.setAttribute('data-key', 'Img15');
 
     const img16= document.querySelector('[data-Img16]');
-    img16.innerHTML=`<img src="${sections['Img16'].imgUrl}" alt="Img">`;
+    img16.innerHTML=`<img src="${sections['Img16'].imageUrl}" alt="Img">`;
     img16.setAttribute('data-editable', 'true');
     img16.setAttribute('data-key', 'Img16');
 
     const img17= document.querySelector('[data-Img17]');
-    img17.innerHTML=`<img src="${sections['Img17'].imgUrl}" alt="Img">`;
+    img17.innerHTML=`<img src="${sections['Img17'].imageUrl}" alt="Img">`;
     img17.setAttribute('data-editable', 'true');
     img17.setAttribute('data-key', 'Img17');
 
     const img18= document.querySelector('[data-Img18]');
-    img18.innerHTML=`<img src="${sections['Img18'].imgUrl}" alt="Img">`;
+    img18.innerHTML=`<img src="${sections['Img18'].imageUrl}" alt="Img">`;
     img18.setAttribute('data-editable', 'true');
     img18.setAttribute('data-key', 'Img18');
 
