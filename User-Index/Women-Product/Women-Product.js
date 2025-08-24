@@ -99,7 +99,7 @@ async function fetchProduct() {
         });
         div.className="Product";
         div.innerHTML=`
-        <img src="${p.image}" width="120"><br>
+        <img src="${p.image.imageUrl}" width="120"><br>
         ${p.name}<br>
         ${p.price}$<br>
         `;
@@ -154,7 +154,7 @@ async function search() {
                 li.style.listStyle="none";
                 li.innerHTML = `
                 <a href="#" class="suggest-item">
-                    <img src="${product.image}" alt="Img" />
+                    <img src="${product.image.imageUrl}" alt="Img" />
                     <div class="info">
                         <h4>${product.name}</h4>
                         <p>${product.price}$</p>
