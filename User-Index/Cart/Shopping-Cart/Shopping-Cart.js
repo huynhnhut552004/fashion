@@ -214,7 +214,7 @@ document.getElementById("Checkout").addEventListener("click", async ()=>{
                 },
                 body: JSON.stringify({voucherId: voucherchoose})
             });
-            window.location.href="/User-Index/Cart/Check-out/Check-Out.html";
+            window.location.href="/User-Index/Cart/Check-Out/Check-Out.html";
         } catch (error) {
             console.error("Lỗi khi tải voucher!", err);
         }
