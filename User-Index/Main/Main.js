@@ -39,7 +39,7 @@ async function fetchFooterData() {
 }
 }
 
-const pageId = "6898bc9c1be788818af2847c"; 
+const pageId = "68aabdbbb697bb5cea509f22"; 
 
 async function fetchAndRenderPage(id) {
     try {
