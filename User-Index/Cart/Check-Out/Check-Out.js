@@ -172,9 +172,9 @@ document.getElementById("Complete").addEventListener("click", async () => {
     const data = await res.json();
     const id= userId;
     const voucher = data.voucher;
-    const orderItems = data.items.map(item => ({
-        productId: item.productId,
-        quantity: item.quantity
+    const orderItems = data.items.map(items => ({
+        productId: items.productId,
+        quantity: items.quantity
     }));
     const subtotal= data.total;
     await fetch("https://fashion-bsqk.onrender.com/Order", {

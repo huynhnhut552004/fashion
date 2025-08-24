@@ -204,7 +204,7 @@ document.getElementById("Checkout").addEventListener("click", async ()=>{
                 },
                 body: JSON.stringify({voucherId:null})
             });
-            window.location.href="/User-Index/Cart/Check-out/Check-Out.html";
+            window.location.href="/User-Index/Cart/Check-Out/Check-Out.html";
     }else{
         try {
             await fetch("https://fashion-bsqk.onrender.com/Cart/updatesubtotal",{
