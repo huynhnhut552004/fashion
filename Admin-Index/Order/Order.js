@@ -66,9 +66,9 @@ async function fetchOrder() {
         const row = document.createElement("tr");
         row.innerHTML = `
         <td>${or.quantity}✕</td>
-        <td>${or._id.name}</td>
-        <td><img src="${or._id.image.imageUrl}" alt="Img" width="60"></td>
-        <td>${or._id.price}$</td>
+        <td>${or.productId.name}</td>
+        <td><img src="${or.productId.image.imageUrl}" alt="Img" width="60"></td>
+        <td>${or.productId.price}$</td>
         `;
         orderTable.appendChild(row);
     });
