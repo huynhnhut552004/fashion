@@ -120,6 +120,9 @@ document.getElementById("Category").addEventListener("change", async ()=>{
   product.innerHTML="";
   data.forEach(p=>{
      const div= document.createElement("div");
+        div.addEventListener("click", ()=>{
+          window.location.href = `/User-Index/Detail/Detail.html?id=${p._id}`;
+        });
         div.className="Product"; 
         div.innerHTML=`
         <img src="${p.image.imageUrl}" width="120"><br>
@@ -151,6 +154,9 @@ async function search() {
             suggestions.innerHTML="";
             data.forEach(product=>{
                 const li= document.createElement("li");
+                li.addEventListener("click", ()=>{
+                  window.location.href = `/User-Index/Detail/Detail.html?id=${product._id}`;
+                });
                 li.style.listStyle="none";
                 li.innerHTML = `
                 <a href="#" class="suggest-item">
