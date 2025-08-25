@@ -173,7 +173,7 @@ document.getElementById("Complete").addEventListener("click", async () => {
     const id= userId;
     const voucher = data.voucher;
     const orderItems = data.items.map(items => ({
-        productId: items.productId,
+        productId: items.productId._id,
         quantity: items.quantity
     }));
     const subtotal= data.total;
