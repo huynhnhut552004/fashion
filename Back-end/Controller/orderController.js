@@ -1,6 +1,6 @@
 const Order= require("../Models/Order");
 
-exports.getOrderByUserId = async (req, res) => {
+exports.getOrder = async (req, res) => {
     try { 
         const cart = await Order.find().populate('items.productId').populate('voucher').populate('userId');
         if (!cart) {
