@@ -13,7 +13,6 @@ body{
 
 section.Area-1{
     border-bottom:1px solid black;
-    height: 1500px;
 }
 
 section.Area-1 div.Brand-Name{
@@ -34,6 +33,7 @@ section.Area-1 div.Grid-Container{
     padding-left: 1.5%;
     padding-right: 3%;
     gap: 4%;
+    padding-bottom: 4%;
 }
 
 section.Area-1 div.Grid-Container div.Img{
@@ -42,7 +42,9 @@ section.Area-1 div.Grid-Container div.Img{
 }
 
 section.Area-1 div.Grid-Container div.Img img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 section.Area-1 div.Grid-Container div.Title{
@@ -85,7 +87,6 @@ section.Area-1 div.Grid-Container div.About-Navigation a:hover{
 
 section.Area-2{
     border-bottom: 1px solid black;
-    height: 870px;
 }
 
 section.Area-2 div.Grid-Container{
@@ -96,6 +97,7 @@ section.Area-2 div.Grid-Container{
     padding-left: 4%;
     padding-right: 4%;
     gap: 4%;
+    padding-bottom: 4%;
 }
 
 section.Area-2 div.Grid-Container div.Title{
@@ -142,11 +144,16 @@ section.Area-2 div.Grid-Container div.Img{
 }
 
 section.Area-2 div.Grid-Container div.Img img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
+
 section.Area-3{
     border-bottom: 1px solid black;
-    height: 3495px;
+    padding-bottom: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
 section.Area-3 div.Grid-Container{
@@ -154,8 +161,6 @@ section.Area-3 div.Grid-Container{
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 1.4fr 0.5fr 1fr ;
     padding-top: 5%;
-    padding-left: 4%;
-    padding-right: 4%;
     gap: 4%;
 }
 
@@ -179,7 +184,9 @@ section.Area-3 div.Grid-Container div.Img-1{
 }
 
 section.Area-3 div.Grid-Container div.Img-1 img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 section.Area-3 div.Grid-Container div.Img-2{
@@ -188,7 +195,9 @@ section.Area-3 div.Grid-Container div.Img-2{
 }
 
 section.Area-3 div.Grid-Container div.Img-2 img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 section.Area-3 div.Img-3{
@@ -197,15 +206,14 @@ section.Area-3 div.Img-3{
 }
 
 section.Area-3 div.Img-3 img{
-    width: 40%;
+    max-width: 40%;
+    height: auto;
 }
 
 section.Area-3 div.Flex-Container-1{
     display: flex;
     padding-top: 3%;
     align-items: end;
-    padding-left: 4%;
-    padding-right: 4%;
     gap: 30%;
 }
 
@@ -220,14 +228,14 @@ section.Area-3 div.Flex-Container-1 div.Img-4{
 }
 
 section.Area-3 div.Flex-Container-1 div.Img-4 img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 section.Area-3 div.Flex-Container-2{
     display: flex;
     padding-top: 3%;
-    padding-left: 4%;
-    padding-right: 4%;
     gap: 4%;
     align-items: end;
 }
@@ -237,7 +245,9 @@ section.Area-3 div.Flex-Container-2 div.Img-5{
 }
 
 section.Area-3 div.Flex-Container-2 div.Img-5 img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 section.Area-3 div.Flex-Container-2 div.Conllection-Navigation{
@@ -264,11 +274,13 @@ section.Area-3 div.Flex-Container-2 div.Conllection-Navigation a:hover{
 }
 
 section.Area-4 div.Video{
+    width: 100vw;
     padding-top: 4%;
 }
 
 section.Area-4 div.Video video{
     width: 100%;
+    height: auto;
     display: block;
 }
 
