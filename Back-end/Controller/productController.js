@@ -176,7 +176,6 @@ exports.patch = async (req, res) => {
             updateData,
             { new: true, runValidators: true } 
         );
-        
         res.json({ message: "Đã sửa!", product: patched });
     } catch (err) {
         console.error("Lỗi khi cập nhật sản phẩm:", err);
