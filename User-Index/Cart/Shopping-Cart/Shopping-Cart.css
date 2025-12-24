@@ -34,7 +34,7 @@ section.No-Product div.Product-Navigation a{
     text-decoration: none;
     color: black;
     border: 1px solid black;
-    padding: 15px;
+    padding: 2%;
     font-family: Courier;
 }
 
@@ -54,6 +54,7 @@ section.Have-Product div.List-Product div.Product{
     border-bottom: 1px solid #ddd;
     padding-bottom: 2%;
     padding-top: 2%;
+    gap: 2%;
 }
 
 section.Have-Product div.List-Product div.Img{
@@ -61,18 +62,16 @@ section.Have-Product div.List-Product div.Img{
 }
 
 section.Have-Product div.List-Product div.Img img{
-    width: 90%;
+    max-width: 100%;
     border: 1px solid #ddd;
 }
 
 section.Have-Product div.List-Product div.Name{
-    width: 65%;
+    flex: 1;
     font-family: Courier;
 }
 
-section.Have-Product div.List-Product div.Quantity{
-    width: 17%;
-}
+
 
 section.Have-Product div.List-Product div.Quantity button{
     background: none;
@@ -84,7 +83,7 @@ section.Have-Product div.List-Product div.Quantity button{
 }
 
 section.Have-Product div.List-Product div.Quantity input{
-    width: 10px;
+    width: 4%;
     background: none;
     border: none;
     font-family: Courier;
@@ -100,11 +99,7 @@ section.Have-Product div.List-Product div.Quantity input::-webkit-inner-spin-but
 
 section.Have-Product div.List-Product div.Price{
     font-family: Courier;
-    flex: 1;
-}
-
-section.Have-Product div.List-Product div.Delete{
-    margin-top: -0.5%;
+    font-size: 1.2em;
 }
 
 section.Have-Product div.List-Product div.Delete button{
@@ -119,36 +114,35 @@ section.Have-Product div.List-Product div.Delete button{
 
 section.Have-Product div.Flex-Discount{
     display: flex;
-    margin-right: 4%;
-    margin-top: 1%;
-    margin-left: 75%;
+    padding-left: 75%;
+    padding-right: 4%;
+    padding-top: 2%;
 }
 
 section.Have-Product div.Flex-Discount div.Title{
-    width: 90%;
-    font-family: Courier ;
+    font-family: Courier;
+    flex:1;
 }
 
 section.Have-Product div.Flex-Discount div.Discount{
     font-family: Courier;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 section.Have-Product div.Flex-Container{
     display: flex;
-    margin-right: 4%;
-    margin-top: 1%;
-    margin-left: 75%;
+    padding-left: 75%;
+    padding-right: 4%;
+    padding-top: 1%;
 }
 
 section.Have-Product div.Flex-Container div.Subtotal{
-    width: 80%;
+    flex: 1;
     font-family: Courier;
 }
 
 section.Have-Product div.Flex-Container div.Total{
     font-family: Courier;
-    font-size: 20px;
 }
 
 section.Have-Product div.Err{
@@ -165,7 +159,8 @@ section.Have-Product div.Err div.Img{
 }
 
 section.Have-Product div.Err div.Img img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 section.Have-Product div.Err div.Title{
@@ -194,7 +189,7 @@ section.Have-Product div.Voucher button{
     border: 1px solid black;
     font-size: 1em;
     font-family: Courier;
-    padding: 11.3px;
+    padding: 0.5%;
     cursor: pointer;
 }
 
@@ -216,7 +211,7 @@ section.Have-Product div.Check-Out button{
     font-family: Courier;
     border: 1px solid black;
     cursor: pointer;
-    padding: 15px 115px;
+    padding: 1% 7.8%;
     background: none;
     font-size: 1em;
 }
@@ -240,6 +235,19 @@ section.Title{
     padding-top: 10%;
 }
 
+section.Have-Product div.Err{
+    width: 50%;
+    margin-left: 45%;
+}
+
+section.Have-Product div.Voucher input{
+    width: 40%;
+}
+
+section.Have-Product div.Voucher button{
+    padding: 4%;
+}
+
 section.Title div.Title{
     padding-left: 1%;
 }
@@ -254,21 +262,25 @@ section.No-Product div.Product-Navigation{
     margin-bottom: 6%;
 }
 
-section.Have-Product div.Flex-Container{
-    padding-right: 1%;
+section.Have-Product div.Flex-Discount{
+    padding-left: 50%;
 }
 
-section.Have-Product div.Flex-Container div.Total{
-    font-size: 15px;
+section.Have-Product div.Flex-Container{
+    padding-left: 50%;
+}
+
+section.Have-Product div.List-Product div.Img{
+    width: 20%;
 }
 
 section.Have-Product div.Check-Out{
-    padding-right: 1%;
     margin-top: 5%;
     margin-bottom: 6%;
 }
 
-section.Have-Product div.Check-Out a{
-    padding: 15px 24px;
+section.Have-Product div.Check-Out button{
+    padding: 2% 20%;
 }
+
 }

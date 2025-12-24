@@ -24,8 +24,9 @@ section.Area-1 div.Brand-Name{
     font-family: 'ArchivoBlack';
     color: white;
     font-size: 80px;
-    top: 1%;
-    left: 36%;
+    display: flex;
+    justify-content: center;
+    inset: 0;
 }
 
 section.Area-1 div.Video video{
@@ -34,11 +35,12 @@ section.Area-1 div.Video video{
 
 section.Area-1 div.Flex-Container{
     display: flex;
-    margin-top: 60px;
+    margin-top: 4%;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
 section.Area-1 div.Flex-Container div.Category{
-    padding-left: 60px;
     text-align: left;
     width: 50%;
 }
@@ -56,7 +58,6 @@ section.Area-1 div.Flex-Container div.Category option{
 section.Area-1 div.Flex-Container div.Search{
     text-align: right;
     width: 50%;
-    padding-right: 60px;
 }
 
 section.Area-1 div.Flex-Container div.Search input{
@@ -79,7 +80,7 @@ section.Area-1 div.Flex-Container div.Search input{
 }
 
 #suggestions li{
-   width: 260px;
+   width: 20vw;
    background-color:white;
    animation: fadeInSlideIn 0.15s ease-out forwards;
 }
@@ -162,10 +163,6 @@ body{
 
 section.Area-1 div.Brand-Name{
     font-size: 5em;
-    top: 1%;
-    bottom: 80%;
-    left: 21%;
-    right: 22%;
 }
 
 section.Area-1 div.Video video{
@@ -184,7 +181,7 @@ section.Area-1 div.Flex-Container div.Search input{
 }
 
 #suggestions li{
-   width: 207px;
+   width: 45vw;
 }
 
 .suggest-item img {

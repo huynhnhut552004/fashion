@@ -16,22 +16,25 @@ section.Area-1 div.Flex-Container{
     background-color: white;
     padding-top: 9%;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    padding-left: 4%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+    gap: 4%;
 }
 
 section.Area-1 div.Flex-Container div.Img{
     width: 30%;
-    padding-left: 4%;
-    padding-bottom: 2%;
 }
 
 section.Area-1 div.Flex-Container div.Img img{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
     border: 1px solid #ddd;
 }
 
 section.Area-1 div.Flex-Container div.Content{
     width: 35%;
-    padding-left: 4%;
 }
 
 section.Area-1 div.Flex-Container div.Content div.Back button{
@@ -107,9 +110,7 @@ section.Area-1 div.Flex-Container div.Content div.warning div.Title-Warning{
 section.Area-1 div.Flex-Container div.Comment{
     flex: 1;
     border: 1px solid #ddd;
-    margin-right: 4%;
     box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
-    margin-bottom: 5%;
     overflow-y: auto;
 }
 
@@ -154,6 +155,10 @@ section.Area-2 div.Description{
     font-size: 10px;
 }
 
+section.Area-2{
+    height: 40vh;
+}
+
 section.Area-1 div.Flex-Container{
     padding-top: 14%;
 }
@@ -188,7 +193,7 @@ section.Area-1 div.Flex-Container div.Content div.Buy{
 
 section.Area-1 div.Flex-Container div.Content div.Buy button{
     font-size: 1.3em;
-    padding:10px 15px;
+    padding: 10% 20%;
 }
 
 section.Area-1 div.Flex-Container div.Content div.warning{

@@ -114,6 +114,20 @@ async function quantity() {
   }
 }
 
+document.getElementById("Question").addEventListener("submit", async(e)=>{
+  e.preventDefault();
+  const email= document.getElementById("email").value;
+  const question= document.getElementById("message").value;
+  const res = await fetch("https://fashion-bsqk.onrender.com/Question",{
+    method: "POST",
+    body: JSON.stringify({email, question}),
+  });
+  if(res.ok){
+    email.value="";
+    question.value="";
+  }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     include("/User-Index/Header/Header.html", "header");
     include("/User-Index/Footer/Footer.html", "footer");
