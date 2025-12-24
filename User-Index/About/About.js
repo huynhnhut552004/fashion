@@ -120,11 +120,14 @@ document.getElementById("Question").addEventListener("submit", async(e)=>{
   const question= document.getElementById("message").value;
   const res = await fetch("https://fashion-bsqk.onrender.com/Question",{
     method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
     body: JSON.stringify({email, question}),
   });
   if(res.ok){
-    email.value="";
-    question.value="";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
   }
 });
 
