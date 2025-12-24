@@ -20,16 +20,15 @@ div.Title{
 
 div.Video{
     position: relative;
-    margin-top: -2%;
 }
 
 div.Description-Video-1{
     position: absolute;
     z-index: 1;
-    top: 70%;
-    bottom: 12.5%;
-    left: 27%;
-    right: 27%;
+    display: flex;
+    justify-content: center;
+    inset: 0;
+    top: 75%;
     color: white;
     font-family: 'ArchivoBlack';
     font-size: 2.2em;
@@ -58,7 +57,7 @@ div.Flex-Container-1{
 
 div.Flex-Container-1 div.Content{
     font-family: Courier;
-    width: 40%;
+    flex:1;
     padding-bottom: 10%;
 }
 
@@ -68,6 +67,7 @@ div.Flex-Container-1 div.Video-2{
 
 div.Flex-Container-1 div.Video-2 video{
     width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -94,6 +94,8 @@ div.Grid-Container-1 div.Img-1{
 
 div.Grid-Container-1 div.Img-1 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-1 div.Img-2{
@@ -104,6 +106,8 @@ div.Grid-Container-1 div.Img-2{
 
 div.Grid-Container-1 div.Img-2 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-1 div.Img-3{
@@ -113,6 +117,8 @@ div.Grid-Container-1 div.Img-3{
 
 div.Grid-Container-1 div.Img-3 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-1 div.Img-4{
@@ -122,6 +128,8 @@ div.Grid-Container-1 div.Img-4{
 
 div.Grid-Container-1 div.Img-4 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-1 div.Img-5{
@@ -130,7 +138,9 @@ div.Grid-Container-1 div.Img-5{
 }
 
 div.Grid-Container-1 div.Img-5 img{
-     width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-1 div.Img-6{
@@ -140,6 +150,8 @@ div.Grid-Container-1 div.Img-6{
 
 div.Grid-Container-1 div.Img-6 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-1 div.Img-7{
@@ -149,6 +161,8 @@ div.Grid-Container-1 div.Img-7{
 
 div.Grid-Container-1 div.Img-7 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-1 div.Img-8{
@@ -158,6 +172,8 @@ div.Grid-Container-1 div.Img-8{
 
 div.Grid-Container-1 div.Img-8 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-1 div.Img-9{
@@ -167,6 +183,8 @@ div.Grid-Container-1 div.Img-9{
 
 div.Grid-Container-1 div.Img-9 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Flex-Container-2{
@@ -182,6 +200,8 @@ div.Flex-Container-2 div.Video-3{
 
 div.Flex-Container-2 div.Video-3 video{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Flex-Container-2 div.Content{
@@ -214,6 +234,8 @@ div.Grid-Container-2 div.Img-10{
 
 div.Grid-Container-2 div.Img-10 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-2 div.Img-11{
@@ -223,6 +245,8 @@ div.Grid-Container-2 div.Img-11{
 
 div.Grid-Container-2 div.Img-11 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-2 div.Img-12{
@@ -232,6 +256,8 @@ div.Grid-Container-2 div.Img-12{
 
 div.Grid-Container-2 div.Img-12 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-2 div.Img-13{
@@ -241,6 +267,8 @@ div.Grid-Container-2 div.Img-13{
 
 div.Grid-Container-2 div.Img-13 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-2 div.Img-14{
@@ -250,6 +278,8 @@ div.Grid-Container-2 div.Img-14{
 
 div.Grid-Container-2 div.Img-14 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-2 div.Img-15{
@@ -259,6 +289,8 @@ div.Grid-Container-2 div.Img-15{
 
 div.Grid-Container-2 div.Img-15 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-2 div.Img-16{
@@ -268,6 +300,8 @@ div.Grid-Container-2 div.Img-16{
 
 div.Grid-Container-2 div.Img-16 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-2 div.Img-17{
@@ -277,6 +311,8 @@ div.Grid-Container-2 div.Img-17{
 
 div.Grid-Container-2 div.Img-17 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Grid-Container-2 div.Img-18{
@@ -286,6 +322,8 @@ div.Grid-Container-2 div.Img-18{
 
 div.Grid-Container-2 div.Img-18 img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 div.Content{
@@ -297,7 +335,8 @@ div.Content{
 }
 
 div.Video-4 video{
-    width: 100%;
+   width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -306,17 +345,21 @@ div.Video-4 video{
     font-size: 10px;
 }
 
+div.Title{
+    font-size: 2.2em;
+    padding-top: 10%;
+}
+
+div.Description-Video-1{
+    font-size: 1.5em;
+}
+
     h2{
         font-size: 0.9em;
     }
 
     h3{
         font-size: 0.8em;
-    }
-
-    div.Title{
-        padding-top: 7%;
-        padding-left: 1%;
     }
 
     div.Video{

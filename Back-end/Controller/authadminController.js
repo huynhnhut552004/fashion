@@ -5,8 +5,8 @@ const bcrypt = require("bcrypt");
 
 exports.loginAdmin = async (req, res) => {
   let { username, password } = req.body;
-  username = username?.trim();
-  password = password?.trim();
+  username = username?.trim().toLowerCase();
+  password = password?.trim().toLowerCase();
   if (!username || !password) {
     return res.status(400).json({ message: "Vui lòng nhập đầy đủ thông tin!" });
   }

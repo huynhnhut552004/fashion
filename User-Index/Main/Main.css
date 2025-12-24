@@ -76,7 +76,7 @@ section.Area-1 div.Grid-Container div.About-Navigation a{
     border: 1px solid black;
     color: black;
     font-family: Courier;
-    padding: 15px;
+    padding: 2%;
 }
 
 section.Area-1 div.Grid-Container div.About-Navigation a:hover{
@@ -105,7 +105,6 @@ section.Area-2 div.Grid-Container div.Title{
     grid-row: 1/2;
     font-family: 'ArchivoBlack';
     font-size: 1.8em;
-    margin-top: -30px;
 }
 
 section.Area-2 div.Grid-Container div.Content{
@@ -129,7 +128,7 @@ section.Area-2 div.Grid-Container div.Product-navigation a{
     text-decoration: none;
     color: black;
     border: 1px solid black;
-    padding: 15px;
+    padding: 2%;
 }
 
 section.Area-2 div.Grid-Container div.Product-navigation a:hover{
@@ -169,7 +168,6 @@ section.Area-3 div.Grid-Container div.Title{
     grid-row: 1/2;
     font-family: 'ArchivoBlack';
     font-size: 1.8em;
-    margin-top: -7%;
 }
 
 section.Area-3 div.Grid-Container div.Content{
@@ -263,7 +261,7 @@ section.Area-3 div.Flex-Container-2 div.Conllection-Navigation a{
     text-decoration: none;
     color: black;
     border: 1px solid black;
-    padding: 15px;
+    padding: 2%;
     font-family: Courier;
 }
 
@@ -293,9 +291,6 @@ section.Area-4 div.Video video{
         font-size: 0.8em;
     }
 
-    section.Area-1{
-        height: auto;
-    }
 
     section.Area-1 div.Brand-Name{
         font-size: 7em;
@@ -308,20 +303,13 @@ section.Area-4 div.Video video{
         gap: 1%;
         padding: 1%;
     }
-
-    section.Area-2{
-        height: auto;
-    }    
+  
 
     section.Area-2 div.Grid-Container{
     grid-template-columns: 3fr 2.5fr;
     grid-template-rows: 0.1fr 1.3fr 0.3fr;
     gap: 1%;
     padding: 1%;
-}
-
-    section.Area-2 div.Grid-Container div.Title{
-    margin-top: -6%;
 }
 
     section.Area-2 div.Grid-Container div.Content{

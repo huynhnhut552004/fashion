@@ -6,20 +6,28 @@
 body{
     background-color: black;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 div.Flex-Container-1{
-    display: flex;
-    padding-top: 4%;
-    padding-left: 4%;
-    gap: 2%;
+    position: relative;
+    padding-top: 10%;
+}
+
+div.Back{
+    position: absolute;
+    inset: 0;
+    top: 40%;
+    left: 2%;
+    z-index: 10;
 }
 
 div.Back a{
     text-decoration: none;
     color: white;
     border: 1px solid white;
-    padding: 15px;
+    padding: 2%;
     font-family: Courier;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -33,50 +41,54 @@ div.Back a:hover{
 }
 
 div.Title{
-    margin-top: -5%;
-    flex: 1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
     font-size: 4em;
     font-family: 'ArchivoBlack';
     color: white;
 }
 
 div.Error{
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     background-color: #ff8791;
     width: 40%;
     border-radius: 10px;
     height: 45px;
-    margin-left: 30%;
     align-items: center;
-    margin-top: -8%;
     visibility: hidden;
 }
 
 div.Error div.Icon{
-    width: 35%;
+    width: 5%;
     padding-left: 1%;
-    padding-top: 1%;
 }
 
 div.Error div.Icon img{
-    width: 20%;
+    max-width: 100%;
     height: auto;
 }
 
 div.Error div.Description-Error{
     flex: 1;
+    text-align: right;
     font-family: Courier;
     color: #d93025;
     padding-right: 1%;
 }
 
 div.Submit{
-    margin-left: 30%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #F5F5F3;
     width: 40%;
-    height: 330px;
+    height: auto;
     border-radius: 10px;
-    
+    padding-bottom: 4%;
 }
 
 div.Submit div.Title-1{
@@ -156,20 +168,24 @@ div.Flex-Container-1{
     display: block;
 }
 
+div.Area{
+    margin-top: 6%;
+}
+
 div.Title{
-    font-size: 2em;
+    font-size: 1.2em;
     text-align: center;
     margin-top: 1%;
 }
 
 div.Error{
     width: 80%;
-    margin-left: 12%;
+    height: 45px;
 }
 
 div.Error div.Icon{
     width: 24%;
-    padding-left: 2%;
+    padding-left: 1%;
 }
 
 div.Error div.Icon img{
@@ -178,8 +194,6 @@ div.Error div.Icon img{
 
 div.Submit{
     width: 80%;
-    height: 240px;
-    margin-left: 12%;
 }
 
 div.Submit div.Button{

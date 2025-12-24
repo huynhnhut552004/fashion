@@ -9,6 +9,7 @@ body{
     margin: 0;
     background-color: #1C1C1D;
     font-size: 16px;
+    color: white;
 }
 
 section.Area-1{
@@ -18,49 +19,48 @@ section.Area-1{
 
 section.Area-1 div.Brand-Name{
     position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'ArchivoBlack';
     font-size: 18.5em;
     color:#F5F5F3;
-    top: 30%;
-    bottom: 20%;
-    left: 1%;
-    right: 1%;
+    transform: translate(-50%, -50%);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
 
-section.Area-1 div.Img{
-    text-align: center;
-}
+
 
 section.Area-1 div.Img img{
     width: 100%;
+    height: auto;
+    display: block;
 }
 
 section.Area-2{
     border-bottom: 1px solid white;
-    padding-top: 4%;
+    padding-top: 2%;
+    
 }
 
 section.Area-2 div.Title{
-    color: white;
     font-family: 'ArchivoBlack';
     font-size: 2.2em;
     padding-left: 4%;
-    margin-top: -3%;
 }
 
 section.Area-2 div.Content{
-    color: white;
     font-family: Courier;
     padding-left: 4%;
     padding-right: 25%;
 }
 
 section.Area-2 div.Content-1{
-    color: white;
+
     font-family: Courier;
     padding-left: 8%;
     padding-right: 32%;
@@ -68,7 +68,6 @@ section.Area-2 div.Content-1{
 }
 
 section.Area-2 div.Content-2{
-     color: white;
     font-family: Courier;
     padding-left: 8%;
     padding-right: 32%;
@@ -76,7 +75,6 @@ section.Area-2 div.Content-2{
 }
 
 section.Area-2 div.Content-3{
-     color: white;
     font-family: Courier;
     padding-left: 8%;
     padding-right: 32%;
@@ -87,26 +85,24 @@ section.Area-2 div.Content-3{
 section.Area-3{
     border-bottom: 1px solid white;
     padding-top: 4%;
+    
 }
 
 section.Area-3 div.Title{
     font-size: 2.2em;
     font-family: 'ArchivoBlack';
-    color: white;
     padding-right: 4%;
     text-align: right;
     margin-top: -3%;
 }
 
 section.Area-3 div.Content-1{
-    color: white;
     font-family: Courier;
     padding-left: 26%;
     padding-right: 4%;
 }
 
 section.Area-3 div.Content-2{
-    color: white;
     font-family: Courier;
     padding-left: 26%;
     padding-right: 4%;
@@ -114,7 +110,6 @@ section.Area-3 div.Content-2{
 }
 
 section.Area-3 div.Content-3{
-    color: white;
     font-family: Courier;
     padding-left: 26%;
     padding-right: 4%;
@@ -125,25 +120,23 @@ section.Area-3 div.Content-3{
 section.Area-4{
     border-bottom: 1px solid white;
     padding-top: 4%;
+    
 }
 
 section.Area-4 div.Title{
     font-size: 2.2em;
     font-family: 'ArchivoBlack';
-    color: white;
     padding-left: 4%;
     margin-top: -3%;
 }
 
 section.Area-4 div.Content-1{
-    color: white;
     font-family: Courier;
     padding-left: 4%;
     padding-right: 26%;
 }
 
 section.Area-4 div.Content-2{
-    color: white;
     font-family: Courier;
     padding-left: 4%;
     padding-right: 26%;
@@ -154,10 +147,10 @@ section.Area-4 div.Content-2{
 section.Area-5{
     border-bottom: 1px solid white;
     padding-top: 4%;
+    
 }
 
 section.Area-5 div.Title{
-    color: white;
     font-family: 'ArchivoBlack';
     font-size: 2.2em;
     padding-right: 4%;
@@ -166,7 +159,6 @@ section.Area-5 div.Title{
 }
 
 section.Area-5 div.Description-1{
-    color: white;
     padding-right: 5%;
     text-align: right;
     font-family: Courier;
@@ -187,7 +179,6 @@ section.Area-5 div.Email input{
 }
 
 section.Area-5 div.Description-2{
-    color: white;
     padding-right: 5%;
     text-align: right;
     font-family: Courier;

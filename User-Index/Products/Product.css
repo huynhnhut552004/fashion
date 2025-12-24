@@ -17,10 +17,10 @@ section.Area-1{
 
 section.Area-1 div.Brand-Name{
     position: absolute;
-    top: 33%;
-    bottom: 54%;
-    right: 33%;
-    left: 34%;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    top: 25%;
     font-family: 'ArchivoBlack';
     color: white;
     font-size: 6.3em;
@@ -31,77 +31,73 @@ section.Area-1 div.Brand-Name{
     user-select: none;
 }
 
-section.Area-1 div.Title-1{
+section.Area-1 div.Flex-Title{
+    width: 100vw;
+    display: flex;
     position: absolute;
+    justify-content: space-around;
+    top: 75%;
+}
+
+section.Area-1 div.Flex-Title div.Title-1{
     font-family: 'ArchivoBlack';
     color: white;
     font-size: 1.9em;
     z-index: 1;
-    top: 75%;
-    bottom: 21%;
-    left: 10%;
-    right: 64%;
     -webkit-user-select: none;  
     -moz-user-select: none;     
     -ms-user-select: none;      
     user-select: none;
 }
 
-section.Area-1 div.Navigation-Woman-Product{
+section.Area-1 div.Flex-Nav{
+    width: 100vw;
+    display: flex;
     position: absolute;
-    z-index: 10;
+    justify-content: space-around;
     top: 80%;
-    bottom: 17.5%;
-    left: 19%;
-    right: 74%;
+}
+
+section.Area-1 div.Flex-Nav div.Navigation-Woman-Product{
+    z-index: 10;
     transition: 0.5s ease-out;
 }
 
-section.Area-1 div.Navigation-Woman-Product a{
+section.Area-1 div.Flex-Nav div.Navigation-Woman-Product a{
     color: white;
     text-decoration: none;
     font-family: Courier;
     font-size: 1.3em;
 }
 
-section.Area-1 div.Navigation-Woman-Product:hover{
+section.Area-1 div.Flex-Nav div.Navigation-Woman-Product:hover{
     text-decoration: white underline;
 }
 
-section.Area-1 div.Title-2{
-    position: absolute;
+section.Area-1 div.Flex-Title div.Title-2{
     font-family: 'ArchivoBlack';
     color: white;
     font-size: 1.9em;
     z-index: 1;
-    top: 75%;
-    bottom: 21%;
-    left: 65%;
-    right: 14%;
     -webkit-user-select: none;  
     -moz-user-select: none;     
     -ms-user-select: none;      
     user-select: none;
 }
 
-section.Area-1 div.Navigation-Men-Product{
-    position: absolute;
+section.Area-1 div.Flex-Nav div.Navigation-Men-Product{
     z-index: 10;
-    top: 80%;
-    bottom: 17.5%;
-    left: 72%;
-    right: 21%;
     transition: 0.5s ease-out;
 }
 
-section.Area-1 div.Navigation-Men-Product a{
+section.Area-1 div.Flex-Nav div.Navigation-Men-Product a{
     color: white;
     text-decoration: none;
     font-family: Courier;
     font-size: 1.3em;
 }
 
-section.Area-1 div.Navigation-Men-Product:hover{
+section.Area-1 div.Flex-Nav div.Navigation-Men-Product:hover{
     text-decoration: white underline;
 }
 
@@ -120,12 +116,14 @@ section.Area-1 div.Flex-Container div.Video-2{
 }
 
 section.Area-1 div.Flex-Container div.Video-1 video{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     display: block;
 }
 
 section.Area-1 div.Flex-Container div.Video-2 video{
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -221,50 +219,23 @@ section.Area-3 div.Content-4 b{
 }
 
 section.Area-1 div.Brand-Name{
-    top: 33%;
-    bottom: 48%;
-    left: 20%;
-    right: 22%;
-    font-size: 5em;
+    font-size: 4em;
 }
 
-section.Area-1 div.Title-1{
-    font-size: 1.5em;
-    top: 75%;
-    bottom: 19%;
-    left: 4%;
-    right: 53%;
+section.Area-1 div.Flex-Title div.Title-1{
+    font-size: 1.2em;
 }
 
-section.Area-1 div.Navigation-Woman-Product{
-    top: 83%;
-    bottom: 12%;
-    left: 18%;
-    right: 64%;
+section.Area-1 div.Flex-Title div.Title-2{
+    font-size: 1.2em;
 }
 
 section.Area-1 div.Navigation-Woman-Product a{
-    font-size: 1.5em;
-}
-
-
-section.Area-1 div.Title-2{
-    font-size: 1.5em;
-    top: 75%;
-    bottom: 19%;
-    left: 57%;
-    right: 6%;
-}
-
-section.Area-1 div.Navigation-Men-Product{
-    top: 83%;
-    bottom: 12%;
-    left: 67%;
-    right: 16%;
+    font-size: 1.2em;
 }
 
 section.Area-1 div.Navigation-Men-Product a{
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 section.Area-2{

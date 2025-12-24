@@ -5,21 +5,29 @@
 
 body{
     background-color: black;
-    font-size: 20px;
+    font-size: 20px; 
+    margin: 0;
+    padding: 0;
 }
 
 div.Flex-Container-1{
-    display: flex;
-    padding-top: 4%;
-    padding-left: 4%;
-    gap: 2%;
+    position: relative;
+    padding-top: 10%;
+}
+
+div.Flex-Container-1 div.Back{
+    position: absolute;
+    inset: 0;
+    top: 40%;
+    left: 2%;
+    z-index: 10;
 }
 
 div.Flex-Container-1 div.Back a{
     text-decoration: none;
     color: white;
     border: 1px solid white;
-    padding: 15px;
+    padding: 2%;
     font-family: Courier;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -33,7 +41,11 @@ div.Flex-Container-1 div.Back a:hover{
 }
 
 div.Flex-Container-1 div.Title{
-    margin-top: -5%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
     font-size: 2.5em;
     font-family: 'ArchivoBlack';
     color: white;
@@ -45,23 +57,24 @@ div.Error{
     width: 40%;
     border-radius: 10px;
     height: 45px;
-    margin-left: 30%;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
-    margin-top: -4%;
 }
 
 div.Error div.Icon{
-    width: 20%;
+    width: 5%;
     padding-left: 1%;
 }
 
 div.Error div.Icon img{
-    width: 20%;
+    max-width: 100%;
     height: auto;
 }
 
 div.Error div.Description-Error{
     flex: 1;
+    text-align: right;
     font-family: Courier;
     color: #d93025;
     padding-right: 1%;
@@ -73,34 +86,37 @@ div.Error-1{
     width: 40%;
     border-radius: 10px;
     height: 45px;
-    margin-left: 30%;
     align-items: center;
-    margin-top: -4%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 div.Error-1 div.Icon{
-    width: 20%;
+    width: 5%;
     padding-left: 1%;
 }
 
 div.Error-1 div.Icon img{
-    width: 20%;
+    max-width: 100%;
     height: auto;
 }
 
 div.Error-1 div.Description-Error{
     flex: 1;
+    text-align: right;
     font-family: Courier;
     color: #d93025;
     padding-right: 1%;
 }
 
 div.Submit{
-    margin-left: 30%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #F5F5F3;
     width: 40%;
-    height: 470px;
+    height: auto;
     border-radius: 10px;
+    padding-bottom: 4%;
 }
 
 div.Submit div.Grid-Name{
@@ -244,35 +260,49 @@ body{
     font-size: 12px;
 }
 
+div.Area{
+    margin-top: 10%;
+}
+
 div.Flex-Container-1{
     padding-top: 6%;
     display: block;
 }
 
 div.Flex-Container-1 div.Title{
-    font-size: 2em;
+    font-size: 1em;
     margin-top: 1%;
     text-align: center;
 }
 
 div.Error{
     width: 80%;
-    margin-left: 10%;
 }
 
 div.Error div.Icon{
-    width: 15%;
-    padding-left: 2%;
+    width: 5%;
+    padding-left: 1%;
 }
 
 div.Error div.Icon img{
-    width: 50%;
+    width: 100%;
+}
+
+div.Error-1{
+    width: 80%;
+}
+
+div.Error-1 div.Icon{
+    width: 24%;
+    padding-left: 1%;
+}
+
+div.Error-1 div.Icon img{
+    width: 40%;
 }
 
 div.Submit{
-    margin-left: 10%;
     width: 80%;
-    height: 370px;
 }
 
 div.Submit div.Grid-Name{
