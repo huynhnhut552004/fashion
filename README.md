@@ -1,88 +1,135 @@
-# [Tên Dự Án Của Bạn]
+# Fashion Shop
 
-![NodeJS](https://img.shields.io/badge/Node.js-18.x-green)
-![Express](https://img.shields.io/badge/Express-4.x-blue)
-![MongoDB](https://img.shields.io/badge/MongoDB-6.0-green)
+## 1. Introduction
 
-## 1. Giới thiệu (Introduction)
-Một dòng mô tả ngắn gọn về dự án này làm gì.
-*Ví dụ: Đây là một ứng dụng quản lý công việc (To-Do List) cho phép người dùng tạo, theo dõi và sắp xếp công việc cá nhân, được xây dựng theo kiến trúc RESTful API.*
+**Fashion Shop** is a comprehensive **Full-stack E-commerce Solution** designed to optimize online fashion retail operations.
 
-**Demo:** [Link đến website đã deploy (nếu có, ví dụ Vercel/Render/Heroku)]
-**Video Demo:** [Link video YouTube demo tính năng (rất quan trọng nếu không có link deploy)]
+The project is built on **RESTful API** architecture, featuring robust Backend logic and a Frontend strictly separated for two distinct user groups:
+* **Customers (End-users):** A seamless shopping experience ranging from product search and cart management to online ordering.
+* **Administrators (Admins):** A powerful Dashboard for product management, order tracking, and website content control.
 
-## 2. Tính năng chính (Key Features)
-Liệt kê các chức năng nổi bật mà bạn đã làm được (đừng liệt kê quá chi tiết kỹ thuật, hãy nói về chức năng người dùng):
-* [x] Đăng ký/Đăng nhập (JWT Authentication)
-* [x] CRUD (Thêm, Xóa, Sửa, Xem) dữ liệu
-* [x] Tìm kiếm và Phân trang (Pagination)
-* [x] Upload hình ảnh (sử dụng Cloudinary/Multer)
-* [ ] Chức năng Chat Realtime (Đang phát triển - ghi cái này để thấy roadmap của bạn)
+The project focuses on handling complex Backend tasks such as **Authentication (JWT)**, **Media Storage (Cloudinary)**, and **Database Optimization (MongoDB)**.
 
-## 3. Công nghệ sử dụng (Tech Stack)
-Đây là phần nhà tuyển dụng kỹ thuật soi kỹ nhất. Hãy chia nhỏ ra:
+**Demo:** [https://fashion-bsqk.onrender.com](https://fashion-bsqk.onrender.com)
 
-* **Backend:** Node.js, Express.js
-* **Database:** MongoDB, Mongoose ODM
-* **Frontend:** (Nếu bạn có làm FE thì ghi vào, ví dụ: ReactJS, TailwindCSS, Axios)
-* **Tools:** Postman (API Testing), Git, Docker (nếu có)
+> ⚠️ **Note:** The server is deployed on the **Render Free Tier**. If you experience slow loading (approx. 30-50s) on your first visit, please wait patiently while the server wakes up from sleeping mode. Videos and images may load slower than usual due to bandwidth limitations.
 
-## 4. Mô hình CSDL (Database Schema) - *Optional nhưng rất nên có*
-Mô tả sơ lược về các bảng (Collections).
-*Ví dụ:*
-* **Users:** Lưu thông tin người dùng, password hash.
-* **Products:** Lưu thông tin sản phẩm, liên kết với Users qua ID.
+## 2. Key Features
 
-## 5. Cài đặt và Chạy dự án (Installation)
-Hướng dẫn người khác cách chạy code của bạn trên máy của họ.
+### User Module (Customer)
+* **Account Authentication:** Register, Login, Forgot Password.
+* **Shopping & Products:**
+    * Search and Filter products by category.
+    * View product details.
+    * Add to cart, update quantity.
+    * Apply discount codes (Vouchers).
+    * Checkout (Process simulation).
+* **Interaction:** Send inquiries/questions to the store.
 
-### Yêu cầu (Prerequisites)
-* Node.js installed
-* MongoDB installed hoặc MongoDB Atlas URI
+### Admin Module (Administrator)
+* **Admin Login:** Separate, highly secure interface.
+* **Product Management:**
+    * Add, edit, delete products.
+    * **Cloudinary Integration:** Direct upload of images/videos to the cloud.
+* **Content Management (CMS):** Manage banners, images, videos, and blog posts.
+* **Business Management:**
+    * Manage product categories.
+    * Manage order status.
+    * Manage discount codes (Vouchers).
+    * Reply to customer inquiries.
 
-### Các bước thực hiện
-1. Clone dự án:
-   ```bash
-   git clone [https://github.com/username/ten-du-an.git](https://github.com/username/ten-du-an.git)
-   ```
-2. Di chuyển vào thư mục dự án:
-   ```bash
-   cd ten-du-an
-   ```
-3. Cài đặt các gói phụ thuộc (dependencies):
-   ```bash
-   npm install
-   ```
-4. Cấu hình biến môi trường:
-   * Tạo file `.env` ở thư mục gốc.
-   * Copy nội dung từ `.env.example` sang `.env` và điền thông tin của bạn.
-   ```env
-   PORT=5000
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
-   ```
-5. Chạy dự án:
-   ```bash
-   npm start
-   # hoặc
-   npm run dev
-   ```
+## 3. Tech Stack
 
-## 6. API Documentation (Tài liệu API)
-Liệt kê các endpoints chính hoặc dẫn link đến tài liệu Postman/Swagger.
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 
-| Method | Endpoint | Mô tả |
-| :--- | :--- | :--- |
-| POST | /api/auth/register | Đăng ký tài khoản mới |
-| POST | /api/auth/login | Đăng nhập |
-| GET | /api/products | Lấy danh sách sản phẩm |
+### Frontend
+* **HTML5 / CSS3 / JavaScript:** Building user interface and client-side logic.
+* **Responsive Design:** Optimized display across various devices.
 
-## 7. Ảnh chụp màn hình (Screenshots)
-> [Chèn hình ảnh giao diện web hoặc ảnh chụp Postman khi test API thành công tại đây. Hình ảnh trực quan hơn ngàn lời nói]
+### Backend
+* **Node.js:** Server-side JavaScript runtime environment.
+* **Express.js:** Web framework for building RESTful APIs and routing.
 
-![Trang chủ](./assets/home-page.png)
+### Database & Cloud
+* **MongoDB:** NoSQL database, using **Mongoose** (ODM) for data interaction.
+* **Cloudinary:** Cloud storage service for images and videos.
 
-## 8. Tác giả & Liên hệ
-* **Tên của bạn**
-* **Email:** email@example.com
-* **LinkedIn/Portfolio:** [Link]
+### Libraries & Utilities
+* **Security:** JWT (Authorization), Bcrypt (Password hashing), CORS.
+* **Utilities:** Multer (File upload), Dotenv (Environment variables).
+
+## 4. Database Schema
+* **Users / Admin:** Stores account information, passwords (hashed).
+* **Product:** Product details, linked to Category ID.
+* **Category:** Product categories.
+* **Cart:** Shopping cart (Linked to User ID, Product ID).
+* **Order:** Orders (Linked to User, Product, Voucher).
+* **Voucher:** Discount codes.
+* **Page / Content:** Website content (Banners, Videos, Articles).
+* **Question:** Customer inquiries.
+
+## 5. Installation
+
+Follow the steps below to run the project locally.
+
+### 1. Prerequisites
+* [Node.js](https://nodejs.org/) (v14 or higher)
+* [MongoDB](https://www.mongodb.com/) (Atlas or Local)
+* [Cloudinary](https://cloudinary.com/) Account
+
+### 2. Setup
+
+**Step 1: Clone the repository**
+* git clone [https://github.com/huynhnhut552004/fashion.git](https://github.com/huynhnhut552004/fashion.git)
+cd fashion
+
+**Step 2: Install dependencies**
+* npm install
+
+**Step 3: Configure environment variables**
+* Create a .env file in the root directory and fill in your details:
+    * MONGO_URL=mongodb+srv://<username>:<password>@...
+    * JWT_SECRET=your_secret_key
+    * CLOUDINARY_CLOUD_NAME=your_name
+    * CLOUDINARY_API_KEY=your_key
+    ** CLOUDINARY_API_SECRET=your_secret
+    * PORT=3000
+
+**Step 4: Run the project**
+* npm start
+* Access the app at: http://localhost:3000.
+
+## 6. API Documentation
+Below are some of the system's key endpoints. For detailed documentation, please refer to the source code or the Postman Collection.
+
+| Chức năng | Method | Endpoint | Description |
+| :--- | :---: | :--- | :--- |
+| **Auth** | POST | `/Login` | User login (Returns Token) |
+| **Product** | GET | `/Product` | Get a list of all products |
+| **Product** | GET | `/Product/:id` | View product details |
+| **Order** | POST | `/Order` | Create a new order (Checkout) |
+| **Admin** | POST | `/imgProduct` | Upload product images to Cloudinary |
+
+## 7. Screenshots
+| Home | Collection |
+|:---:|:---:|
+| <img src="Img_Demo/image.png" width="100%"> | <img src="Img_Demo/image-1.png" width="100%"> |
+
+| Product | Detail product |
+|:---:|:---:|
+| <img src="Img_Demo/image-2.png" width="100%"> | <img src="Img_Demo/image-3.png" width="100%"> |
+
+| Login | Admin Main |
+|:---:|:---:|
+| <img src="Img_Demo/image-4.png" width="100%"> | <img src="Img_Demo/image-5.png" width="100%"> |
+
+| Product admin | Voucher admin |
+|:---:|:---:|
+| <img src="Img_Demo/image-6.png" width="100%"> | <img src="Img_Demo/image-7.png" width="100%"> |
+
+## 8. Author & Contact
+* Huỳnh Minh Nhựt
+* Email: nhut552004@gmail.com
+* Portfolio: https://portfolio-1f96c.web.app

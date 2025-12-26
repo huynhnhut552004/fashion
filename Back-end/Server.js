@@ -27,15 +27,11 @@ app.use(cors());
 app.use(express.json());
 ConnectDB();
 
-// Phục vụ toàn bộ các file tĩnh từ thư mục gốc của dự án
 app.use(express.static(path.join(__dirname, '..')));
-
-// Định nghĩa route chính cho trang chủ
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../User-Index/Main/Main.html'));
 });
 
-// Các route khác của API
 app.use("/Page", pageRoute);
 app.use("/Login-Admin", authadminRoute);
 app.use("/Login", authuserRoute);
