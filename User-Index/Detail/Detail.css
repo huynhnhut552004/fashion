@@ -73,7 +73,7 @@ section.Area-1 div.Flex-Container div.Content div.Buy button{
     font-size: 2em;
     background-color: black;
     color: white;
-    padding: 15px 40px;
+    padding: 2% 4%;
     cursor: pointer;
 }
 
@@ -166,12 +166,11 @@ section.Area-1 div.Flex-Container div.Img{
 }
 
 section.Area-1 div.Flex-Container div.Content{
-    width:30%;
-    padding-left: 4%;
+    width: 28%;
 }
 
 section.Area-1 div.Flex-Container div.Content div.Back button{
-    font-size: 1em;
+    font-size: 0.8em;
 }
 
 section.Area-1 div.Flex-Container div.Content div.Name-Product{
