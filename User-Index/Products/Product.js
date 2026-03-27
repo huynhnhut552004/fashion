@@ -4,6 +4,7 @@ const html = await res.text();
 document.getElementById(elementId).innerHTML = html;
 if (elementId === "header") {
     fetchHeaderData();
+    authHeader();
 }
 if (elementId==="footer"){
     fetchFooterData();
@@ -26,6 +27,27 @@ try {
 }
 
 const footerId="689326a6c52779c23722b093";
+
+function authHeader() {
+  const token = localStorage.getItem("token");
+  const authBtn = document.getElementById("authBtn");
+
+  if (!authBtn) return;
+
+  if (token) {
+    authBtn.textContent = "LOGOUT";
+    authBtn.href = "#";
+
+    authBtn.onclick = function (e) {
+      e.preventDefault();
+      localStorage.removeItem("token");
+      location.reload();
+    };
+  } else {
+    authBtn.textContent = "LOGIN";
+    authBtn.href = "/User-Index/Login/User-Login/User-Login.html";
+  }
+}
 
 async function fetchFooterData() {
     try{ 

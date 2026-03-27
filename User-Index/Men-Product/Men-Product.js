@@ -1,30 +1,58 @@
 async function include(file, elementId) {
-const res = await fetch(file);
-const html = await res.text();
-document.getElementById(elementId).innerHTML = html;
-if (elementId === "header") {
-    fetchHeaderData();
-    const header = document.querySelector("header");
-    if (header) {
-      header.classList.add("Hidden");
+  const res = await fetch(file);
+  const html = await res.text();
+  document.getElementById(elementId).innerHTML = html;
 
-      window.addEventListener("scroll", () => {
-        const Y = window.pageYOffset;
-        if (Y > 0) {
-          header.classList.remove("Hidden");
-        } else {
-          header.classList.add("Hidden");
-        }
-      });
-    }
-}
-if (elementId==="footer"){
+  if (elementId === "header") {
+    fetchHeaderData();
+    authHeader();
+    initHeaderScrollEffect();
+  }
+
+  if (elementId === "footer") {
     fetchFooterData();
-}
+  }
 }
 
 const API = "https://fashion-bsqk.onrender.com/Page";
 const headerId = "68932692d62cb86cdd957f92";
+
+function authHeader() {
+  const token = localStorage.getItem("token");
+  const authBtn = document.getElementById("authBtn");
+
+  if (!authBtn) return;
+
+  if (token) {
+    authBtn.textContent = "LOGOUT";
+    authBtn.href = "#";
+
+    authBtn.onclick = function (e) {
+      e.preventDefault();
+      localStorage.removeItem("token");
+      location.reload();
+    };
+  } else {
+    authBtn.textContent = "LOGIN";
+    authBtn.href = "/User-Index/Login/User-Login/User-Login.html";
+  }
+}
+
+function initHeaderScrollEffect() {
+  const header = document.querySelector("header");
+  if (!header) return;
+
+  header.classList.add("Hidden");
+
+  window.addEventListener("scroll", () => {
+    const Y = window.pageYOffset;
+    if (Y > 0) {
+      header.classList.remove("Hidden");
+    } else {
+      header.classList.add("Hidden");
+    }
+  });
+}
 
 async function fetchHeaderData() {
 try {
