@@ -161,7 +161,6 @@ document.getElementById("Complete").addEventListener("click", async () => {
     const payloadJson = atob(payloadBase64);
     const payload = JSON.parse(payloadJson);
     const userId = payload.userId;
-    console.log("User ID:", userId);
 
     const res = await fetch("https://fashion-bsqk.onrender.com/Cart", {
         headers: {
@@ -177,7 +176,7 @@ document.getElementById("Complete").addEventListener("click", async () => {
         quantity: items.quantity
     }));
     const subtotal= data.total;
-    await fetch("https://fashion-bsqk.onrender.com/Order", {
+    const orderRes = await fetch("https://fashion-bsqk.onrender.com/Order", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -190,6 +189,11 @@ document.getElementById("Complete").addEventListener("click", async () => {
             subtotal: subtotal
         })
     });
+    if (!orderRes.ok) {
+        const errorData = await orderRes.json();
+        console.log(errorData);
+        return;
+    }
     await fetch("https://fashion-bsqk.onrender.com/Cart/clear", {
         method:"DELETE",
         headers:{"Content-Type":"application/json",

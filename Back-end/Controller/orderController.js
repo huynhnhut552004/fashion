@@ -38,7 +38,7 @@ exports.addOrder = async (req, res) => {
         }
 
         if(!subtotal){
-            return res.status(400),json({message:"Thiếu giá tổng sản phẩm!"});
+            return res.status(400).json({message:"Thiếu giá tổng sản phẩm!"});
         }
         
         const order = new Order({

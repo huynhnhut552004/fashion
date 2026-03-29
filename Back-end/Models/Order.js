@@ -16,8 +16,9 @@ const orderSchema = new Schema({
 
 orderSchema.pre("save", async function (next) {
     if (!this.code) {
-        const count = await this.constructor.countDocuments();
-        this.code = `ORD${(count + 1).toString().padStart(4, "0")}`;
+        const timeStr = Date.now().toString().slice(-6); 
+        const randomStr = Math.floor(100 + Math.random() * 900).toString();
+        this.code = `ORD${timeStr}${randomStr}`; 
     }
     next();
 });
