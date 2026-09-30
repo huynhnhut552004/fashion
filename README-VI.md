@@ -220,25 +220,21 @@ Backend cung cấp các RESTful endpoint phục vụ xác thực, sản phẩm, 
 
 ## Giao diện
 
-### Khách hàng
+| Trang chủ (Home) | Trang Collection (Collection) |
+|:---:|:---:|
+| <img src="Img_Demo/image.png" width="100%"> | <img src="Img_Demo/image-1.png" width="100%"> |
 
-| Trang chủ | Collection |
-| --------- | ---------- |
-|           |            |
+| Sản phẩm (Product) | Chi tiết sản phẩm (Detail) |
+|:---:|:---:|
+| <img src="Img_Demo/image-2.png" width="100%"> | <img src="Img_Demo/image-3.png" width="100%"> |
 
-| Sản phẩm | Chi tiết sản phẩm |
-| -------- | ----------------- |
-|          |                   |
+| Đăng nhập (Login) | Trang Admin (Admin Main) |
+|:---:|:---:|
+| <img src="Img_Demo/image-4.png" width="100%"> | <img src="Img_Demo/image-5.png" width="100%"> |
 
-### Xác thực & Quản trị
-
-| Đăng nhập | Dashboard quản trị |
-| --------- | ------------------ |
-|           |                    |
-
-| Quản lý sản phẩm | Quản lý mã giảm giá |
-| ---------------- | ------------------- |
-|                  |                     |
+| Quản lý sản phẩm (Product admin) | Quản lý voucher (Voucher admin) |
+|:---:|:---:|
+| <img src="Img_Demo/image-6.png" width="100%"> | <img src="Img_Demo/image-7.png" width="100%"> |
 
 ---
 
