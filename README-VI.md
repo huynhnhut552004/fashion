@@ -1,135 +1,258 @@
 # Fashion Shop
 
-## 1. Giới thiệu
+Website thương mại điện tử full-stack dành cho sản phẩm thời trang, được xây dựng với Node.js, Express.js và MongoDB.
 
-**Fashion Shop** là một giải pháp thương mại điện tử trọn gói (Full-stack E-commerce Solution) được thiết kế để tối ưu hóa quy trình kinh doanh thời trang trực tuyến.
+## Tổng quan
 
-Dự án được xây dựng theo kiến trúc **RESTful API** với Backend xử lý logic chặt chẽ và Frontend phân tách riêng biệt cho hai đối tượng:
-* **Khách hàng (End-users):** Trải nghiệm mua sắm mượt mà từ việc tìm kiếm sản phẩm, quản lý giỏ hàng đến đặt hàng trực tuyến.
-* **Quản trị viên (Admins):** Hệ thống Dashboard mạnh mẽ giúp quản lý sản phẩm, theo dõi đơn hàng và kiểm soát nội dung website.
+**Fashion Shop** là một dự án thương mại điện tử full-stack, cung cấp các trải nghiệm riêng biệt cho khách hàng và quản trị viên.
 
-Dự án tập trung vào việc xử lý các tác vụ Backend phức tạp như **Authentication (JWT)**, **Media Storage (Cloudinary)** và **Database Optimization (MongoDB)**.
+Dự án được phát triển như một dự án web trước đây nhằm thực hành xây dựng một hệ thống thương mại điện tử hoàn chỉnh, bao gồm xác thực người dùng, quản lý sản phẩm, giỏ hàng, xử lý đơn hàng, mã giảm giá, tải lên và quản lý hình ảnh/video, cùng hệ thống quản lý nội dung.
 
-**Demo:** [https://fashion-bsqk.onrender.com](https://fashion-bsqk.onrender.com)
+### Demo
 
-> ⚠️ **Lưu ý:** Server được deploy trên **Render Free Tier**. Nếu bạn truy cập lần đầu thấy load chậm (khoảng 30-50s), vui lòng kiên nhẫn đợi một chút để server khởi động lại sau trạng thái ngủ đông (sleeping mode). Video và Hình ảnh có thể tải chậm hơn bình thường do băng thông giới hạn.
+**Demo trực tuyến:** https://fashion-bsqk.onrender.com
 
-## 2. Tính năng chính
+> **Lưu ý:** Backend được triển khai trên Render Free Tier. Server có thể mất khoảng 30–50 giây để phản hồi ở lần truy cập đầu tiên sau một khoảng thời gian không hoạt động. Hình ảnh và video cũng có thể tải chậm hơn do giới hạn về hosting và băng thông.
 
-### Phân hệ User (Khách hàng)
-* **Xác thực tài khoản:** Đăng ký, Đăng nhập, Quên mật khẩu.
-* **Mua sắm & Sản phẩm:**
-    * Tìm kiếm và Lọc sản phẩm theo danh mục.
-    * Xem chi tiết sản phẩm.
-    * Thêm vào giỏ hàng, cập nhật số lượng.
-    * Áp dụng mã giảm giá (Voucher).
-    * Thanh toán (Mô phỏng quy trình).
-* **Tương tác:** Gửi câu hỏi, thắc mắc đến cửa hàng.
+---
 
-### Phân hệ Admin (Quản trị viên)
-* **Đăng nhập quản trị:** Trang riêng biệt, bảo mật cao.
-* **Quản lý sản phẩm:**
-    * Thêm, sửa, xoá sản phẩm.
-    * **Tích hợp Cloudinary:** Upload ảnh/video trực tiếp lên đám mây.
-* **Quản lý nội dung (CMS):** Quản lý banner, hình ảnh, video và bài viết.
-* **Quản lý kinh doanh:**
-    * Quản lý danh mục sản phẩm.
-    * Quản lý trạng thái đơn hàng.
-    * Quản lý mã giảm giá (Voucher).
-    * Phản hồi câu hỏi khách hàng.
+## Tính năng
 
-## 3. Công nghệ sử dụng (Tech Stack)
+### Khách hàng
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![Cloudinary](https://img.shields.io/badge/Cloudinary-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white) ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+* Đăng ký và đăng nhập
+* Quên mật khẩu
+* Xem danh sách sản phẩm
+* Tìm kiếm và lọc sản phẩm theo danh mục
+* Xem chi tiết sản phẩm
+* Thêm sản phẩm vào giỏ hàng
+* Cập nhật số lượng sản phẩm trong giỏ hàng
+* Áp dụng mã giảm giá
+* Đặt hàng
+* Gửi câu hỏi đến cửa hàng
+
+### Quản trị viên
+
+* Hệ thống xác thực riêng cho quản trị viên
+* Quản lý sản phẩm
+
+  * Thêm sản phẩm
+  * Cập nhật sản phẩm
+  * Xóa sản phẩm
+  * Tải lên hình ảnh/video sản phẩm
+* Quản lý danh mục
+* Quản lý đơn hàng
+* Quản lý mã giảm giá
+* Quản lý nội dung website
+
+  * Banner
+  * Hình ảnh
+  * Video
+  * Bài viết
+* Quản lý câu hỏi của khách hàng
+
+---
+
+## Điểm nổi bật về kỹ thuật
+
+Một số nội dung kỹ thuật chính được triển khai trong dự án:
+
+* **Xác thực & Phân quyền**
+
+  * Xác thực người dùng bằng JWT
+  * Hash mật khẩu bằng Bcrypt
+  * Phân tách quyền truy cập giữa người dùng và quản trị viên
+
+* **RESTful API**
+
+  * Xây dựng Backend API với Express.js
+  * Thực hiện các thao tác CRUD cho sản phẩm, danh mục, mã giảm giá và nội dung
+
+* **Quản lý Media**
+
+  * Tải lên hình ảnh và video bằng Multer
+  * Tích hợp Cloudinary để lưu trữ media trên nền tảng đám mây
+
+* **Cơ sở dữ liệu**
+
+  * MongoDB kết hợp với Mongoose
+  * Thiết lập mối quan hệ giữa người dùng, sản phẩm, danh mục, giỏ hàng, đơn hàng và mã giảm giá
+
+* **Giao diện Responsive**
+
+  * Thiết kế giao diện tương thích với máy tính và thiết bị di động
+
+---
+
+## Công nghệ sử dụng
 
 ### Frontend
-* **HTML5 / CSS3 / JavaScript:** Xây dựng giao diện người dùng và xử lý logic phía client.
-* **Responsive Design:** Tối ưu hiển thị trên nhiều thiết bị.
+
+* HTML5
+* CSS3
+* JavaScript
 
 ### Backend
-* **Node.js:** Môi trường thực thi JavaScript server-side.
-* **Express.js:** Web framework để xây dựng RESTful API và routing.
 
-### Database & Cloud
-* **MongoDB:** Cơ sở dữ liệu NoSQL, sử dụng **Mongoose** (ODM) để tương tác dữ liệu.
-* **Cloudinary:** Dịch vụ lưu trữ đám mây cho hình ảnh và video.
+* Node.js
+* Express.js
+* JWT
+* Bcrypt
+* Multer
+* CORS
+* Dotenv
 
-### Các thư viện & Tiện ích khác
-* **Bảo mật:** JWT (Authorization), Bcrypt (Hash password), CORS.
-* **Tiện ích:** Multer (Upload file), Dotenv (Biến môi trường).
+### Cơ sở dữ liệu & Dịch vụ
 
-## 4. Mô hình CSDL (Schema)
-* **Users / Admin:** Lưu thông tin tài khoản, mật khẩu (hash).
-* **Product:** Thông tin sản phẩm, liên kết với Category ID.
-* **Category:** Danh mục sản phẩm.
-* **Cart:** Giỏ hàng (Liên kết User ID, Product ID).
-* **Order:** Đơn hàng (Liên kết User, Product, Voucher).
-* **Voucher:** Mã giảm giá.
-* **Page / Content:** Nội dung website (Banner, Video, Bài viết).
-* **Question:** Câu hỏi từ khách hàng.
+* MongoDB
+* Mongoose
+* Cloudinary
 
-## 5. Cài đặt và Chạy dự án (Installation)
+---
 
-Làm theo các bước dưới đây để chạy dự án trên máy local.
+## Cấu trúc dự án
 
-### 1. Yêu cầu tiên quyết
-* [Node.js](https://nodejs.org/) (v14 trở lên)
-* [MongoDB](https://www.mongodb.com/) (Atlas hoặc Local)
-* Tài khoản [Cloudinary](https://cloudinary.com/)
+```text
+Fashion Shop/
+├── Backend/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middleware/
+│   └── ...
+│
+├── Frontend/
+│   ├── css/
+│   ├── js/
+│   ├── pages/
+│   └── ...
+│
+├── Img_Demo/
+└── README.md
+```
 
-### 2. Cài đặt
+> Cấu trúc thư mục có thể thay đổi tùy theo phiên bản của dự án.
 
-**Bước 1: Clone dự án**
-* git clone [https://github.com/huynhnhut552004/fashion.git](https://github.com/huynhnhut552004/fashion.git)
+---
+
+## Các Model trong cơ sở dữ liệu
+
+Ứng dụng sử dụng MongoDB kết hợp với Mongoose.
+
+| Model            | Mô tả                                         |
+| ---------------- | --------------------------------------------- |
+| `User`           | Tài khoản khách hàng và quản trị viên         |
+| `Product`        | Thông tin sản phẩm và tham chiếu đến danh mục |
+| `Category`       | Danh mục sản phẩm                             |
+| `Cart`           | Giỏ hàng liên kết với người dùng và sản phẩm  |
+| `Order`          | Đơn hàng và các sản phẩm đã mua               |
+| `Voucher`        | Mã giảm giá                                   |
+| `Page / Content` | Banner, video và bài viết của website         |
+| `Question`       | Câu hỏi và yêu cầu từ khách hàng              |
+
+---
+
+## Cài đặt
+
+### Yêu cầu
+
+* Node.js 14+
+* MongoDB Atlas hoặc MongoDB local
+* Tài khoản Cloudinary
+
+### 1. Clone repository
+
+```bash
+git clone https://github.com/huynhnhut552004/fashion.git
 cd fashion
+```
 
-**Bước 2: Cài đặt thư viện**
-* npm install
+### 2. Cài đặt các package
 
-**Bước 3: Cấu hình biến môi trường**
-* Tạo file .env tại thư mục gốc và điền thông tin của bạn:
-    * MONGO_URL=mongodb+srv://<username>:<password>@...
-    * JWT_SECRET=your_secret_key
-    * CLOUDINARY_CLOUD_NAME=your_name
-    * CLOUDINARY_API_KEY=your_key
-    ** CLOUDINARY_API_SECRET=your_secret
-    * PORT=3000
+```bash
+npm install
+```
 
-**Bước 4: Chạy dự án**
-* npm start
-* Truy cập: http://localhost:3000.
-## 6. API Document
-Dưới đây là một số Endpoint chính của hệ thống. Tài liệu chi tiết vui lòng xem trong mã nguồn hoặc Postman Collection.
+### 3. Cấu hình biến môi trường
 
-| Chức năng | Method | Endpoint | Mô tả |
-| :--- | :---: | :--- | :--- |
-| **Auth** | POST | `/Login` | Đăng nhập người dùng (Trả về Token) |
-| **Product** | GET | `/Product` | Lấy danh sách toàn bộ sản phẩm |
-| **Product** | GET | `/Product/:id` | Xem chi tiết một sản phẩm |
-| **Order** | POST | `/Order` | Tạo đơn hàng mới (Checkout) |
-| **Admin** | POST | `/imgProduct` | Upload ảnh sản phẩm lên Cloudinary |
+Tạo file `.env` và cấu hình các biến môi trường cần thiết:
 
-## 7. Giao diện Demo (Screenshots)
+```env
+MONGO_URL=mongodb+srv://<username>:<password>@...
+JWT_SECRET=your_secret_key
 
-| Trang chủ (Home) | Trang Collection (Collection) |
-|:---:|:---:|
-| <img src="Img_Demo/image.png" width="100%"> | <img src="Img_Demo/image-1.png" width="100%"> |
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
 
-| Sản phẩm (Product) | Chi tiết sản phẩm (Detail) |
-|:---:|:---:|
-| <img src="Img_Demo/image-2.png" width="100%"> | <img src="Img_Demo/image-3.png" width="100%"> |
+PORT=3000
+```
 
-| Đăng nhập (Login) | Trang Admin (Admin Main) |
-|:---:|:---:|
-| <img src="Img_Demo/image-4.png" width="100%"> | <img src="Img_Demo/image-5.png" width="100%"> |
+### 4. Khởi chạy ứng dụng
 
-| Quản lý sản phẩm (Product admin) | Quản lý voucher (Voucher admin) |
-|:---:|:---:|
-| <img src="Img_Demo/image-6.png" width="100%"> | <img src="Img_Demo/image-7.png" width="100%"> |
+```bash
+npm start
+```
 
-## 8. Tác giả & Liên hệ
-* Huỳnh Minh Nhựt
-* Email: nhut552004@gmail.com
+Sau đó truy cập:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## Tổng quan API
+
+Backend cung cấp các RESTful endpoint phục vụ xác thực, sản phẩm, đơn hàng và các chức năng quản trị.
+
+| Chức năng | Method | Endpoint       | Mô tả                           |
+| --------- | :----: | -------------- | ------------------------------- |
+| Xác thực  |  POST  | `/Login`       | Xác thực người dùng             |
+| Sản phẩm  |   GET  | `/Product`     | Lấy danh sách tất cả sản phẩm   |
+| Sản phẩm  |   GET  | `/Product/:id` | Lấy thông tin chi tiết sản phẩm |
+| Đơn hàng  |  POST  | `/Order`       | Tạo đơn hàng mới                |
+| Quản trị  |  POST  | `/imgProduct`  | Tải lên media sản phẩm          |
+
+Để xem toàn bộ API, vui lòng tham khảo mã nguồn Backend.
+
+---
+
+## Giao diện
+
+### Khách hàng
+
+| Trang chủ | Collection |
+| --------- | ---------- |
+|           |            |
+
+| Sản phẩm | Chi tiết sản phẩm |
+| -------- | ----------------- |
+|          |                   |
+
+### Xác thực & Quản trị
+
+| Đăng nhập | Dashboard quản trị |
+| --------- | ------------------ |
+|           |                    |
+
+| Quản lý sản phẩm | Quản lý mã giảm giá |
+| ---------------- | ------------------- |
+|                  |                     |
+
+---
+
+## Trạng thái dự án
+
+Đây là một **dự án cũ** được phát triển trong quá trình học tập và thực hành phát triển web.
+
+Dự án được lưu lại như một tài liệu tham khảo cho kinh nghiệm phát triển web full-stack trước đây, bao gồm xây dựng RESTful API, xác thực người dùng, thiết kế cơ sở dữ liệu và tích hợp các dịch vụ bên thứ ba.
+
+---
+
+## Tác giả
+
+**Huỳnh Minh Nhựt**
+
+* Email: [nhut552004@gmail.com](mailto:nhut552004@gmail.com)
 * Portfolio: https://portfolio-1f96c.web.app
